@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 视口设置 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<!-- 引入bootstrap的css文件 -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.css">
+	<!-- 引入datepicker插件css -->
+	<link rel="stylesheet" type="text/css" href="js/datepicker/jquery.datetimepicker.css">
+		<!-- 引入jquery的js文件 -->
+    <script type="text/javascript" src="files/jquery.js"></script>
+    <link rel="stylesheet" href="css/leftmenu.css" media="screen" type="text/css">
+	<script src="js/leftmenu.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body ng-controller="UpdateExpatriateController">
+			<!-- 左侧菜单 -->
+	<link rel="stylesheet" type="text/css" href="files/styles.css">
+	
+	<!-- 左侧菜单-->
+	<script type="text/javascript" src="files/jquery.easing.1.3.js"></script>
+
+    <!-- 左侧浮动菜单 -->
+    <div id="page">
+        <div id="container" class="content clearfix">
+            <div id="fl_menu" style="top: 50px;">
+                <div style="display:none;" class="menulabel">MENU</div>
+                <div class="menu">
+                    <a style="display:none;" href="index.html" class="menu_item">主页</a>
+                    <a style="display:none;" href="QueryEmp.html" class="menu_item">系统管理</a>
+                    <a style="display:none;" href="QueryCard.html" class="menu_item">名片管理</a>
+                    <a style="display:none;" href="QueryInventory.html" class="menu_item">库存管理</a>
+                    <a style="display:none;" href="QueryCar.html" class="menu_item">车辆管理</a>
+                    <a style="display:none;" href="QueryDised.html" class="menu_item">派车管理</a>
+                    <a style="display:none;" href="ViewNotice.html" class="menu_item">系统公告</a>
+                    <a style="display:none;" href="QueryExpatriate.html" class="menu_item">外派人才</a>
+                    <a style="display:none;" href="QueryCooperateCompany.html" class="menu_item">合作公司</a>
+                </div>
+            </div>
+            <script type="text/javascript" src="files/menu.js"></script>
+        </div>
+    </div>
+
+
+	<!-- 网页头部开始 -->
+	<div ng-include="'header.html'"></div><!-- 要基于服务器运行 -->
+	<!-- 网页头部结束 -->
+<!-- 引入结束 -->	
+<div class="container">	
+		<div class="row">	
+			<div class="col-md-8">
+				<h3 class="page-header">更新信息</h3>
+				<!-- 表单开始 -->
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="" class="col-sm-2">姓名</label>
+						<div class="col-sm-8">
+							<input type="text" placeholder="请输入姓名" name="expatriateName" class="form-control" ng-model="expatriateName">
+						</div>				
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-2">技能</label>
+						<div class="col-sm-8">
+							<input type="text" placeholder="技能" name="expatriateSkill" class="form-control" ng-model="expatriateSkill">
+						</div>				
+					</div>	
+					<div class="form-group">
+						<label for="" class="col-sm-2">薪水</label>
+						<div class="col-sm-8">
+							<input type="text" placeholder="薪水"   name="expatriateSalary" class="form-control" ng-model="expatriateSalary">
+						</div>				
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-2">外派状态</label>
+						<div class="col-sm-8">
+							<select name="expatriateState" class="form-control" ng-model="expatriateState" >
+							<option value="空闲">空闲</option>
+							<option value="外派">外派</option>									
+							</select>							
+						</div>				
+					</div>	
+									
+					<div class="form-group">				
+						<div class="col-sm-8 col-sm-offset-2">
+							<input type="button" value="确定" class="btn btn-primary" ng-click="update();">
+						</div>				
+					</div>
+				</form>
+				<!-- 表单结束 -->
+			</div>
+			</div>
+	</div>
+			<!-- 右侧区域结束 -->
+	<!-- 网页底部开始 -->
+	<div ng-include="'footer.html'"></div><!-- 要基于服务器运行 -->
+	<!-- 网页底部结束 -->
+	<!-- 引入jquery的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/jquery.js"></script>
+	<!-- 引入bootstrap的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>	
+	<!-- 引入angularjs的js文件 -->
+	<script type="text/javascript" src="js/angularjs/angular.js"></script>
+	<!-- 引入layer.js插件 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 引入全局配置js -->
+	<script type="text/javascript" src="js/global.js"></script>
+	<!-- 引入datepicker插件js -->
+	<script type="text/javascript" src="js/datepicker/jquery.datetimepicker.js"></script>
+	<script type="text/javascript">
+	    var expatriateId=getParam('expatriateId');
+
+		// 创建模块
+		var myApp = angular.module('myApp',[]);
+
+		//发送post请求必须要设置修改请求报头为x-www-form-urlencoded，否则以json字符串形式发送到服务器端!!!
+		myApp.config(function($httpProvider) {
+		    $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
+		    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+		 
+		    // Override $http service's default transformRequest
+		    $httpProvider.defaults.transformRequest = [function(data) {
+		        /**
+		         * The workhorse; converts an object to x-www-form-urlencoded serialization.
+		         * @param {Object} obj
+		         * @return {String}
+		         */
+		        var param = function(obj) {
+		            var query = '';
+		            var name, value, fullSubName, subName, subValue, innerObj, i;
+		 
+		            for (name in obj) {
+		                value = obj[name];
+		 
+		                if (value instanceof Array) {
+		                    for (i = 0; i < value.length; ++i) {
+		                        subValue = value[i];
+		                        fullSubName = name + '[' + i + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value instanceof Object) {
+		                    for (subName in value) {
+		                        subValue = value[subName];
+		                        fullSubName = name + '[' + subName + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value !== undefined && value !== null) {
+		                    query += encodeURIComponent(name) + '='
+		                            + encodeURIComponent(value) + '&';
+		                }
+		            }
+		 
+		            return query.length ? query.substr(0, query.length - 1) : query;
+		        };
+		 
+		        return angular.isObject(data) && String(data) !== '[object File]'
+		                ? param(data)
+		                : data;
+		    }];
+		});
+
+
+		// 创建控制器
+		myApp.controller('UpdateExpatriateController',function($scope,$http){
+			var url1 = URL + '/GetExpatriateServlet';
+
+			// post请求的快捷方法
+			var promise = $http.get(url1,{					
+				params:{
+					expatriateId:expatriateId
+				}					
+			});
+
+			promise.success(function(data){
+			
+				console.log(data);
+				// 绑定数据
+				    
+		            $scope.expatriateName = data.expatriateName;
+					$scope.expatriateSkill = data.expatriateSkill;
+					$scope.expatriateSalary = data.expatriateSalary;
+					$scope.expatriateState = data.expatriateState;
+				
+			});
+
+			promise.error(function(data,status,headers,config) {
+				alert('请求失败' + status);
+			});	
+			// 增加功能
+			$scope.update = function() {
+
+				var url = URL + '/UpdateExpatriateServlet';
+
+				// post请求的快捷方法	
+				var promise = $http.post(url,{
+				    expatriateId:expatriateId,
+					expatriateName:$scope.expatriateName,
+					expatriateSkill:$scope.expatriateSkill,
+					expatriateSalary:$scope.expatriateSalary,
+					expatriateState:$scope.expatriateState
+				});
+
+				promise.success(function(){
+					layer.msg('更新成功');	
+
+					setTimeout(function(){
+						location.href = 'QueryExpatriate.html';
+					},1000);								
+				});
+
+
+				promise.error(function(data,status,headers,config) {
+					alert('更新失败' + status);
+				});
+
+
+			}
+			
+		});
+
+	</script>
+</body>
+</html>

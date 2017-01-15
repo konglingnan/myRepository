@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 视口设置 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<!-- 引入bootstrap的css文件 -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.css">
+	
+	<!-- 引入datepicker插件css -->
+	<link rel="stylesheet" type="text/css" href="js/datepicker/jquery.datetimepicker.css">
+	
+    <!-- 引入jquery的js文件 -->
+    <script type="text/javascript" src="files/jquery.js"></script>
+    
+    <link rel="stylesheet" href="css/leftmenu.css" media="screen" type="text/css">
+	<script src="js/leftmenu.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	
+	
+<style>
+
+#typeEx, #tagEx, #picEx{
+	font-size:14px;
+	color:#FF0000;
+	visibility:hidden;
+/*	display:none;*/
+}
+
+</style>
+
+<script>
+
+function typeFunc(){
+	var name=document.getElementById("carType").value;
+	if(name.length>20){
+		confirm("位长不可超过20！");
+		document.getElementById('carType').focus();
+	}
+	if(name==""){
+		document.getElementById("typeEx").style.visibility="visible";
+	}
+	else{
+		document.getElementById("typeEx").style.visibility="hidden";
+	}
+}
+
+function tagFunc(){
+	var name=document.getElementById("carTag").value;
+	if(name.length>10){
+		confirm("位长不可超过10！");
+		document.getElementById('carType').focus();
+	}
+	if(name==""){
+		document.getElementById("tagEx").style.visibility="visible";
+	}
+	else{
+		document.getElementById("tagEx").style.visibility="hidden";
+	}
+}
+
+
+function picFunc(){
+	var name=document.getElementById("carPic").value;
+	if(name==""){
+		document.getElementById("picEx").style.visibility="visible";
+	}
+	else{
+		document.getElementById("picEx").style.visibility="hidden";
+	}
+}
+
+
+</script>
+</head><body ng-controller="carController" onLoad="document.getElementById('carType').focus()">
+
+<!-- 引入开始 -->
+	<!-- 左侧菜单 -->
+	<link rel="stylesheet" type="text/css" href="files/styles.css">
+	
+	<!-- 左侧菜单-->
+	<script type="text/javascript" src="files/jquery.easing.1.3.js"></script>
+
+    <!-- 左侧浮动菜单 -->
+    <div id="page">
+        <div id="container" class="content clearfix">
+            <div id="fl_menu" style="top: 50px;">
+                <div style="display:none;" class="menulabel">MENU</div>
+                <div class="menu">
+                    <a style="display:none;" href="index.html" class="menu_item">主页</a>
+                    <a style="display:none;" href="index.html" class="menu_item">主页</a>
+                    <a style="display:none;" href="QueryEmp.html" class="menu_item">系统管理</a>
+                    <a style="display:none;" href="QueryCard.html" class="menu_item">名片管理</a>
+                    <a style="display:none;" href="QueryInventory.html" class="menu_item">库存管理</a>
+                    <a style="display:none;" href="QueryCar.html" class="menu_item">车辆管理</a>
+                    <a style="display:none;" href="QueryDised.html" class="menu_item">派车管理</a>
+                    <a style="display:none;" href="ViewNotice.html" class="menu_item">系统公告</a>
+                    <a style="display:none;" href="QueryExpatriate.html" class="menu_item">外派人才</a>
+                    <a style="display:none;" href="QueryCooperateCompany.html" class="menu_item">合作公司</a>
+                </div>
+            </div>
+            <script type="text/javascript" src="files/menu.js"></script>
+        </div>
+    </div>
+
+
+	<!-- 网页头部开始 -->
+	<div ng-include="'header.html'"></div><!-- 要基于服务器运行 -->
+	<!-- 网页头部结束 -->
+<!-- 引入结束 -->
+	<div class="container">
+    	<ol class="breadcrumb">
+        	<li><a href="#">OA系统</a></li>
+            <li><a href="#">车辆管理</a></li>
+            <li class="active">增加车辆</li>
+        </ol>
+	</div>
+		
+<!-- ///////////////////////////////////////////////////////加上这些,然后把a标签内的改你自己的////////////////////////////////////////////////////////////// -->
+		
+		
+<!-- 左侧边栏 -->
+
+				
+	<div class="row">	
+		<!-- 左侧区域开始 -->
+		<div class="col-md-4" style="margin-top:100px;">
+		  <div class="clcontainer">
+			  <ul>
+			   
+			     <li class="cldropdown">
+			     	<a href="AddDis.html" data-toggle="cldropdown">申请用车</a>
+			     </li>
+			     
+			     <li class="cldropdown">
+			     <a href="QueryCar.html" data-toggle="cldropdown">所有车辆</a>
+			     </li>
+			    
+			     <li class="cldropdown">
+			     <a href="QueryDising.html" data-toggle="cldropdown">所有用车申请</a>
+			     </li>
+			    
+			     <li class="cldropdown">
+			     <a href="QueryDised.html" data-toggle="cldropdown">用车记录</a>
+			     </li>
+			    
+			  </ul>
+			</div>
+		</div>
+		<!-- 左侧区域结束 -->
+		
+		
+		<!-- 右侧区域开始 -->
+		
+			<div class="col-md-8">
+				<h3 class="page-header" style="margin-bottom:50px;">增加新车辆</h3>
+				<!-- 表单开始 -->
+				<form class="form-horizontal"  method="post" action="AddCarServlet" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="" class="col-sm-2">车辆类型</label>
+						<div class="col-sm-8">
+							<input type="text" placeholder="请输入车辆类型" id="carType" name="carType" class="form-control"  onBlur="typeFunc();"   ng-model="carType">
+							<span id="typeEx">不能为空</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-2">车牌号</label>
+						<div class="col-sm-8">
+							<input type="text" placeholder="请输入车牌号" id="carTag" name="carTag" class="form-control"   onBlur="tagFunc();"  ng-model="carTag">
+							<span id="tagEx">不能为空</span>
+						</div>	
+					</div>	
+					
+					<div class="form-group">
+						<label for="" class="col-sm-2">汽车照片</label>
+						<div class="col-sm-8">
+							<input type="file" id="carPic" name="carPic" class="form-control" accept="image/*"  onBlur="picFunc();"  ng-model="carPic">
+							<span id="picEx">不能为空</span>
+							</div>				
+					</div>	
+					<div class="form-group">				
+						<div class="col-sm-8 col-sm-offset-2">
+							<input type="submit" value="提交" class="btn btn-primary"  ng-click="add();">
+						</div>				
+					</div>
+				</form>
+				<!-- 表单结束 -->
+			</div>
+			<!-- 右侧区域结束 -->
+		</div>
+	</div>
+
+	<!-- 网页底部开始 -->
+	<div ng-include="'footer.html'"></div><!-- 要基于服务器运行 -->
+	<!-- 网页底部结束 -->
+		
+	<!-- 引入jquery的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/jquery.js"></script>
+	<!-- 引入bootstrap的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>	
+	<!-- 引入angularjs的js文件 -->
+	<script type="text/javascript" src="js/angularjs/angular.js"></script>
+	<!-- 引入layer.js插件 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 引入全局配置js -->
+	<script type="text/javascript" src="js/global.js"></script>
+	<!-- 引入datepicker插件js -->
+	<script type="text/javascript" src="js/datepicker/jquery.datetimepicker.js"></script>
+	<script type="text/javascript">
+
+		// 创建模块
+		var myApp = angular.module('myApp',[]);
+
+		//发送post请求必须要设置修改请求报头为x-www-form-urlencoded，否则以json字符串形式发送到服务器端!!!
+		myApp.config(function($httpProvider) {
+		    $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
+		    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+		 
+		    // Override $http service's default transformRequest
+		    $httpProvider.defaults.transformRequest = [function(data) {
+		        /**
+		         * The workhorse; converts an object to x-www-form-urlencoded serialization.
+		         * @param {Object} obj
+		         * @return {String}
+		         */
+		        var param = function(obj) {
+		            var query = '';
+		            var name, value, fullSubName, subName, subValue, innerObj, i;
+		 
+		            for (name in obj) {
+		                value = obj[name];
+
+		                if (value instanceof Array) {
+		                    for (i = 0; i < value.length; ++i) {
+		                        subValue = value[i];
+		                        fullSubName = name + '[' + i + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value instanceof Object) {
+		                    for (subName in value) {
+		                        subValue = value[subName];
+		                        fullSubName = name + '[' + subName + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value !== undefined && value !== null) {
+		                    query += encodeURIComponent(name) + '='
+		                            + encodeURIComponent(value) + '&';
+		                }
+		            }
+		 
+		            return query.length ? query.substr(0, query.length - 1) : query;
+		        };
+		 
+		        return angular.isObject(data) && String(data) !== '[object File]'
+		                ? param(data)
+		                : data;
+		    }];
+		});
+
+		// 创建控制器
+		myApp.controller('carController',function($scope,$http){
+
+			// 增加功能
+			$scope.add = function() {
+
+				var url = URL + '/AddCarServlet';
+
+				// post请求的快捷方法
+				var promise = $http.post(url,{	
+					carType:$scope.carType,
+					carTag:$scope.carTag,
+					carPic:$scope.carPic
+				});
+
+				promise.success(function(){
+
+					layer.msg('增加车辆成功');
+
+					setTimeout(function(){
+						location.href = 'AddCar.html';
+					},1000);								
+				});
+
+				promise.error(function(data,status,headers,config) {
+					layer.msg('请求失败' + status);
+					location.href = 'AddCar.html';
+				});
+
+			}
+			
+		});
+
+	</script>
+</body>
+</html>
