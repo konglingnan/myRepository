@@ -202,8 +202,19 @@
 		display: inline-block;
 		width: 520px;
 		height: 210px;
-		background-color: #ADADAD;
+		background-color: pink;
 		margin: 0px 10px;
+		position: relative;
+	}
+
+	.opa {
+		width: 520px;
+		height: 30px;
+		position: absolute;
+		bottom: 0px;
+		background-color: gray;
+		opacity: 0.5;
+		filter:Alpha(opacity=50);/*兼容IE6等浏览器*/
 	}
 /*中间内容区结束*/
 
