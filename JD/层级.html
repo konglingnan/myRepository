@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 1000px;
+            margin: 50px 50px;
+            overflow: hidden;
+        }
+        .text {
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            float: left;
+            margin-left: -1px;
+            position: relative;
+            z-index: 1;
+        }
+        .text:hover {
+            border-color: #000;
+            /*position: relative;*/
+            z-index: 2;
+        }
+
+        .xiongda {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /*position: relative;*/
+        }
+        .xionger {
+            width: 90px;
+            height: 150px;
+            background-color: blue;
+            position: relative;
+        }
+        .gtq {
+            width: 100px;
+            height: 150px;
+            background-color: purple;
+        }
+        .gtq1 {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+    </div>
+
+    <div class="xiongda">
+        <div class="xionger"></div>
+    </div>
+    <div class="gtq">
+        <div class="gtq1">
+            <a href="#">
+                我爱你中过
+            </a>
+        </div>
+    </div>
+</body>
+</html>
