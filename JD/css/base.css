@@ -647,6 +647,7 @@ footer {
 .footer-us {
     height: 192px;
     border-top: 1px solid #E5E5E5;
+    text-align: center;
 }
 
 /*footer部分end*/
