@@ -182,7 +182,17 @@ s, i, em {
 	position: absolute;
 	top: -15px;
 }
-
+/*
+.side-nav-l-city {
+    width: 150px;
+    height: 100px;
+    background-color: pink;
+    z-index: 99;
+    position: absolute;
+    top: 30px;
+    left: 68px;
+}
+*/
 .side-nav-l:hover i,
 .side-nav-r:hover i {
 	position: absolute;
@@ -219,7 +229,6 @@ s, i, em {
 }
 
 /*导航栏end*/
-
 
 /*广告start*/
 .banner {
@@ -288,29 +297,48 @@ s, i, em {
 }
 
 .search-car .search-car-number {
-    padding: 0px 5px;
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
     color: #FFFFFF;
     background: #C81623;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 8px 8px 8px 0px; /*宽高的一半*/
     position: absolute;
-    top: -6px;
+    top: -5px;
     right: 18px;
 }
+
 .search-input-search {
-    width: 538px;
+    width: auto; /*自适应子盒子*/
     height: 36px;
     margin: 25px 0 8px 0;
-    background-color: #B61D1D;
 }
 
 .search-input-search input {
-    width: 454px;
-    height: 32px;
-    margin: 2px;
-    padding-left: 3px;
+    width: 450px;
+    height: 24px;
+    border: 2px solid #B61D1D;
+    padding: 4px;
+    font: 14px/24px "microsoft yahei";
+    float: left;
 }
 
-.link a {
+.search-input-search button {
+    width: 76px;
+    height: 36px;
+    background-color: #B61D1D;
+    color: #FFFFFF;
+    cursor: pointer; /*鼠标样式：小手*/
+    /*cursor: move;*/ /*移动*/
+    /*cursor: default;*/ /*默认*/
+    /*cursor: text;*/ /*光标*/
+    /*cursor: wait;*/
+
+    float: left;
+}
+
+.search-input-link a {
     display: inline-block;
     padding-right: 11px;
     float: left;
@@ -322,265 +350,6 @@ s, i, em {
     color: #FFFFFF;
 }
 /*搜索栏end*/
-
-/*商品分类部分start*/
-.classify {
-    height: 44px;
-    border-bottom: 2px solid #C81623;
-}
-
-.classify-l {
-    width: 210px;
-    height: 512px;
-    background-color: #C81623;
-    color: #FFFFFF;
-    float: left;
-}
-
-.classify-l h1 {
-    height: 46px;
-    font-size: 14px;
-    line-height: 46px;
-    padding-left: 10px;
-}
-
-.classify-l a {
-    display: inline-block;
-    color: #FFFFFF;
-    width: 187px;
-    line-height: 31px;
-    padding-left: 10px;
-    position: relative;
-}
-
-.classify-l i {
-    display: inline-block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-.classify-c {
-    float: left;
-}
-
-.classify .classify-c li {
-    float: left;
-    position: relative;
-}
-
-.classify .classify-c a {
-    font-size: 14px;
-    line-height: 44px;
-    margin: 0 20px;
-}
-
-.classify-c img {
-    position: absolute;
-    top: 0px;
-    right: -8px;
-}
-
-.classify-r {
-    font-size: 18px;
-    line-height: 44px;
-    margin-right:10px;
-    float: right;
-}
-/*商品分类部分end*/
-
-/*巨幅广告部分start*/
-.big {
-    padding: 12px 8px 0;
-    float: left;
-}
-
-.big .big-img {
-    display: block;
-    width: 730px;
-    height: 454px;
-    background: url(../images/shoose.jpg) no-repeat;
-    position: relative;
-}
-
-.button1:hover,
-.button2:hover {
-    opacity: 0.5;
-    filter:Alpha(opacity=50);
-}
-
-.big ul {
-    width: 132px;
-    height: 22px;
-    position: absolute;
-    bottom: 6px;
-    left: 50%;
-    margin-left: -66px;
-}
-
-.big li {
-    float: left;
-    color: #FFFFFF;
-    width: 18px;
-    height: 18px;
-    text-align: center;
-    margin: 2px;
-    background-color: #3E3E3E;
-    border-radius: 10px;
-}
-
-.big li:hover {
-    cursor: hand;
-    background-color: #C81623;
-}
-/*巨幅广告部分end*/
-
-/*信息部分start*/
-.information {
-    color: #666666;
-    width: 254px;
-    margin-top: 12px;
-    float: left;
-}
-
-.information h1 {
-    font-size: 16px;
-    border-bottom: 1px dotted #E4E4E4;
-    padding: 15px;
-}
-
-.information-top {
-    width: 251px;
-    height: 200px;
-    border: 1px solid #E4E4E4;
-    border-bottom: 1px dashed #E4E4E4;
-}
-
-.information-top .more {
-    font-size: 14px;
-    float: right;
-}
-
-.information-top ul {
-    padding:10px 0 0 15px;
-}
-
-.information-top li a {
-    display: inline-block;
-    line-height: 27px;
-}
-
-.information-bottom {
-    width: 252px;
-    height: 252px;
-    border-left: 1px solid #E4E4E4;
-}
-
-.information-bottom h1 {
-    border-right: 1px solid #E4E4E4;    
-}
-
-.service {
-    width: 62px;
-    height: 67px;
-    border-right: 1px solid #E4E4E4;
-    border-bottom: 1px solid #E4E4E4;
-    float: left;
-    position: relative;
-}
-
-.service a {
-    display: block;
-    text-align: center;
-    height: 20px;
-    margin: 0 auto;
-    padding-top: 47px;
-}
-
-.information-bottom i {
-    width: 25px;
-    height: 25px;
-    background: url(../images/fly.png) no-repeat;
-    position: absolute;
-    top: 16px;
-    left: 18px;
-}
-
-.information-bottom .service2 {
-    background-position: 0px -25px;
-}
-
-.information-bottom .service3 {
-    background-position: 0px -50px;
-}
-
-.information-bottom .service4 {
-    background-position: 0px -75px;
-}
-
-.information-bottom .service5 {
-    background-position: 0px -100px;
-}
-
-.information-bottom .service6 {
-    background-position: 0px -125px;
-}
-
-.information-bottom .service7 {
-    background-position: 0px -150px;
-}
-
-.information-bottom .service8 {
-    background-position: 0px -175px;
-}
-
-.information-bottom .service9 {
-    background-position: 0px -200px;
-}
-
-.information-bottom .service10 {
-    background-position: 0px -225px;
-}
-
-.information-bottom .service11 {
-    background-position: 0px -250px;
-}
-
-.information-bottom .service12 {
-    background-position: 0px -275px;
-}
-
-.information-bottom .service2 {
-    background-position: 0px -25px;
-}
-
-.information-bottom .service2 {
-    background-position: 0px -25px;
-}
-/*信息部分end*/
-
-/*今日推荐部分start*/
-.today {
-    padding-top: 10px;
-}
-
-.today-image {
-    float: left;
-    width: 206px;
-    height: 151px;
-    background: url(../images/today.png) no-repeat -213px -136px;
-}
-
-.today-buy {
-    float: left;
-    position: relative;
-}
-
-.today-buy img {
-    float: left;
-    padding-left: 1px;
-}
-/*今日推荐部分end*/
 
 /*footer部分start*/
 footer {
@@ -662,12 +431,10 @@ footer {
 .footer-us-img {
     display: inline-block;
     margin: 0 auto;
-
 }
 
 .footer-us-img img {
     float: left;
     margin: 13px 13px 0 0;
 }
-
 /*footer部分end*/
