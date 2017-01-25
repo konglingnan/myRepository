@@ -7,33 +7,34 @@
 
 .classify-l {
     width: 210px;
-    height: 512px;
+    height: 511px;
     background-color: #C81623;
     color: #FFFFFF;
     float: left;
 }
 
-.classify-l h1 {
+.classify-l .classify-l-all {
     height: 46px;
-    font-size: 14px;
-    line-height: 46px;
+    font: 400 14px/46px "microsoft yahei";
     padding-left: 10px;
+    background-color: #B1191A;
 }
 
 .classify-l a {
-    display: inline-block;
+    display: block;
     color: #FFFFFF;
-    width: 187px;
-    line-height: 31px;
+    font: 12px/31px "microsoft yahei";
     padding-left: 10px;
     position: relative;
+    border-left: 1px solid #B1191A;
+    background-color: #C81623;
 }
 
 .classify-l i {
     display: inline-block;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 13px;
 }
 
 .classify-c {
@@ -46,9 +47,9 @@
 }
 
 .classify .classify-c a {
-    font-size: 14px;
-    line-height: 44px;
-    margin: 0 20px;
+    display: inline-block;
+    font: 14px/44px "microsoft yahei";
+    padding: 0 20px;
 }
 
 .classify-c img {
@@ -58,8 +59,7 @@
 }
 
 .classify-r {
-    font-size: 18px;
-    line-height: 44px;
+    font: 18px/44px "microsoft yahei";
     margin-right:10px;
     float: right;
 }
