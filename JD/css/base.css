@@ -647,7 +647,27 @@ footer {
 .footer-us {
     height: 192px;
     border-top: 1px solid #E5E5E5;
+    padding-top: 10px;
     text-align: center;
+}
+
+.footer-us a {
+    line-height: 38px;
+}
+
+.footer-us span {
+    margin: 0 10px;
+}
+
+.footer-us-img {
+    display: inline-block;
+    margin: 0 auto;
+
+}
+
+.footer-us-img img {
+    float: left;
+    margin: 13px 13px 0 0;
 }
 
 /*footer部分end*/
