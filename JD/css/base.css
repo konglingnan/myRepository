@@ -121,43 +121,47 @@ s, i, em {
     display: none
 }
 
-/*导航栏start*/
+/*右箭头start*/
 .go {
     font-family: "SimSun";
 }
+/*右箭头end*/
 
-.button1 {
-    display: inline-block;
-    font-size: 30px;
-    text-align: center;
-    width: 30px;
-    height: 60px;
-    background: #000000;
-    line-height: 60px;
+/*左右按钮start*/
+
+.button {
+    width: 100%;
     position: absolute;
     top: 50%;
     margin-top: -30px;
-    opacity: 0.3;
-    filter:Alpha(opacity=30);
-    left: 0px;
 }
 
-.button2 {
+.button a {
     display: inline-block;
     font-size: 30px;
     text-align: center;
-    width: 30px;
-    height: 60px;
-    background: #000000;
-    line-height: 60px;
-    position: absolute;
-    top: 50%;
-    margin-top: -30px;
-    opacity: 0.3;
-    filter:Alpha(opacity=30);
-    right: 0px;
+    color: #FFFFFF;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: rgba(0, 0, 0, 0.3); 
 }
 
+.button .button1 {
+    float: left;
+}
+
+.button .button2 {
+    float: right;
+}
+
+.button a:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+/*左右按钮end*/
+
+/*导航栏start*/
 .side-nav {
     background-color: #F1F1F1;
     height: 30px;
@@ -166,6 +170,10 @@ s, i, em {
 
 .side-nav-l {
     padding: 0 10px;
+}
+
+.side-nav-l:hover {
+    background-color: #FFFFFF;
 }
 
 .side-nav-l s,
@@ -197,10 +205,6 @@ s, i, em {
 .side-nav-r:hover i {
     position: absolute;
     top: -7px;
-}
-
-.side-nav-l:hover {
-    background-color: #FFFFFF;
 }
 
 .side-nav-r li {
@@ -280,6 +284,48 @@ s, i, em {
     float: left;
 }
 
+.search-input-search {
+    width: auto; /*自适应子盒子*/
+    height: 36px;
+    margin: 25px 0 8px 0;
+}
+
+.search-input-search input {
+    width: 450px;
+    height: 24px;
+    border: 2px solid #B61D1D;
+    padding: 4px;
+    font: 14px/24px "microsoft yahei";
+    vertical-align: middle; /*垂直对齐方式: 居中*/
+    float: left;
+}
+
+.search-input-search button {
+    width: 76px;
+    height: 36px;
+    background-color: #B61D1D;
+    color: #FFFFFF;
+    cursor: pointer; /*鼠标样式：小手*/
+    /*cursor: move;*/ /*移动*/
+    /*cursor: default;*/ /*默认*/
+    /*cursor: text;*/ /*光标*/
+    /*cursor: wait;*/
+
+    float: left;
+}
+
+.search-input-link a {
+    display: inline-block;
+    padding-right: 11px;
+    float: left;
+}
+
+.search-input-search a {
+    display: inline-block;
+    padding: 8px 24px;
+    color: #FFFFFF;
+}
+
 .search-car {
     width: 139px;
     height: 34px;
@@ -309,46 +355,6 @@ s, i, em {
     right: 18px;
 }
 
-.search-input-search {
-    width: auto; /*自适应子盒子*/
-    height: 36px;
-    margin: 25px 0 8px 0;
-}
-
-.search-input-search input {
-    width: 450px;
-    height: 24px;
-    border: 2px solid #B61D1D;
-    padding: 4px;
-    font: 14px/24px "microsoft yahei";
-    float: left;
-}
-
-.search-input-search button {
-    width: 76px;
-    height: 36px;
-    background-color: #B61D1D;
-    color: #FFFFFF;
-    cursor: pointer; /*鼠标样式：小手*/
-    /*cursor: move;*/ /*移动*/
-    /*cursor: default;*/ /*默认*/
-    /*cursor: text;*/ /*光标*/
-    /*cursor: wait;*/
-
-    float: left;
-}
-
-.search-input-link a {
-    display: inline-block;
-    padding-right: 11px;
-    float: left;
-}
-
-.search-input-search a {
-    display: inline-block;
-    padding: 8px 24px;
-    color: #FFFFFF;
-}
 /*搜索栏end*/
 
 /*footer部分start*/
@@ -386,15 +392,15 @@ footer {
     margin-left: 18px;
 }
 
-.footer-guide-one dt {
-    font: 400 16px/36px "microsoft yahei";
-}
-
 .footer-guide-one {
     float: left;
     width: 150px;
     height: 187px;
     margin-left: 50px;
+}
+
+.footer-guide-one dt {
+    font: 400 16px/36px "microsoft yahei";
 }
 
 .footer-guide-one a {

@@ -3,6 +3,21 @@
 .classify {
     height: 44px;
     border-bottom: 2px solid #C81623;
+    position: relative;
+}
+
+.classify-banner {
+    height: 0px;
+}
+
+.classify-banner a {
+    display: block;
+    width: 100%;
+    height: 603px;
+    position: absolute;
+    top: 44px;
+    z-index: -1;
+    background: url(../images/banner.jpg) no-repeat top center;
 }
 
 .classify-l {
@@ -10,43 +25,53 @@
     height: 511px;
     background-color: #C81623;
     color: #FFFFFF;
-    float: left;
+    position: absolute;
+    z-index: 2;
 }
 
 .classify-l .classify-l-all {
+    display: block;
     height: 46px;
     font: 400 14px/46px "microsoft yahei";
     padding-left: 10px;
     background-color: #B1191A;
 }
 
-.classify-l a {
-    display: block;
+.classify-l li {
     color: #FFFFFF;
     font: 12px/31px "microsoft yahei";
-    padding-left: 10px;
-    position: relative;
+    padding: 0 10px;
     border-left: 1px solid #B1191A;
     background-color: #C81623;
 }
 
+.classify-l li:hover {
+    background-color: #FFFFFF;
+}
+
+.classify-l li:hover a {
+    color: #C81623;
+}
+
+.classify-l a {
+    color: #FFFFFF;
+    font: 12px/31px "microsoft yahei";
+}
+
 .classify-l i {
-    display: inline-block;
-    position: absolute;
-    top: 0px;
-    right: 13px;
+    float: right;
 }
 
 .classify-c {
-    float: left;
+    margin-left: 210px;
 }
 
-.classify .classify-c li {
+.classify-c li {
     float: left;
     position: relative;
 }
 
-.classify .classify-c a {
+.classify-c a {
     display: inline-block;
     font: 14px/44px "microsoft yahei";
     padding: 0 20px;
@@ -65,20 +90,18 @@
 }
 /*商品分类部分end*/
 
-/*巨幅广告部分start*/
-.big {
-    margin: 12px 8px 0;
+/*轮播图部分start*/
+.slider {
+    margin: 12px 10px 0 220px;
     float: left;
     position: relative;
 }
 
-.button1:hover,
-.button2:hover {
-    opacity: 0.5;
-    filter:Alpha(opacity=50);
+.slider:hover a {
+    background: rgba(0, 0, 0, 0.5); 
 }
 
-.big ul {
+.slider ul {
     width: 132px;
     height: 22px;
     position: absolute;
@@ -87,7 +110,7 @@
     margin-left: -66px;
 }
 
-.big li {
+.slider li {
     float: left;
     color: #FFFFFF;
     width: 18px;
@@ -98,44 +121,54 @@
     border-radius: 10px;
 }
 
-.big a {
-    color: #FFFFFF;
-}
-
-.big li:hover {
-    cursor: hand;
+.slider li:hover {
+    cursor: pointer;
     background-color: #C81623;
 }
-/*巨幅广告部分end*/
+
+.slider .current { /*通过js控制方便*/
+    cursor: pointer;
+    background-color: #C81623;
+}
+/*轮播图部分end*/
 
 /*信息部分start*/
 .information {
     color: #666666;
-    width: 254px;
     margin-top: 12px;
     float: left;
+    border: 1px solid #E4E4E4;
+}
+
+.information .information-title {
+    width: 221px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #E4E4E4;
 }
 
 .information h1 {
-    font-size: 16px;
-    border-bottom: 1px dotted #E4E4E4;
-    padding: 15px;
+    float: left;
+    font: 400 16px/43px "microsoft yahei";
 }
 
 .information-top {
-    width: 251px;
+    width: 248px;
     height: 200px;
-    border: 1px solid #E4E4E4;
     border-bottom: 1px dashed #E4E4E4;
 }
 
 .information-top .more {
-    font-size: 14px;
+    font: 14px/43px "microsoft yahei";
     float: right;
 }
 
 .information-top ul {
     padding:10px 0 0 15px;
+}
+
+.information-top ul span {
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .information-top li a {
@@ -144,29 +177,30 @@
 }
 
 .information-bottom {
-    width: 252px;
+    width: 248px;
     height: 252px;
-    border-left: 1px solid #E4E4E4;
+    overflow: hidden; /*隐藏掉ul的边框*/
+
 }
 
-.information-bottom h1 {
-    border-right: 1px solid #E4E4E4;    
+.information-bottom ul {
+    width: 255px; /*为了一排能放下四个li*/
+    height: 252px;
 }
 
-.service {
+.information-bottom a {
     width: 62px;
-    height: 67px;
-    border-right: 1px solid #E4E4E4;
-    border-bottom: 1px solid #E4E4E4;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    border-top: none;
     float: left;
+    margin: -1px 0 0 -1px;  /*移动盒子，使边框重叠*/
     position: relative;
 }
 
-.service a {
+.information-bottom span {
     display: block;
     text-align: center;
-    height: 20px;
-    margin: 0 auto;
     padding-top: 47px;
 }
 
@@ -179,57 +213,54 @@
     left: 18px;
 }
 
-.information-bottom .service2 {
+.information-bottom-service2 i {
     background-position: 0px -25px;
 }
 
-.information-bottom .service3 {
+.information-bottom-service3 i {
     background-position: 0px -50px;
 }
 
-.information-bottom .service4 {
+.information-bottom-service4 i {
     background-position: 0px -75px;
 }
 
-.information-bottom .service5 {
+.information-bottom-service5 i {
     background-position: 0px -100px;
 }
 
-.information-bottom .service6 {
+.information-bottom-service6 i {
     background-position: 0px -125px;
 }
 
-.information-bottom .service7 {
+.information-bottom-service7 i {
     background-position: 0px -150px;
 }
 
-.information-bottom .service8 {
+.information-bottom-service8 i {
     background-position: 0px -175px;
 }
 
-.information-bottom .service9 {
+.information-bottom-service9 i {
     background-position: 0px -200px;
 }
 
-.information-bottom .service10 {
+.information-bottom-service10 i {
     background-position: 0px -225px;
 }
 
-.information-bottom .service11 {
+.information-bottom-service11 i {
     background-position: 0px -250px;
 }
 
-.information-bottom .service12 {
+.information-bottom-service12 i {
     background-position: 0px -275px;
 }
 
-.information-bottom .service2 {
-    background-position: 0px -25px;
+.send {
+    background: url(../images/send.png) no-repeat right top;
 }
 
-.information-bottom .service2 {
-    background-position: 0px -25px;
-}
 /*信息部分end*/
 
 /*今日推荐部分start*/
@@ -239,17 +270,23 @@
 
 .today-image {
     float: left;
-    width: 206px;
+    width: 210px;
     height: 151px;
     background: url(../images/today.png) no-repeat -213px -136px;
 }
 
 .today-buy {
+    width: 1000px; 
+    overflow: hidden;
     float: left;
     position: relative;
 }
 
-.today-buy img {
+.today-buy ul {
+    width: 5000px; /*放一排图片播放*/
+}
+
+.today-buy li {
     float: left;
     padding-left: 1px;
 }
