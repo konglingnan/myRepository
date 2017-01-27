@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	height: 499px;
+	background: url("images/dbg.jpg") repeat-x;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding-left: 15px;
+	margin: 20px;
+	background: url("images/bg.png") no-repeat 0px -192px;
+}
+
+a {
+	line-height: 35px;
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 15px;
+	background: url("images/bg.png") no-repeat right -192px;
+}
+
+li:hover{
+	background: url("images/bg.png") no-repeat 0px -144px;	
+}
+
+li:hover a{
+	background: url("images/bg.png") no-repeat right -144px;	
+}
