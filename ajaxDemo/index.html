@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>动态数据</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript">
+	
+	window.onload = function (){
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			ajax("a.txt?t="+new Date().getTime(), fnSucc, fnFaild);
+		}
+
+		function fnSucc(str){
+			alert(str);
+		}
+
+		function fnFaild(str){
+			alert(str);
+		}
+
+	}	
+	</script>
+
+</head>
+<body>
+
+	<button id="btn">sure</button>
+
+</body>
+</html>
