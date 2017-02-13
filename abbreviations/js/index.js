@@ -54,7 +54,7 @@ function displayAbbr(){
 	if(dl.childNodes.length<1) return false;
 	// 将标题和定义列表添加到页面
 	var h1 = document.createElement("h1");
-	var h1Text = document.createTextNode("abbr list");
+	var h1Text = document.createTextNode("abbreviations");
 	h1.appendChild(h1Text);
 	var body = document.getElementsByTagName("body")[0];
 	body.appendChild(h1);

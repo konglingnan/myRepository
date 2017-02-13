@@ -14,6 +14,7 @@ function addLoadEvent(func) {
 			oldload();
 			func();
 		}
+	}
 }
 
 // 在某个节点后插入新节点
