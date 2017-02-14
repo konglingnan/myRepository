@@ -65,6 +65,8 @@ function move(nodeId, toX, toY, interval){
 	node.style.top = theY + "px";
 
 	var repeat = "move('"+nodeId+"',"+toX+","+toY+","+interval+")";
+
+	// 设置成属性为了使其他move函数调用时能访问movement，使其他的移动时可以取消之前的移动。
 	node.movement = setTimeout(repeat, interval);
 }
 // 通用函数结束
