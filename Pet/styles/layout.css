@@ -1,0 +1,134 @@
+section,
+header,
+article,
+nav {
+	display: block;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+body {
+	margin: 1em 10%;
+	max-width: 80em;
+}
+#home {
+	background-image: url(../images/home.jpg);
+}
+#about {
+	background-image: url(../images/about.jpg);
+}
+#photos {
+	background-image: url(../images/photos.jpg);
+}
+#live {
+	background-image: url(../images/live.jpg);
+}
+#contact {
+	background-image: url(../images/contact.jpg);
+}
+header {
+	border-width: 0.1em;
+	border-style: solid;
+	border-bottom-width: 0;
+}
+header nav {
+	border-width: 0.1em;
+	border-style: solid;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	padding-left: 10%;
+}
+header nav ul {
+	width: 100%;
+	overflow: hidden;
+	border-left-width: 0.1em;
+	border-left-style: solid;
+}
+header nav li {
+	display: inline;
+}
+header nav li a{
+	display: block;
+	float: left;
+	padding: 0.5em 2em;
+	border-right: 0.1em solid;
+}
+article {
+	border-width: 0.1em;
+	border-style: solid;
+	border-top-width: 0;
+	padding: 2em 10%;
+	line-height: 1.8em;
+}
+article img {
+	border-width: 0.1em;
+	border-style: solid;
+	outline-width: 0.1em;
+	outline-style: solid;
+}
+
+/*home幻灯片开始*/
+#placehoderArea {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+}
+#placehoder {
+	position: absolute;
+}
+/*home幻灯片结束*/
+
+/*photos图片库开始*/
+#gallery {
+	margin: 20px 0;
+}
+#gallery li {
+	display: inline;
+	margin: 20px;
+}
+#gallery li img {
+	width: 100px;
+	height: 100px;
+}
+#imgPlacehoder {
+	display: block;
+	margin: 0 auto;
+	clear: both;
+}
+/*photos图片库结束*/
+
+/*live表格开始*/
+table {
+	width: 700px;
+	height: 300px;
+	margin: 20px;
+}
+/*live表格结束*/
+
+/*contact表单开始*/
+fieldset {
+	padding: 30px;
+}
+form label {
+	display: block;
+}
+input {
+	width: 200px;
+	height: 2em;
+	margin: 10px;
+	outline: none;
+}
+textarea {
+	margin: 10px;
+	resize: none;
+	outline: none;
+}
+input[type="submit"],
+input[type="reset"] {
+	width: 100px;
+}
+/*contact表单结束*/
