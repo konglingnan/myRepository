@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 视口设置 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<!-- 引入bootstrap的css文件 -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.css">
+</head>
+<body ng-controller="controller">
+		
+	<div class="container">		
+		<div class="row">			
+			<!-- 左侧区域开始 -->
+			<div class="col-md-3">
+				
+			</div>
+			<!-- 左侧区域结束 -->
+			<!-- 右侧区域开始 -->
+			<div class="col-md-8">				
+				<div class="row">
+
+					<div class="col-md-4" ng-repeat="item in data">				
+						<div class="thumbnail text-center">
+							<img src="GetCarServlet?carId={{item.carId}}" alt="">
+						</div>
+					</div>
+
+				</div>			
+			</div>
+			<!-- 右侧区域结束 -->
+		</div>
+	</div>
+
+	<!-- 引入jquery的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/jquery.js"></script>
+	<!-- 引入bootstrap的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>	
+	<!-- 引入angularjs的js文件 -->
+	<script type="text/javascript" src="js/angularjs/angular.js"></script>
+	<!-- 引入全局配置js -->
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript">
+
+		// 创建模块
+		var myApp = angular.module('myApp',[]);
+
+		// 创建控制器
+		myApp.controller('controller',function($scope,$http){
+
+			// 请求地址
+			var url = URL + '/QueryCarPicServlet';
+
+			// 访问后台数据接口			
+			var promise = $http.get(url,{
+				params:{
+					carId:2
+				}
+			});
+
+			// 请求成功处理
+			promise.success(function(data){
+				// 在作用域中存储数据
+				$scope.data = data;
+			});	
+
+			// 请求失败处理
+			promise.error(function(){
+				alert('请求失败');
+			});		
+
+
+		});
+
+	</script>
+</body>
+</html>

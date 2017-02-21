@@ -1,0 +1,42 @@
+#playZone{
+	width: 900px;
+	height: 600px;
+	background-color: rgb(700,700,700);
+}
+
+.control{
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	top: 400px;
+	right: 100px;
+}
+
+table td{
+	text-align: center;
+}
+
+div{
+	float: left;
+	margin: 30px;
+}
+
+button{
+	font-size: 30px;
+}
+
+#mario{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+}
+
+#mashroom{
+	width: 50px;
+	height: 50px;
+	position: absolute;	
+}
+
+body{
+	background-color: rgb(0, 0, 0);
+}

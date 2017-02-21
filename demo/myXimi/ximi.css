@@ -1,0 +1,573 @@
+
+/*初始化开始*/
+
+		html, body, ul, li, a, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, hr 
+		{
+			margin:0;
+			padding:0;
+		}
+
+		body {
+			font-size: 12px;
+			color: #444444;
+			overflow: auto;
+		}
+/*初始化结束*/
+
+/*版心初始化开始*/
+		.page-depth {
+			width: 970px;
+			margin: 0 auto;
+			position: relative;
+		}
+/*版心初始化结束*/
+
+/*导航条开始*/
+		nav {
+			height: 26px;
+			width: 100%;
+			background-color: #F7F7F7;
+			border-bottom: 1px solid #D8D8D8;
+			position: fixed;
+			top: 0px;
+			z-index: 99;
+		}
+
+		.page-depth-t {
+			height: 26px;
+		}
+
+		.triangle {
+			display: inline-block;
+			width: 0px;
+			border-top: 4px solid #606060;
+			border-left: 4px solid #F7F7F7;
+			border-right: 4px solid #F7F7F7;
+			margin-left: 3px;
+		}
+
+		.page-depth-r {
+			display: inline-block;
+			list-style: none;
+			position: absolute;
+			right: 10px;
+		}
+
+		.page-depth-r li{
+			display: inline-block;
+			line-height: 26px;
+			margin: 0px 4px;
+		}
+
+		.page-depth-r a{
+			text-decoration: none;
+			color: #666666;
+		}
+
+		.page-depth-r a:hover{
+			color: red;
+		}
+
+		.page-depth-l {
+			display: inline-block;
+			line-height: 26px;
+		}
+/*导航条结束*/
+
+/*第二个版心开始*/
+	
+	/*初始化版心开始*/
+		.page-depth2 {
+			height: 97px;
+			margin-top: 27px;
+		}
+	/*初始化版心结束*/
+
+	/*标识开始*/
+		.logo {
+			margin-top: 25px;
+			margin-left: 10px;
+			float: left;
+		}
+	/*标识结束*/
+
+	/*搜索开始*/
+		.search {
+			border: 1px solid #C9C9C9;
+			float: right;
+			margin: 29px 0px;
+			padding: 5px 4px;
+		}
+
+		.search .search-input {
+			width: 420px;
+			height: 30px;
+			color: #999999;
+
+		}
+
+		.search input {
+			float: left;
+		}
+	/*搜索结束*/
+/*第二个版心结束*/
+
+/*小导航开始*/
+		.page-depth3 {
+			list-style: none;
+			height: 26px;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 25px;
+			border-bottom: 2px solid #306BAE;
+
+		}
+
+		.page-depth3 li {
+			display: inline-block;
+		}
+
+		.page-depth3 a{
+			display: inline-block;
+			text-decoration: none;
+			padding: 1px 15px;
+			color: #306BAE;
+			font-family: "微软雅黑";
+		}
+
+		.page-depth3 a:hover {
+			color: #FFFFFF;
+			background-color: #306BAE;
+		}
+/*小导航结束*/
+
+/*清除浮动开始*/
+	.clearfix:after {
+		content: "";
+		height: 0;
+		line-height: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+
+	.clearfix {
+		zoom: 1;
+	}
+/*清除浮动结束*/
+
+/*左侧内容区开始*/
+	.page-depth4 {
+		margin-top: 10px;
+	}
+
+	.con-l {
+		width: 200px;
+		/*height: 210px;*/
+		background-color: #EBF0F6;
+		float: left;
+	}
+
+	.con-l h3 {
+		height: 30px;
+		background-color: #0266A3;
+		font-size: 14px;
+		line-height: 30px;
+		color: #FFFFFF;
+		padding-left: 20px;
+	}
+
+	.con-l ul {
+		height: 175px;
+		padding-left: 39px;
+		list-style: none;
+		margin-top: 5px;
+		background: url(images/renxing.gif) no-repeat 0px -5px;
+	}
+
+	.con-l a {
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 28px;
+		color: #606060;
+	}
+
+	.con-l a:hover {
+		color: red;
+	}
+/*左侧内容区结束*/
+
+/*中间内容区开始*/
+	.con-c {
+		display: inline-block;
+		width: 520px;
+		height: 210px;
+		background-color: pink;
+		margin: 0px 10px;
+		position: relative;
+	}
+
+	.opa {
+		width: 520px;
+		height: 30px;
+		position: absolute;
+		bottom: 0px;
+		background-color: gray;
+		opacity: 0.5;
+		filter:Alpha(opacity=50);/*兼容IE6等浏览器*/
+	}
+/*中间内容区结束*/
+
+/*右侧内容区开始*/
+	.con-r {
+		display: inline-block;
+		width: 230px;
+		height: 208px;
+		float: right;
+		position: relative;
+	}
+
+	.con-r-t {
+		width: 230px;
+		height: 95px;
+		border: 1px solid #E0E6F0;
+		background-color: #F7FAFF;
+		overflow: hidden;
+	}
+
+	.con-r-t h3 {
+		font-size: 12px;
+		color: #666666;
+		margin: 8px 17px;
+	}
+
+	.con-r-t img {
+		display: inline-block;
+		vertical-align: middle;
+		margin: -10px 0px 0px 10px;
+	}
+
+	.con-r-t p {
+		display: inline-block;
+		width: 150px;
+		margin: 15px 0px 0px 3px;
+	}
+
+	.con-r-b {
+		width: 230px;
+		height: 93px;
+		background-color: #F7F7F7;
+		margin-top: 20px;
+		overflow: hidden;
+	}
+
+	.con-r-b h3 {
+		height: 40px;
+		font-size: 14px;
+		line-height: 40px;
+		color: #999999;
+		text-align: center;
+		font-weight: normal;
+	}
+
+	.con-r-b .img1 {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 48px;
+	}
+
+	.con-r-b a {
+		text-decoration: none;
+		font-size: 14px;
+		color: #3F9CE0;
+		margin-top: 50px;
+	}
+
+	.con-r-b input {
+		display: block;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		margin-left: -40px;
+	}
+/*右侧内容区结束*/
+
+/*建筑材料左开始*/
+	.title {
+		height: 34px;
+		font-size: 14px;
+		color: #444444;
+		line-height: 34px;
+		font-weight: bold;
+		border-top: 2px solid #C3D7E4;
+		padding-left: 22px;
+		background-color: #ECF1F7;
+		margin: 11px 0px;
+	}
+
+	.materials {
+		width: 727px;
+		border: 1px solid #D8D8D8;
+		padding-top: 4px;
+		float: left;
+	}
+
+	.commodity {
+		display: inline-block;
+		width: 332px;
+		height: 142px;
+		padding: 11px 0px 14px 26px;
+	}
+
+	.commodity div {
+		display: inline-block;
+		height: 142px;
+		position: relative;
+		float: left;
+	}
+
+	.commodity img {
+		display: inline-block;
+		border: 1px solid #D8D8D8;
+		padding: 18px 3px;
+	}
+
+	.commodity input {
+		display: inline-block;
+		position: absolute;
+		bottom: 0px;
+	}
+
+	.information {
+		display: inline-block;
+		width: 212px;
+		height: 143px;
+		margin-left: 10px;
+		float: left;
+	}
+
+	.information h4 {
+		display: inline-block;
+		height: 38px;
+		line-height: 38px;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	
+	.information p {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.information .disc {
+		margin-left: 15px;
+	}
+
+	.price {
+		font-size: 20px;
+		line-height: 60px;
+		color: #A10000;
+		margin-right: 30px;
+	}
+
+	.oldprice {
+		font-size: 12px;
+		line-height: 30px;
+		padding: 20px 10px;
+	}
+
+	.number {
+		color: #A10000;
+	}
+
+	hr {
+		width: 98%;
+		border-top: 1px solid #D8D8D8;
+		margin: auto;
+	}
+/*建筑材料左结束*/
+
+/*建筑材料右开始*/
+	.materials2 {
+		width:228px;
+		height: 344px;
+		float: right;
+		border: 1px solid #D8D8D8;
+	}
+
+	.materials2 h3 {
+		font-size: 12px;
+		height: 28px;
+		line-height: 28px;
+		padding-left: 15px;
+		background-color: #FAFAFA;
+		border-bottom: 1px solid #D8D8D8;
+	}
+
+	.materials2 ul {
+		margin: 12px 0px 0px 26px;
+	}
+
+	.materials2 li {
+		list-style: url(images/fk.gif);
+	}
+
+	.materials2 a {
+		text-decoration: none;
+		color: #000000;
+		line-height: 24px;
+	}
+/*建筑材料右结束*/
+
+/*安全座椅开始*/
+	.two {
+		display: inline-block;
+	}
+
+	.jk {
+		height: 25px;
+		width: 722px;
+		line-height: 25px;
+		background: url(images/jk.gif) no-repeat;
+	}
+	.jk a {
+		float: right;
+	}
+
+	.da {
+		width: 720px;
+		height: 283px;
+		padding: 5px 0px 13px 0px;
+		border: 1px solid #CACACA;
+		border-top: 0px;
+	}
+
+	.sp {
+		width: 163px;
+		height: 283px;
+		padding: 0px 12px 0px 5px;
+		float: left;
+		text-align: center;
+	}
+
+	.sp h3 {
+		line-height: 20px;
+		margin-top: 5px;
+	}
+
+	.sp p {
+		color: #999999;
+		line-height: 24px;
+	}
+
+	.sp .zx {
+		color: #A10000;
+		font-size: 16px;
+	}
+	
+	.page-depth .r3 {
+		margin-left: 17px;
+	}
+/*安全座椅结束*/
+
+/*建材商社开始*/
+	.ss {
+		width: 230px;
+		float: right;
+	}
+
+	.ss h3 {
+		height: 30px;
+		border-bottom: 1px solid #E1E2E2;
+		background-color: #F8F8F8;
+		font-size: 14px;
+		line-height: 30px;
+		padding-left: 10px;
+	}
+
+	.nr {
+		margin-top: 11px;
+	}
+
+	.nr img {
+		margin: 3px;
+		float: left;
+	}
+
+	.nr p {
+		line-height: 21px;
+		color: #777777;
+		text-indent: 2em;
+	}
+
+	.nr a {
+		display: block;
+		text-decoration: none;
+		color: #444444;
+		line-height: 21px;
+	}
+
+	.nr span {
+		color: #999999;
+	}
+/*建材商社结束*/
+
+/*友情链接开始*/
+	.link {
+		height: 103px;
+		margin-top: 18px;
+		border-top: 1px solid #DDDDDD;
+	}
+
+	.link .kk {
+		height: 6px;
+		background-color: #FBFBFB;
+		margin-bottom: 17px;
+	}
+
+	.link p {
+		float: left;
+		width: 60px;
+		padding-left: 6px;
+		line-height: 26px;
+		color: #999999;
+	}
+
+	.link .a {
+		float: left;
+		width: 890px;
+	}
+	.link a {
+		text-decoration: none;
+		line-height: 26px;
+		color: #666666;
+	}
+/*友情链接结束*/
+
+/*footer开始*/
+	footer {
+		height: 76px;
+		padding: 9px 0px 6px;
+		border-top: 3px solid #0A7EC3;
+	}
+
+	footer p {
+		font-size: 12px;
+		line-height: 27px;
+		text-align: center;
+	}
+
+	footer a {
+		text-decoration: none;
+		color: #444444;
+		font-size: 12px;
+		line-height: 27px;
+		text-align: center;
+	}
+
+	footer span {
+		font-size: 14px;
+		color: #CCCCCC;
+	}
+/*footer结束*/

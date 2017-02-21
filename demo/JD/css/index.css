@@ -1,0 +1,293 @@
+
+/*商品分类部分start*/
+.classify {
+    height: 44px;
+    border-bottom: 2px solid #C81623;
+    position: relative;
+}
+
+.classify-banner {
+    height: 0px;
+}
+
+.classify-banner a {
+    display: block;
+    width: 100%;
+    height: 603px;
+    position: absolute;
+    top: 44px;
+    z-index: -1;
+    background: url(../images/banner.jpg) no-repeat top center;
+}
+
+.classify-l {
+    width: 210px;
+    height: 511px;
+    background-color: #C81623;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+}
+
+.classify-l .classify-l-all {
+    display: block;
+    height: 46px;
+    font: 400 14px/46px "microsoft yahei";
+    padding-left: 10px;
+    background-color: #B1191A;
+}
+
+.classify-l li {
+    color: #FFFFFF;
+    font: 12px/31px "microsoft yahei";
+    padding: 0 10px;
+    border-left: 1px solid #B1191A;
+    background-color: #C81623;
+}
+
+.classify-l li:hover {
+    background-color: #FFFFFF;
+}
+
+.classify-l li:hover a {
+    color: #C81623;
+}
+
+.classify-l a {
+    color: #FFFFFF;
+    font: 12px/31px "microsoft yahei";
+}
+
+.classify-l i {
+    float: right;
+}
+
+.classify-c {
+    margin-left: 210px;
+}
+
+.classify-c li {
+    float: left;
+    position: relative;
+}
+
+.classify-c a {
+    display: inline-block;
+    font: 14px/44px "microsoft yahei";
+    padding: 0 20px;
+}
+
+.classify-c img {
+    position: absolute;
+    top: 0px;
+    right: -8px;
+}
+
+.classify-r {
+    font: 18px/44px "microsoft yahei";
+    margin-right:10px;
+    float: right;
+}
+/*商品分类部分end*/
+
+/*轮播图部分start*/
+.slider {
+    margin: 12px 10px 0 220px;
+    float: left;
+    position: relative;
+}
+
+.slider:hover a {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.slider ul {
+    width: 132px;
+    height: 22px;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    margin-left: -66px;
+}
+
+.slider li {
+    float: left;
+    color: #FFFFFF;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    margin: 2px;
+    background-color: #3E3E3E;
+    border-radius: 10px;
+}
+
+.slider li:hover {
+    cursor: pointer;
+    background-color: #C81623;
+}
+
+.slider .current { /*通过js控制方便*/
+    cursor: pointer;
+    background-color: #C81623;
+}
+/*轮播图部分end*/
+
+/*信息部分start*/
+.information {
+    color: #666666;
+    margin-top: 12px;
+    float: left;
+    border: 1px solid #E4E4E4;
+}
+
+.information .information-title {
+    width: 221px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #E4E4E4;
+}
+
+.information h1 {
+    float: left;
+    font: 400 16px/43px "microsoft yahei";
+}
+
+.information-top {
+    width: 248px;
+    height: 200px;
+    border-bottom: 1px dashed #E4E4E4;
+}
+
+.information-top .more {
+    font: 14px/43px "microsoft yahei";
+    float: right;
+}
+
+.information-top ul {
+    padding:10px 0 0 15px;
+}
+
+.information-top ul span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.information-top li a {
+    display: inline-block;
+    line-height: 27px;
+}
+
+.information-bottom {
+    width: 248px;
+    height: 252px;
+    overflow: hidden; /*隐藏掉ul的边框*/
+
+}
+
+.information-bottom ul {
+    width: 255px; /*为了一排能放下四个li*/
+    height: 252px;
+}
+
+.information-bottom a {
+    width: 62px;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    border-top: none;
+    float: left;
+    margin: -1px 0 0 -1px;  /*移动盒子，使边框重叠*/
+    position: relative;
+}
+
+.information-bottom span {
+    display: block;
+    text-align: center;
+    padding-top: 47px;
+}
+
+.information-bottom i {
+    width: 25px;
+    height: 25px;
+    background: url(../images/fly.png) no-repeat;
+    position: absolute;
+    top: 16px;
+    left: 18px;
+}
+
+.information-bottom-service2 i {
+    background-position: 0px -25px;
+}
+
+.information-bottom-service3 i {
+    background-position: 0px -50px;
+}
+
+.information-bottom-service4 i {
+    background-position: 0px -75px;
+}
+
+.information-bottom-service5 i {
+    background-position: 0px -100px;
+}
+
+.information-bottom-service6 i {
+    background-position: 0px -125px;
+}
+
+.information-bottom-service7 i {
+    background-position: 0px -150px;
+}
+
+.information-bottom-service8 i {
+    background-position: 0px -175px;
+}
+
+.information-bottom-service9 i {
+    background-position: 0px -200px;
+}
+
+.information-bottom-service10 i {
+    background-position: 0px -225px;
+}
+
+.information-bottom-service11 i {
+    background-position: 0px -250px;
+}
+
+.information-bottom-service12 i {
+    background-position: 0px -275px;
+}
+
+.send {
+    background: url(../images/send.png) no-repeat right top;
+}
+
+/*信息部分end*/
+
+/*今日推荐部分start*/
+.today {
+    padding-top: 10px;
+}
+
+.today-image {
+    float: left;
+    width: 210px;
+    height: 151px;
+    background: url(../images/today.png) no-repeat -213px -136px;
+}
+
+.today-buy {
+    width: 1000px; 
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.today-buy ul {
+    width: 5000px; /*放一排图片播放*/
+}
+
+.today-buy li {
+    float: left;
+    padding-left: 1px;
+}
+/*今日推荐部分end*/

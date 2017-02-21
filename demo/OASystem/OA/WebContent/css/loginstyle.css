@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/*统一设置*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*body背景图片*/
+body {
+	background: url(../images/14.jpg) no-repeat;
+	background-size: cover;
+}
+
+/*主体登陆区*/
+#main {
+	width: 650px;
+	min-height: 400px;
+	background:rgba(10,10,10,0.5);
+	margin: 270px auto;
+	border-top: 8px solid;
+	border-radius: 5px;	
+	position: relative;
+	border-left:0.001px solid;
+	border-right: 0.001px solid;
+	border-color:rgba(10,10,10,0.5); 
+}
+
+/*头像区*/
+#head_pic {
+	width: 184px;
+	height: 184px;
+	background: url(../images/3.jpg) no-repeat;
+	background-size:cover;
+	border-radius: 50%;
+	margin: 60px auto;
+	position:absolute;
+	left:40px;		
+}
+
+/*账号密码区*/
+#account {
+	width: 270px;
+	position:absolute;
+	padding: 5px;	
+	margin: 40px auto;
+	right:50px;	
+}
+
+#account .input {
+	height: 60px;
+	right:30px;
+	top:60px;
+	line-height: 45px;
+	position: relative;
+	
+}
+
+#account .input1 {
+	height: 60px;
+	right:30px;
+	top:80px;
+	line-height: 45px;
+	position: relative;
+	
+}
+
+#account .input input {
+	border: none;
+	outline: none;
+	color: #FFE1A3;
+	font-size: 16px;
+	width: calc(100% - 10px);
+	height: 45px;
+	background:rgba(10,10,10,0.2);
+	padding: 0 5px;
+	border-radius: 5px;
+	right:20px;	
+}
+
+#account .input1 input {
+	border: none;
+	outline: none;
+	color: #FFE1A3;
+	font-size: 16px;
+	width: calc(100% - 10px);
+	height: 45px;
+	background:rgba(10,10,10,0.2);
+	padding: 0 5px;
+	border-radius: 5px;
+	right:20px;	
+}
+
+/*按钮*/
+.btn1 {
+	width: 80%;
+	height: 40px;
+	display: block;
+	margin: 300px auto;
+	background:rgba(10,10,10,0.2);
+	color: #FFE1A3;
+	border: none;
+	outline: none;	
+	cursor: pointer;
+	border-radius: 5px;
+	right:30px;
+
+}
+
+.btn1:active {
+	position: relative;
+	top:2px;
+}
+
+/*底部区域*/
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;	
+	border-top: 1px solid #ccc;
+	border-bottom: 8px solid #0cc;
+	border-color:rgba(10,10,10,0.5); 
+}
+
+#footer a {
+	color: #B8B4B2;
+	text-decoration: none;
+	font-size: 14px;
+
+}

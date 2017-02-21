@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pet</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="scripts/modernizr.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/basic.css" />
+</head>
+<body>
+	<header>
+		<img src="images/logo.jpg" />
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="live.html">Live</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<h1>Contact us</h1>
+
+		<form method="post" action="submit.html">
+			<fieldset>
+				<legend>Contact</legend>
+				<p>
+					<label for="name">Name: </label>
+					<input type="text" id="name" name="name" placeholder="Your name" required="required" />
+				</p>
+				<p>
+					<label for="email">Email: </label>
+					<input type="email" id="email" name="email" placeholder="Your email" required="required" />
+				</p>
+				<p>
+					<label for="message">Message: </label>
+					<textarea cols="60" rows="7" id="message" name="message" placeholder="Your message" required="required"></textarea>
+				</p>
+				<p>
+					<input type="submit" value="sure" />
+					<input type="reset" value="reset" />
+				</p>
+			</fieldset>
+		</form>
+
+	</article>
+
+	<script type="text/javascript" src="scripts/global.js"></script>
+</body>
+</html>

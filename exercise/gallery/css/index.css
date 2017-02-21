@@ -1,0 +1,36 @@
+body {
+	background-color: #cccccc;
+	padding: 50px 100px;
+}
+
+h1 {
+	background-color: transparent;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	float: left;
+	margin: 20px;
+}
+
+a{
+	text-decoration: none;
+	color: #eeeeee;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+img {
+	display: block;
+	clear: both;
+	margin: 0 auto;
+}
+
+a img {
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+}
