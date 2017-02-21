@@ -1,0 +1,88 @@
+#band img {
+	width: 900px;
+	height: auto;
+}
+
+#band {
+	width: 900px;
+	height: auto;
+	position: relative;
+}
+
+#band ul {
+	list-style: none;
+}
+
+#band a {
+	display: block;
+	position: absolute;
+	border: 1px solid transparent;
+	text-decoration: none;
+	color: #ccc;
+	text-indent: -1000em;
+}
+#band .outer {
+	display: block;
+	border: 1px solid transparent;
+}
+#band .inner {
+	display: block;
+	width: 100px;
+	height: 150px;
+	border: 1px solid transparent;
+}
+
+#band .name {
+	display: block;
+	width: 80px;
+	height: 25px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#band .jack:hover a,
+#band .mary:hover a,
+#band .john:hover a {
+	border-color: #000;
+	text-indent: 0;
+}
+#band .jack:hover .outer,
+#band .mary:hover .outer,
+#band .john:hover .outer {
+	border-color: #aaa;
+}
+#band .jack:hover .inner,
+#band .mary:hover .inner,
+#band .john:hover .inner {
+	border-color: #ccc;
+}
+#band .jack:hover .name,
+#band .mary:hover .name,
+#band .john:hover .name {
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	margin-left: -40px;
+	background-color: #000;
+}
+/*对各框定位*/
+#band .jack a {
+	top: 100px;
+	left: 75px;
+}
+
+#band .mary a {
+	top: 20px;
+	left: 450px;
+}
+
+#band .john a {
+	top: 100px;
+	left: 750px;
+}
+
+#band .mary .inner {
+	width: 150px;
+	height: 225px;
+}
+
