@@ -1,0 +1,81 @@
+#band img {
+	width: 900px;
+	height: auto;
+}
+
+#band {
+	position: relative;
+}
+
+#band li{
+	list-style: none;
+	position: absolute;
+}
+
+#band a {
+	display: block;
+	border: 1px solid transparent;
+	text-decoration: none;
+	color: #aaa;
+	font-size: 36px;
+}
+
+/*设置边框大小*/
+#band .hotspot {
+	display: block;
+	width: 100px;
+	height: 150px;
+	border: 1px solid transparent;
+}
+#band .mary .hotspot {
+	width: 150px;
+	height: 225px;
+}
+
+/*设置边框得到焦点时样式*/
+#band .jack:hover a,
+#band .mary:hover a,
+#band .john:hover a {
+	border-color: #000;
+	text-indent: 0;
+}
+#band .jack:hover .link,
+#band .mary:hover .link,
+#band .john:hover .link {
+	font-weight: bold;
+}
+
+/*对各框定位*/
+#band .jack {
+	top: 100px;
+	left: 75px;
+}
+
+#band .mary {
+	top: 20px;
+	left: 450px;
+}
+
+#band .john {
+	top: 100px;
+	left: 750px;
+}
+
+/*固定文字*/
+#band .link {
+	position: absolute;
+}
+#band .jack .link {
+	left: 1000px;
+	top: 100px;
+}
+
+#band .mary .link {
+	left: 625px;
+	top: 260px;
+}
+
+#band .john .link {
+	left: 325px;
+	top: 250px;
+}
