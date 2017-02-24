@@ -1,0 +1,131 @@
+/*初始化开始*/
+body, div, ul, li, img {
+	margin: 0;
+	padding: 0;
+}
+/*初始化结束*/
+
+/*清除浮动开始*/
+.clearfix:after,
+.clearfix:before {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+/*清除浮动结束*/
+
+/*整体轮播图区域开始*/
+#carousel {
+	width: 360px;
+	height: 490px;
+	margin: 60px auto;
+	position: relative;
+}
+/*整体轮播图区域结束*/
+
+/*大图整体部分开始*/
+#carousel .big {
+	width: 360px;
+	height: 360px;
+	position: absolute;
+}
+/*大图整体部分开始*/
+
+/*大图切换区域开始*/
+#carousel .big a {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+#carousel .prevArea {
+	left: 0;
+	width: 180px;
+	height: 360px;
+}
+#carousel .nextArea {
+	left: 180px;
+	width: 180px;
+	height: 360px;
+}
+/*大图切换区域结束*/
+
+/*大图按钮开始*/
+#carousel .big div {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	position: absolute;
+	font-size: 48px;
+	line-height: 50px;
+	font-weight: bold;
+	color: black;
+	background-color: #ccc;
+	cursor: pointer;
+}
+#carousel .prevBtn {
+	left: 0;
+	top: 50%;
+	margin-top: -25px;
+	opacity: 0;
+	filter: alpha(opacity: 0);
+}
+#carousel .nextBtn {
+	right: 0;
+	top: 50%;
+	margin-top: -25px;
+	opacity: 0;
+	filter: alpha(opacity: 0);
+}
+/*大图按钮结束*/
+
+/*大图图片开始*/
+#carousel .big li {
+	width: 360px;
+	height: 360px;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#carousel .big img {
+	width: 360px;
+	height: 360px;
+}
+/*大图图片结束*/
+
+/*小图整体部分开始*/
+#carousel .imgs {
+	width: 360px;
+	border: 1px solid black;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+/*小图整体部分结束*/
+
+/*小图列表开始*/
+#carousel .imgs ul {
+	width: 600px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#carousel .imgs li {
+	list-style: none;
+	float: left;
+	margin: 10px 10px;
+	opacity: 0.5;
+	filter: alpha(opacity: 50);
+}
+#carousel .imgs img {
+	width: 100px;
+	height: 100px;
+}
+/*小图列表结束*/
