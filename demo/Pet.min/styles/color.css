@@ -84,6 +84,11 @@ th {
 /*live表格结束*/
 
 /*表单开始*/
+input:focus,
+textarea:focus {
+	background-color: #ffc;
+}
+
 .holder {
 	color: #ccc;
 }
