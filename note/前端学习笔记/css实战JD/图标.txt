@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+		获取图标：
+			网址/favicon.ico
+			( eg. www.jd.com/favicon.ico )
+
+
+		ico图标转换工具网站：
+
+			比特虫：bitbug.net

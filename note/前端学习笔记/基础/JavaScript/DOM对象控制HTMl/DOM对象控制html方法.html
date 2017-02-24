@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	div {
+		background-color: #cccccc;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<p name="pname">Hello</p>
+		<p name="pname">Hello</p>
+		<p name="pname">Hello</p>
+		<p name="pname">Hello</p>
+	</div>
+
+	<a id="aid" href="http://www.baidu.com">this is a link</a>
+
+
+	<script type="text/javascript">
+
+	// 访问子节点
+		// var childs = document.getElementsByTagName("div")[0].childNodes;
+		// childs[1].innerHTML = "childnode";
+
+		// childNodes个数（包括空白项五个换行）
+		// alert("div的childNodes个数："+childs.length);
+
+		// nodeType：元素element=1, 属性attr=2, 文本text=3, 注释comments=8, 文档document=9
+		// alert("nodeType："+childs[2].nodeType);
+
+	// 访问父节点
+		// var parent = document.getElementsByTagName("p")[0].parentNode;
+		// alert(parent.nodeName);
+
+	// 创建元素节点
+		// var anode = document.createElement("a");
+		// anode.href = "#";
+		// anode.innerHTML = "new node";
+		// document.getElementsByTagName("div")[0].appendChild(anode);
+
+	// 创建文本节点
+		// var tnode = document.createElement("text");
+		// tnode.innerHTML = "new text node";
+		// document.getElementsByTagName("div")[0].appendChild(tnode);
+
+	// 指定位置插入节点
+		// var parent = document.getElementsByTagName("div")[0]; 
+		// var child = document.getElementsByTagName("p")[0];
+		// var newnode = document.createElement("text");
+		// newnode.innerHTML = "new text node";
+
+		// parent.insertBefore(newnode, child);
+
+	// 删除节点
+		// var parent = document.getElementsByTagName("div")[0]; 
+		// parent.removeChild(parent.childNodes[1]);
+
+
+	// 获取name数组		
+		// var a = document.getElementsByName("pname");
+		// a[0].innerHTML = "word";
+
+	// 获取标签数组
+		// var a = document.getElementsByTagName("p");
+		// a[1].innerHTML = "word";
+
+	// 获取属性
+		// var anode = document.getElementById("aid");
+		// var attr = anode.getAttribute("href");
+		// alert(attr);
+
+	// 设置属性
+		// var anode = document.getElementById("aid");
+		// anode.setAttribute("title", "设置了title属性");
+
+	// 元素高度/宽度（不包括滚动条）
+		// var width = document.documentElement.offsetWidth || document.body.offsetWidth;
+		// var height = document.documentElement.offsetHeight || document.body.offsetHeight;
+		// alert("widht:" + width + " height:" + height);
+
+	// 元素高度/宽度（包括滚动条）
+		// var width = document.documentElement.scrollWidth || document.body.scrollWidth;
+		// var height = document.documentElement.scrollHeight || document.body.scrollHeight;
+		// alert("widht:" + width + " height:" + height);
+
+
+	</script>
+
+</body>
+</html>

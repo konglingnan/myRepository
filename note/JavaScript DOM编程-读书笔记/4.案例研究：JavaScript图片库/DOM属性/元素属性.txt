@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+		元素的属性：
+
+
+			1.element.childNodes   //返回数组
+
+			2.element.nodeType   //返回int
+
+			3.element.nodeValue   //必须是文本节点才有nodeValue，元素节点没有nodeValue
+
+			4.element.firstChild   //返回第一个子节点
+
+			5.element.lastChild   //返回最后一个子节点

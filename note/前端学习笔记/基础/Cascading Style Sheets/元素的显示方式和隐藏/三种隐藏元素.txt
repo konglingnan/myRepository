@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+		三种隐藏元素属性：
+
+			1.overflow: hidden; 将溢出部分隐藏。
+
+			2.display: none; 将元素直接隐藏，元素不占据页面位置。
+
+			3.visibility: hidden; 将元素直接隐藏，元素还占据原位置。

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		#father .son div {  /* id:1  class:1  标签:1 */ 
+			color: red;
+		}
+
+		#father .son .grandson {  /* id:1  class:2  标签:0 */ 
+			color: yellow;
+		}
+
+		#grandson {  /* id:1  class:0  标签:0 */ 
+			color: blue;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	优先级的权重计算：如果选择器混合使用，就数 id, class,标签的个数（不看本质，也不看混合顺序，但一定要命中对应标签）。<br /> 
+	
+		先比id数，再比class数，最后再比标签数。<br /> 
+		
+		如果权重也一样，就覆盖。<br />
+
+	权重值：id > class > 标签<br /> 
+	
+	
+	<div id="father" class="father">
+		<div id="son" class="son">
+			<div id="grandson" class="grandson">我是什么颜色？</div>
+		</div>
+	</div>
+	
+</body>
+</html>

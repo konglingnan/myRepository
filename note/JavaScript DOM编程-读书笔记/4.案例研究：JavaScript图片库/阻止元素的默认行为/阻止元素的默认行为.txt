@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+	事件处理函数的工作机制：
+
+		在给某个元素添加了事件处理函数后，一旦事件发生，相应的JavaScript代码就会得到执行。被调用的JavaScript代码可以返回一个值，这个值将被传递给那个事件处理函数。例如，我们可以给某个链接添加一个onclick事件处理函数，并让这个处理函数所触发的JavaScript代码返回布尔值true或false。这样一来，当这个链接被点击时，如果那段JavaScript代码返回的是true，onclick事件处理函数就会认为“这个链接被点击了”，反之，如果返回的值是false，onclick事件处理函数就会认为“这个链接没有被点击。”
+
+
+
+eg.	<a href="http://www.baidu.com/" onclick="return false;">百度访问拦截</a>

@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+		1.内容也透明
+			opacity: 0.8;
+			filter: alpha(opacity=80); /*兼容IE*/
+
+		2.内容不透明
+			rgba(0, 0, 0, 0.8);
+
+		3.png透明度（IE6不支持）
+			针对于IE6可以使用过滤器
+
+	.img-wrapper div{
+		filter:progid:DXImageTransform.Microsoft.AlphaImageLoader src='./img/shadow2.png', sizingMethod='crop');
+		background: none;
+}

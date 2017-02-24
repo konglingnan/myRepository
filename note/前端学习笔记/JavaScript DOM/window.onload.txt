@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+		当整个html文档完全加载成功后，会触发window.onload事件。
+
+		事件触发时，执行后面function里面的函数。
+
+
+
+
+
+
+		HTML文档顺序执行，如果在<head>的<script>内不加window.onload，则此段js代码最先执行，不能读取文档内容。但如果加上window.onload事件，此段js代码可以获取到html文档的任何元素。

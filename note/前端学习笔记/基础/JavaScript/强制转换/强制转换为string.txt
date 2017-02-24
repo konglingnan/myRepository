@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+		强制转换为string的几种方法：
+
+			1. String(a);
+
+			2. a.toString();

@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+		// 第1级DOM （可以修改任何元素的任何属性）（可移植性好）（推荐）
+
+		input.setAttribute("type", "button");
+
+
+
+
+
+
+		// 老方法，不是适用于所有元素（少用）
+
+		input.type = "button";

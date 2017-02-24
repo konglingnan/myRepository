@@ -1,0 +1,13 @@
+
+
+
+
+
+	对象检测：
+
+		为了解决浏览器的向后兼容，我们需要使用对象检测技术来验证当前这个浏览器是否理解我们所要使用的语句。
+
+
+	eg.
+		if(!document.getElementsByTagName) return false;
+		if(!document.getElementById) return false;

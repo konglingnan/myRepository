@@ -1,0 +1,47 @@
+
+
+
+
+
+
+		不设置父盒子高的情况下，浮动会对页面有影响。有时候为了消除浮动对页面的影响，我们需要清除浮动。
+
+
+
+		清除浮动的几种方法：
+
+			1.额外标签法。（使用方法：在需要清除浮动的地方加一个额外的标签，使用clear:both;样式进行清除）（不推荐使用，因为会平添大量的额外标签。）
+
+			2.使用overflow:hidden.（使用方法：在被浮动影响的元素样式中加入overflow:hidden;）
+			overflow:hidden原理：触动底层BFC(block formatting context，块级独立化上下文),分配独立渲染区域。
+			（不推荐使用，浮动与定位结合使用时会发生冲突。）
+
+			3.*使用伪元素清除。
+				（使用方法：在需要清除的位置加入clearfix类，并在css中加入以下代码。）
+				.clearfix:after｛
+					content: "";
+					height: 0;
+					display: block;
+					overflow: hidden;
+					visibility: hidden;
+					clear: both;
+				｝
+				.clearfix{
+					*zoom: 1;/*用来兼容IE6/7*/
+				}
+
+			4.使用双伪元素清除。（推荐）
+				（使用方法与3相同）
+
+				.clearfix:after, .clear:before{
+					content: "";
+					display: table;
+				}
+				.clearfix:after{
+					clear:both;
+				}
+				.clearfix{
+					zoom: 1;
+				}
+
+			5.设置高（不算清除浮动的方法，但可以消除浮动的影响）

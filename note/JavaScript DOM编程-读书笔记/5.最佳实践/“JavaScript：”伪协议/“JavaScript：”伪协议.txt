@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+
+		“真”协议用来在因特网上的计算机之间传输数据包，如HTTP协议（http://）、FTP协议（ftp://）等，伪协议则是一种非标准化的协议。“javascript:”伪协议让我们通过一个链接来调用JavaScript函数。
+
+
+eg. 
+	<a href="javascript:openWindow('http://www.baidu.com/');">open</a>

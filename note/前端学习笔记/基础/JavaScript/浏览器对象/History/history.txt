@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+		window.history对象包含浏览器的历史(url)的集合.
+
+
+
+		history的方法：
+
+			1.history.back() 与在浏览器点击后退按钮相同。
+
+			2.history.forward() 与在浏览器点击向前按钮相同。
+
+			3.history.go() 进入历史中的某个页面。

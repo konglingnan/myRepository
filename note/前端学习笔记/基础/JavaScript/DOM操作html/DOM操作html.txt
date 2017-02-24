@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+		DOM操作html：
+
+
+			1.改变html输出流。
+				在文档加载完成后使用document.write()会覆盖原文档。
+
+			2.寻找元素
+				通过id/标签名
+
+			3.改变html内容
+				innerHTML
+
+			4.改变html属性
+
+				(eg. document.getElementById("id").src="2.jpg"; )

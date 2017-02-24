@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	screen.availWidth: <span id="aw"></span><br />
+	screen.availHeight: <span id="ah"></span><br />
+	screen.width: <span id="w"></span><br />
+	screen.height: <span id="h"></span><br />
+
+	<script type="text/javascript">
+		function demo(){
+			document.getElementById("aw").innerHTML = window.screen.availWidth;
+			document.getElementById("ah").innerHTML = window.screen.availHeight;
+			document.getElementById("w").innerHTML = window.screen.width;
+			document.getElementById("h").innerHTML = window.screen.height;
+		}
+		demo();
+    </script>
+
+</body>
+</html>

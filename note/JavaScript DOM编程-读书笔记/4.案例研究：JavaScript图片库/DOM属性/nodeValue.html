@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var pid = document.getElementById("pid");
+		var iid = document.getElementById("iid");
+
+		//p节点value为空
+		alert(pid.nodeValue);   //null
+		//需要得到文本节点
+		alert(pid.childNodes[0].nodeValue);   //事件处理
+
+		//p节点value为空
+		alert(iid.nodeValue);   //null
+		//需要得到文本节点
+		alert(iid.childNodes[0]);   //input无子节点
+
+	}
+	</script>
+</head>
+<body>
+
+	<p id="pid">事件处理</p>
+
+	<input id="iid" value="hahaha" />
+	
+</body>
+</html>

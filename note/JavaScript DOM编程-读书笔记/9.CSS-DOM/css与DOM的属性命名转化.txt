@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+	css中使用连字符命名：font-family
+	DOM中一律采用驼峰命名：fontFamily
+
+	所以DOM中如果要使用css的属性，需要将其名字变为驼峰命名。
+
+
+
+
+	eg.     node.style.backgroundColor

@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>04</title>
+	<script type="text/javascript" src="14.js"></script>
+	<script type="text/javascript" >
+
+
+//object的创建方法：
+
+	// 1.工厂方法
+
+	// var person1 = new Object();
+	// person1.name="工厂方法创建";
+	// person1.age=1;
+	// person1.show=function(){
+	// 	document.writeln(this.name+" "+this.age+"<br />");
+	// }
+	// person1.show();
+
+
+	// 2.字面量声明 JSON写法
+
+	// var person2={
+	// 	name:"对象字面量",
+	// 	age:2,
+	// 	show:function(){
+	// 		document.writeln(this.name+" "+this.age+"<br />");
+	// 	}
+	// };
+	// person2.show();
+
+
+	// 3.类(原型对象)(其实也是对象，它实际上是Function类的一个实例)
+
+	// function Person(name, age){
+	// 	this.name=name;//公有，可在外部调用
+	// 	var age=age;//私有,只能在类内使用，不可调用
+	// 	this.showGY=function(){//公有
+	// 		document.writeln(this.name+" "+this.age);
+	// 	}
+	// 	function showSY(){//私有
+	// 		document.writeln(this.name+" "+this.age);
+	// 	}
+	// }
+	// var people = new Person("lisi",13);
+
+	// 函数构造器方法
+	// function People(){
+	// }
+	// People.prototype = {
+	// 	name: "aaa",
+	// 	age: 11,
+	// 	eat: function (){
+	// 		alert("eee");
+	// 	}
+	// }
+
+	// var p = new People();
+	// alert(p.age);   //11
+	// alert(People.age);   //undefined
+
+	// 继承
+	// function Student(){
+	// }
+	// Student.prototype = new People();
+	// var s = new Student();
+
+
+	// //对象的特别说明
+	// function Person(){}
+	// document.writeln("Person.constructor: "+Person.constructor+"<br />");
+	// var p=new Person();
+	// document.writeln("p.constructor: "+p.constructor+"<br />");
+	// document.writeln("typeof p :"+typeof p+"<br />");
+	// document.writeln("typeof Person: "+(typeof Person)+"<br />");
+
+
+	// //var b = "123"  等于  var b = new String("123");
+	// b = "123";
+	// document.writeln("typeof b: "+typeof b+"<br />");
+
+
+	// //如何判断p的数据类型是不是Person
+	// function Person(){}
+	// var p=new Person();
+	// if(p instanceof Person){
+	// 	document.writeln("p instanceof Person方法：p是Person类型"+"<br />");
+	// }
+	// if(p.constructor==Person){
+	// 	document.writeln("p.constructor==Person方法：p是Person类型"+"<br />");
+	// }
+
+
+
+
+	var p=new Person("小明",10);
+	document.writeln("p.showGY():");
+	p.showGY();
+	document.writeln("<br />p.showSY():");
+	p.showSY();
+
+	</script>
+</head>
+<body>
+</body>
+</html>

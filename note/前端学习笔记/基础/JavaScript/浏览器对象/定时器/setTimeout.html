@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>setTimeout</title>
+</head>
+<body>
+
+	<p id="pid"></p>
+
+	<button onclick="stop()">stop</button>
+
+	<script type="text/javascript">
+	
+	var begin;
+
+	function myTime(){
+		var myDate = new Date();
+		var s = myDate.toLocaleTimeString();
+		document.getElementById("pid").innerHTML=s;
+		begin = setTimeout(myTime,1000);
+	}
+
+	function stop(){
+		clearInterval(begin);
+	}
+
+	myTime();
+
+    </script>
+
+</body>
+</html>

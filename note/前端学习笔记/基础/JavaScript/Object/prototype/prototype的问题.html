@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function People(name){
+			this.name=name;
+		}
+		
+		// prototype所有对象共享，除非自行修改，并且修改形式必须为赋值
+
+		People.prototype.friends = ["john", "koko"];
+
+	var p1 = new People("Amy");
+	var p2 = new People("Lucy");
+
+	p2.friends.push("Lily");
+
+	alert(p1.friends);  //["john", "koko"， "Lily"]
+	alert(p2.friends);  //["john", "koko"， "Lily"]
+
+
+	// 如果遇到以上问题，需要将这个属性改为私有形式this.
+
+    </script>
+
+</body>
+</html>

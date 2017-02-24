@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onLoad="setInterval('show()', 500)">
+
+	<img name="change" src="1.jpg" />
+	<p id="pid"></p>
+
+	<script type="text/javascript">
+
+	var images = []; //用其提前载入图片
+	for(var i=0; i<5; i++){
+		images[i] = new Image();
+		images[i].src = "images/"+i+".png";
+	}
+
+	var index = 0;
+	function show(){
+		document.change.src=images[index].src;
+		index = (index+1)%5;
+	}
+
+	</script>
+
+</body>
+</html>

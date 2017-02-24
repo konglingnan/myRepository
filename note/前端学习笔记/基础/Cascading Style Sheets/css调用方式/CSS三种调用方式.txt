@@ -1,0 +1,20 @@
+﻿
+
+
+
+
+		CSS的调用方式：
+
+			1.内联样式
+
+			2.嵌入样式
+
+			3.外部引用（外联样式.css与html的解析同时进行）
+				<link rel="stylesheet" href="1.css" />
+
+			4.导入
+				<style> @import url("1.css"); </style>
+
+		优先级：(离元素越近越高)
+
+			!important > 内联样式 > 内嵌样式 > 外部引用 > 导入

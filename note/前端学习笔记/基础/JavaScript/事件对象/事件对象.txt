@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+		事件对象：
+
+			在触发DOM事件的时候都会产生一个对象。
+
+
+		事件对象event：
+
+			event的属性
+				1.event.type 获取事件的类型
+				2.event.target 获取事件的目标
+
+			event的方法
+				1.event.stopPropagation() 停止事件冒泡的传播
+				2.event.preventDefault() 组织事件的默认行为
+

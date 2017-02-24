@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	hostname: <span id="hn"></span><br />
+	panthname: <span id="pn"></span><br />
+	port: <span id="pt"></span><br />
+	protocol: <span id="ptc"></span><br />
+	href: <span id="hf"></span><br />
+	<button id="btn">加载新文档</button>
+
+	<script type="text/javascript">
+		document.getElementById("btn").addEventListener("click", doAssign);
+		function doAssign(){
+			window.location.assign("http://www.baidu.com");
+		}
+		function demo(){
+			document.getElementById("hn").innerHTML = window.location.hostname;
+			document.getElementById("pn").innerHTML = window.location.panthname;
+			document.getElementById("pt").innerHTML = window.location.port;
+			document.getElementById("ptc").innerHTML = window.location.protocol;
+			document.getElementById("hf").innerHTML = window.location.href;
+		}
+		demo();
+    </script>
+
+</body>
+</html>

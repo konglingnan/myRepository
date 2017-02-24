@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>字符串</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	var str = "Hello Word";
+
+// 属性
+// 原型
+	// alert(str.prototype); 
+// 构造函数
+	// alert(str.constructor); 
+
+// 方法
+	var s;
+// 查找字符串，返回起始位置（没有则返回-1）
+
+	// 从前面开始找，找第一次出现的位置
+	// s = str.indexOf("o"); 
+
+	// 从后面开始找，找最后一次出现的位置
+	// s = str.lastIndexOf("o"); 
+
+// 查找字符串，返回起始位置（没有则返回-1） * 强制正则匹配模式。
+	// var s1 = "123456.abc";
+
+	// var a1 = s1.indexOf("."); //6
+	// var a2 = s1.search("."); //0
+	// alert(a1);
+	// alert(a2);
+
+	// var b1 = s1.indexOf("\\."); //-1
+	// var b2 = s1.search("\\."); //6
+	// alert(b1);
+	// alert(b2);
+
+// 匹配
+	// var s1 = str.match("Wo");
+	// var s2 = str.match("ww");
+	// alert(s1); //Wo
+	// alert(s2); //null
+
+// 替换
+	// s = str.replace("Word", "konglingnan"); 
+
+// 大小写转换 
+	// var s1 = str.toUpperCase();
+	// var s2 = str.toLowerCase();
+	// alert(s1);
+	// alert(s2);
+
+// 根据所给标志拆分成数组
+	// s = str.split(" ");
+	// alert(s[0]);
+
+// 获取第n个字符
+	// s = str.charAt(1);
+
+// 获取第n个字符的ASCⅡ码
+	// s = str.charCodeAt(1);
+
+// 连接两个或多个数组
+	// var s1 = [
+	// "111",
+	// "222"
+	// ];
+	// var s2 = [
+	// "aaa",
+	// "bbb"
+	// ];
+	// s = str.concat(s1, s2);
+
+// 类方法，将一个编码转换成字符
+	// s = String.fromCharCode(65);
+
+// 按位切取字符
+	// s = str.slice(0, 2); //He (0,1)
+
+// 从第n位开始截取到末尾 
+	// s = str.substring(2);
+	// s = str.substr(2);
+
+// 从第n位截取到第m位之前
+	// s = str.substring(0, 2);
+
+// 从第n位开始截取，截取m长
+	// s = str.substr(1, 2);
+
+// 从倒数第n位开始往后截取，截取m长
+	// s = str.substr(-3, 2);
+
+// 返回指定对象的原始值(每个JS固有对象的valueOf方法定义不同)
+	// s = str.valueOf(); //字符串值
+
+
+
+
+	alert(s);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	.div1 {
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+		position: relative;
+		top: 0px;
+		left: 0px;
+	}
+	.div2 {
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+		position: relative;
+		top: -50px;
+		left: 50px;
+		
+		/*position的任何属性值都可以设定z-index*/
+		z-index: 99;/*确定它在z轴的层数*/
+	}
+	.div3 {
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		position: relative;
+		top: -300px;
+		left: 100px;
+	}
+	</style>
+</head>
+<body>
+	本来应该3在最上面
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+</body>
+</html>

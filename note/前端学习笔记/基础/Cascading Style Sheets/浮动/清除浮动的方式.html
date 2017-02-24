@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.main-div{
+		width: 400px;
+		height: 200px;
+		background-color: red;
+	}
+
+				.clearfix:after{
+					content: "";
+					height: 0;
+					line-height: 0;
+					display: block;
+					visibility: hidden;
+					clear: both;
+				}
+				.clearfix{
+					zoom: 1;/*用来兼容IE*/
+				}
+
+	.div1 {
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+		float: left;
+	}
+	.div2 {
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+		float: left;
+	}
+	.last {
+		width: 400px;
+		height: 200px;
+		background-color: yellow;
+	}
+	</style>
+</head>
+<body>
+	<div class="main-div clearfix">
+		<div class="div1"></div>
+		<div class="div2"></div>
+	</div>
+	<div class="last"></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+	var arr = [];
+	arr["a"] = "aaa";
+	arr["b"] = "bbb";
+	arr["c"] = "ccc";
+	arr[3] = "ddd";
+	for(var i in arr){
+		alert(i);  //3, a, b, c
+	}

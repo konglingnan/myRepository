@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+		margin外边距的叠加：
+
+
+
+			1.两个盒子并列关系：上面盒子的margin-bottom会和下面盒子的margin-top发生重叠。（margin-right和margin-left不会）
+
+
+			2.margin的塌陷：两个包含关系的盒子，如果在子盒子内设置magin-top，父盒子会跟自盒子一起向下掉。（如果一个盒子高度为0，它的上下外边距也会叠加成一个偏大的。）
+
+
+
+			margin的塌陷解决办法：
+
+				1.给父盒子设置border。（推荐）
+				2.给父盒子设置overflow:hidden。（推荐）
+				4.把子盒子显示方式改为inline-block。
+				3.给子盒子加浮动（block——>inline-block）
+
+
+
+
+
+
+
+		margin外边距的叠加的好处：
+
+			文本的边距不会不统一。（中间每排的上下边距都会叠加，第一排的上边距会和下面相同）

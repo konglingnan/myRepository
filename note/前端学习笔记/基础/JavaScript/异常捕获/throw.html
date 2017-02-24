@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function a() {
+		try{
+			if(document.getElementById("txt").value==""){
+				throw "自定义错误！";
+			}
+		}catch (err){
+			alert(err);
+		}
+	}
+	</script>
+</head>
+<body>
+	<input id="txt" type="text" />
+	<input type="button" value="send" onclick="a()" />
+</body>
+</html>

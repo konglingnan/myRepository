@@ -1,0 +1,19 @@
+
+
+
+
+
+		在javascript中，数据类型根据存储位置分为两大类：
+
+
+			简单数据类型——>值类型
+					(string, number, boolean, undefined)
+
+			复杂数据类型——>引用类型
+					(null, Array, object, function)
+
+
+
+		一般情况下，简单数据类型存储于内存的栈中。
+
+		一般情况下，复杂数据类型存储于内存的堆中。

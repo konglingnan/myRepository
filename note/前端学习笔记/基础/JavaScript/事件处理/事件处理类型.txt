@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+		事件处理：
+
+			1.html事件处理
+				<button onclick="hello()" >sure</button>
+
+			2.DOM0级事件处理
+				x.onclick=hello;
+
+			3.DOM2级事件处理（推荐）
+				x.addEventListener("click", hello);
+				x.removeEventListener("click", hello);
+
+				x.addEventListener("click", hello, true);
+				true: 事件捕获
+				false: 事件冒泡
+
+			4.IE事件处理
+				x.attackEvent("onclick", hello);
+				x.detackEvent("onclick", hello);

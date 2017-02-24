@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// var a = new Array();
+		// a[0] = 81;
+		// a[1] = "haha"
+
+		// console.log(a[0] + "   " + typeof a[0]);
+		// console.log(a[1] + "   " + typeof a[1]);
+		// console.log(a[2] + "   " + typeof a[2]);
+
+
+		var a = [6, 1, 5, 3];
+		var b;
+
+	// 排序
+		// b = a.sort(); //正序
+
+		b = a.sort(function(a, b){//反序
+			return b-a;
+		});
+		
+		alert(b);
+
+	// 末尾追加元素(返回长度)
+		// b = a.push("aaa");
+		// alert(a);
+		// alert("lenth: " + b);
+
+	// 翻转
+		 // b = a.reverse();
+		 // alert(b);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

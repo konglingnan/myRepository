@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+		获取元素属性：
+
+			aNode.getAttribute("href");
+
+
+
+
+		设置元素属性：
+
+			aNode.settAttribute("href", "http://www.baidu.com/");

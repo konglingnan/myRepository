@@ -1,0 +1,24 @@
+
+
+
+
+
+		DOM：Document Object Model
+
+		D：文档-html文档或xml文档
+
+		O：对象—document对象的属性和方法
+
+		M：模型
+
+
+
+
+
+		DOM是针对html的基于树的API
+
+		DOM树：节点的层次
+
+		DOM把一个文档表示为一棵家谱树
+
+		DOM定义了node的接口以及许多种节点类型来表示XML节点的多个方面

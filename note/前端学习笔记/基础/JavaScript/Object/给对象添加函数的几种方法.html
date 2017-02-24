@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>5-4</title>
+	<script type="text/javascript">
+
+	function Person(){}
+	var p1 = new Person();
+	var p2 = new Person();
+
+////////////给单个对象分配函数/////////////////////
+	//对象p1独占show方法
+	p1.abc=function show(){
+		document.write("独占"+"<br />");
+	}
+	p1.abc();
+
+	//将show2方法动态分配给对象p2
+	function show2(){
+		document.write("动态分配"+"<br />");
+	}
+	p2.abc=show2;
+	p2.abc();
+
+/////////////给所有对象添加函数////////////////
+	//内部添加
+	var p3 = new Person();
+	function Person(){
+		this.abc=function(){
+			document.write("内部添加this.abc=function(){}"+"<br />");
+		}
+	}
+
+	//外部添加
+	Person.prototype.abc=function(){
+		document.write("外部添加Person.prototype.abc=function(){}"+"<br />");
+	}
+	p3.abc();
+
+	//////////JS不支持重载//////////////////
+	function test(){
+		document.write("test()"+"<br />");
+	}
+	function test(a){
+		document.write("test(a)"+"<br />");
+	}
+	//只认识后定义的test(a)
+	test();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	.div1 {
+		width: 300px;
+		height: 300px;
+		background-color: pink;
+
+		overflow: auto;
+/*
+		overflow: scroll;
+		overflow: hidden;
+*/		
+	}
+	.div2 {
+		width: 300px;
+		height: 300px;
+		background-color: blue;
+	}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<br />无空格的英文字母，浏览器会将其当作一个单词来解析，所以横向会超出，而汉字不会。<br /><br />有空格不会超出。<br /><br />文字过多会向下溢出，影响布局。<br /><br />sdaffafafknlflkadslfjlsadhifsadfsdfsdfsadfasfsafsaa afa sds afs asadfsfa dfsfafds afsaf sdafs dadfsdf dsfasf dsfasf dsfas sdaf ds fafds afsaf sdafs dadfsdf dsfasf dsfasf dsfas sdaf ds fafds afsaf sdafs dadfsdf dsfasf dsfasf dsfas sdaf ds afsaf sdsfasf dsfas sdaf </div>
+	<div class="div2">
+		<h1>用overflow解决。</h1>
+	</div>
+
+</body>
+</html>

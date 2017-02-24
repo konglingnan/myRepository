@@ -1,0 +1,17 @@
+
+
+
+
+
+		节点（node）：来源于网络理论，代表网络中的一个连接点。网络是由节点构成的集合。
+
+
+
+
+
+		<p title="a paragraph">hello world!</p>
+
+
+		父节点： 元素节点：p
+		子节点： 属性节点：title="a paragraph"
+			 文本节点：hello world!

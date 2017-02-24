@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+
+	1.尽量少访问DOM和尽量减少标记
+
+		不管什么时候，只要是查询DOM中的某些元素，浏览器都会搜索整个DOM树，从中查找可能匹配的元素。
+
+		例如：document.getElementsByTagName("a")，每执行一次就会遍历一遍DOM树，如果执行多次的话，就会遍历多遍DOM树。所以需要这样写：var links = document.getElementsByTagName("a")，后面的操作只需要使用links就可以了。

@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+		getElementById，setAttribute，document.getElementsByTagName(body)[0]等方法都是DOM Core的组成部分，它们并不专属于JavaScript支持DOM的任何一种程序设计语言都可以使用它们。它们的用途不仅限于处理网页，它们可以用来处理任何一种标记语言编写的文档。
+
+		img.src，.onclick，document.body这些属性则属于HTML-DOM，只能处理Web文档。
+
+
+
+
+		尽量使用DOM Core，更利于维护。

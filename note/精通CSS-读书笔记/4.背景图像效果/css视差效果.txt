@@ -1,0 +1,27 @@
+
+
+
+
+		改变窗口大小可以有远近不同的感觉，有深度
+
+
+		<body>
+			<div class="middle">
+				<div class="fore">
+					<div></div>
+				</div>
+			</div>
+		</body>
+
+		body{
+			background：url(image.png) repeat-x 20% 0;
+			background-color: #d3ff99;
+		}
+		.middle{
+			background：url(image.png) repeat-x 40% 0;
+			background-color: transparent; //背景透明，且不会被点击到（背景不会获得焦点）
+		}
+		.fore{
+			background：url(image.png) repeat-x 150% 0;
+			background-color: transparent;
+		}

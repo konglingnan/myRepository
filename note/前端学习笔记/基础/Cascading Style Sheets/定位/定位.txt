@@ -1,0 +1,79 @@
+﻿
+
+
+
+
+
+		定位的种类：
+
+
+
+			1.静态定位。
+				position: static;
+				一般情况下，静态定位不会单独使用，通常是通过js来动态清除定位。
+
+
+			2.绝对定位。
+				*子元素“看脸行事”
+				（无论是否有父元素，参考系都为body(0, 0)。但当父元素（包括爷爷级及以上）也有定位时，子元素定位则相对于父元素。）
+
+				**绝对定位的元素在页面上不占位置。（脱离标准流）
+
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				(right: 30px;)（都可设置为负）
+				(bottom: 30px;)
+
+				*如果只设置了position: absolute;盒子位置不变，但也不占位置。
+
+				display变为inline-block;
+
+			3.相对定位。（相对自己原位移动）
+				*相对定位占据原位置。（不脱流）
+
+				position: relative;
+
+				*如果只设置了position: relative;盒子还在原位，和没设置一样。（父相子绝的原因）
+
+				不影响display.
+
+			4.固定定位（相对于浏览器窗口定位，滚动页面位置也不变。）
+
+				position: fixed;
+
+				*脱离标准流。
+				display变为inline-block;
+
+
+		总结：如果要在页面上使用定位，要将父元素设置为relative，子元素设置为absolute。因为这样的话，父元素相对于不变，但子元素就可以相对于父元素设置了。
+
+
+
+
+
+
+
+
+？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+	如果要让父盒子中的子盒子在父盒子中居中显示：
+		a)先让子盒子的left设置为50%;
+		b)再让子盒子的margin-left为负数（自己宽度的一半）。
+eg.
+
+	.father {
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+		position: relative;
+	}
+
+	.son {
+		width: 50px;
+		height: 50px;
+		background-color: pink;
+		
+		position: absolute;
+		left: 50%;
+		margin-left: -25px;
+	}

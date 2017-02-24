@@ -1,0 +1,13 @@
+
+
+
+
+
+
+		1.document.getElementById("id");   //返回一个节点
+
+
+		2.element.getElementsByTagName("tag");   //返回一个数组
+
+
+		3.element.getElementsByClassName("class");   //返回一个数组

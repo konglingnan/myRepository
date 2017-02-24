@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>动态数据</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript">
+	
+	window.onload = function (){
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			// 使用ajax的时候，千万要注意同源策略。使用XMLHttpRequest对象发送的请求只能访问与其所在的html处于同一个域中的数据，不能向其他域发送请求。
+			ajax("a.txt?t="+new Date().getTime(), fnSucc, fnFaild);
+		}
+
+		function fnSucc(str){
+			alert(str);
+		}
+
+		function fnFaild(str){
+			alert(str);
+		}
+
+	}	
+	</script>
+
+</head>
+<body>
+
+	<button id="btn">sure</button>
+
+</body>
+</html>

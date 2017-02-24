@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+		数据随时更新，要阻止缓存。
+
+
+
+
+
+		阻止缓存方法：
+
+			ajax('aaa.txt?t='+new Date().getTime(), funSucc, funFail;
+
+			原理：使url不断变化。

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="did">
+		<button id="btn">sure</button> <!-- html事件处理 -->
+		<a id="aid" href="http://www.baidu.com">阻止事件默认行为</a>
+	</div>
+
+	<script type="text/javascript">
+
+		var x = document.getElementById("btn");
+		x.addEventListener("click", hello);  
+
+		var y = document.getElementById("did");
+		y.addEventListener("click", world);  
+
+		var z = document.getElementById("aid");
+		z.addEventListener("click", prevent);  
+
+		function hello(event) {
+			alert("事件类型：" + event.type);
+			event.stopPropagation(); //阻止事件冒泡
+		}
+		function world(event) {
+			alert("事件目标：" + event.target);
+		}
+
+		function prevent(event) {
+			event.preventDefault(); //阻止事件默认行为
+		}
+
+	</script>
+</body>
+</html>

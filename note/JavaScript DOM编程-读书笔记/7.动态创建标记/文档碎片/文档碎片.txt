@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+	文档碎片：
+
+		var para = document.createElement("p");
+		这个para节点虽然已经存在了，但它还不是任何一棵DOM节点树的组成部分，它只是游荡在JavaScript世界里的一个孤儿。它这种情况成为文档碎片（document Fragment），还无法显示在浏览器的窗口里。不过，它已经像其他的节点那样有了自己的DOM属性。
+
+		插入节点它就不再是文档碎片了。element.appendChild(para);

@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+	JavaScript的加载：
+
+
+		如果JavaScript文件是从html文档的<head>部分用<script>标签调用的，它将在html文档之前加载到浏览器里。
+
+		同样，如果<script>标签位于文档底部</body>之前，就不能保证哪个文件最先结束加载（浏览器可能一次加载多个）。
+
+		因为脚本加载时文档可能不完整，所以模型也不完整。
+
+		没有完整的DOM，getElementById等方法就不能正常工作，所以必须借助于window.onload事件处理函数。
+
+		同时，为了保证我们将要使用的元素已经加载进来了，在使用之前，我们需要使用这样的语句来判断：	if(!document.getElementById("gallery")) return false;

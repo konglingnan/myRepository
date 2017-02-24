@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+	/*伪类选择器必须按这个顺序写*/
+	/*不止a有伪类选择器，其他的标签也可以有，eg. div:hover {} */
+		a{
+			display: inline-block;
+			width: 100px;
+			height: 20px;
+			background-color: red;
+		}
+
+		a:link { /*未访问*/
+			background-color: blue;
+		}
+		a:visited { /*已访问*/
+			background-color: pink;
+		}
+		a:hover {  /*鼠标悬停*/
+			background-color: purple;
+		}
+		a:active {  /*活动中*/
+			background-color: yellow;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<a href="#">hahahah</a>
+</body>
+</html>

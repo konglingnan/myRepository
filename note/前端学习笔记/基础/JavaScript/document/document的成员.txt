@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+		document成员里的三个数组：
+
+			anchors[]
+
+			forms[]
+
+			images[]   //document.Image[0].src;
+
+
+
+		其他成员：
+
+			cookie，title，bgColor，alinkColor等等。。。

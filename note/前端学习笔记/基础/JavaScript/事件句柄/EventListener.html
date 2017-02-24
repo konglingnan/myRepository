@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="sure">sure</button>
+
+	<script type="text/javascript">
+		var x = document.getElementById("sure");
+		
+		x.addEventListener("click", hello);  //添加事件句柄
+		x.addEventListener("click", world);
+		x.removeEventListener("click", world);   //移除事件句柄
+		
+		function hello() {
+			alert("hello");
+		}
+		function world() {
+			alert("world");
+		}
+	</script>
+</body>
+</html>

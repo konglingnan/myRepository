@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	window.onload = function (){
+		var input = document.getElementById("input");
+
+		// 第1级DOM （可以修改任何元素的任何属性）（可移植性好）（推荐）
+		input.setAttribute("type", "button");
+		
+		// 老方法，不是适用于所有元素（少用）
+		input.type = "button";
+	}
+	
+	</script>
+
+</head>
+<body>
+
+	<input id="input" />
+
+</body>
+</html>

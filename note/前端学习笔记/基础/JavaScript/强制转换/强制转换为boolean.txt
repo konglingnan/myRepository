@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+		强制转换成boolean的方法：
+
+			Boolean("true");
+
+		注意：除了false、0、""、NaN、Undefined在转换的时候会转成false以外，其它的都会转成true.(包括”false”).

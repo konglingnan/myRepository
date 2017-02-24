@@ -1,0 +1,32 @@
+
+
+
+
+Ajax异步性：
+
+	ajax操作后，页面仍可继续访问。异步执行，2222222222222有可能先alert出来。  
+
+	为此，如果其他脚步依赖于服务器的相应，那么就得把相应的代码都转移到指定给onreadstatechange属性的那个函数中。所以我们在其中使用了回调函数。
+
+
+			
+function ajax(url, fnSucc, fnFaild) { 
+	if(window.XMLHttpRequest){
+		var oAjax = new XMLHttpRequest();
+	}else{ 
+		var oAjax = new ActiveXObject("Microsoft.XMLHttp");
+	}
+	oAjax.open("GET", url, true);
+	oAjax.onreadystatechange = function (){
+		if(oAjax.readyState==4 && oAjax.status==200){
+//	alert(111111111111111);
+			fnSucc(oAjax.responseText);
+		}else{
+			if(fnFaild){
+				fnFaild(oAjax.status);
+			}
+		}
+	};
+ 	oAjax.send();
+//	alert(22222222222222);
+}

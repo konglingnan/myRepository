@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+	
+	/*实现函数封装格式*/
+	// (function(){  
+			//类
+	// }());
+
+	(function(){  //实现函数封装  闭包
+		function People(name){
+			this.name=name;
+		}
+		People.prototype.say = function (){
+			alert("People: " + this.name);
+		}
+		window.People = People;  //外部接口
+	}());  //()执行
+
+
+	(function(){
+		function Student(name){
+			this.name=name;
+		}
+		Student.prototype = new People();
+		var superSay = Student.prototype.say; //调用父类方法
+		Student.prototype.say = function(){ //重写父类方法
+			superSay.call(this); //调用父类方法
+			alert("Student: " + this.name);
+		}
+		window.Student = Student;
+	}());
+ 
+
+	var s = new Student("hhhhhhhhhh");
+	s.say();
+
+    </script>
+
+</body>
+</html>

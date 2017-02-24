@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+		
+		// prototype所有对象共享，除非自行修改，并且修改形式必须为赋值
+
+		People.prototype.say = function (){
+			alert("People: " + this.name);
+		}

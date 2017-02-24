@@ -1,0 +1,44 @@
+
+
+		html文本有很多优点，搜索引擎可以读取它，开发人员可以复制它，如果在浏览器中增加文本字号就可以让它放大，因此，我们都尽可能的使用文本而不是文字图像。
+		但可供开发人员使用的字体有限，有时为了树立品牌等原因，我们还是会使用一些文字图像。但是使用css隐藏文本，并在它的位置上显示图像，这样的话，搜索引擎仍然可以搜索html文本。
+
+
+	解决方法：
+
+	1.FIR
+
+		<h2>
+			<span>hello word</span>
+		</h2>
+
+		h2 {
+			background:url(img.gif) no-repeat;
+			width: 150px;
+			width: 35px;
+		}
+		span {
+			display: none;
+		}
+
+	缺点：  1.屏幕阅读器会忽略display: none;的文字。
+		2.关闭图像但是打开css时，无效。
+
+
+	2.Phark
+
+		<h2>hello word</h2>
+
+		h2 {
+			text-indent: -5000px;
+			background:url(img.gif) no-repeat;
+			width: 150px;
+			width: 35px;
+		}
+
+	缺点：关闭图像但是打开css时，无效。
+
+
+	3.sIFR
+		flash允许将字体嵌入SWF文件，所以不把文本换成图像，而是使用flash文件替换文本。
+		使用JavaScript搜索文档，找到特定元素或具有特定类名的所有文本。然后js将文本替换为一个小的flash文件。这种技术不为每段文本创建单独的flash文件，而是将被替换的文本放回一个重复的flash文件中。因此进行图像替换要做的只是添加一个类，flash和js会完成余下的工作。另一个好处是文本可复制。

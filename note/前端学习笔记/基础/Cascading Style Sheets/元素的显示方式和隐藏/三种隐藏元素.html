@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	.div1 {
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+
+		display: none;
+		visibility: hidden;
+	}
+	.div2 {
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+	}
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	display: none; 将元素直接隐藏，且元素不占页面位置。<br />
+	visib: hidden; 将元素直接隐藏，但元素占页面位置。<br /><br />
+	此处我们对粉第一个盒子运用这两个属性：
+	<pre>
+		display: none;
+		visibility: hidden;</pre>在我们理解的应该是visibility: hidden;会覆盖display: none; 所以第一个盒子隐藏，而第二个蓝盒子会在原位。但却发现第二个盒子向上移动了。由此可知，浏览器解析页面时，会一步一步执行，现将第一个属性应用了，而不是我们理解的属性直接覆盖。
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>window对象</title>
+</head>
+<body>
+
+	<button onclick="openNew()">open</button>
+	<button onclick="closeThis()">close</button>
+
+	<script type="text/javascript">
+
+	// 浏览器窗口的内部宽度/高度(不包含工具栏等)
+	// alert("width:"+window.innerWidth+" height:"+window.innerHeight);
+
+	function openNew(){
+		window.open("2.html", "windowname","width=200, height=200, top=200, left=400, toolbar=no, menubar=no");
+	}
+
+	function closeThis(){
+		window.close();
+	}
+
+    </script>
+
+</body>
+</html>

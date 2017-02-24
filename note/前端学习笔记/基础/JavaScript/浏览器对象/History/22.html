@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>2</title>
+</head>
+<body>
+
+	<form>
+		name: <input type="text" id="username" />
+		password: <input type="password" id="passwd" />
+		<button type="submit" id="btn">sure</button>
+	</form>
+
+	<script type="text/javascript">
+	var btn = document.getElementById("btn");
+	btn.addEventListener("click", go);
+
+	function go(){
+		var username = document.getElementById("username").value;
+		var passwd = document.getElementById("passwd").value;
+		if(username=="zhang" && passwd=="123"){
+			history.go(-1);
+		}else{
+			alert("用户名或密码错误！");
+		}
+	}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function People(){
+		}
+		
+		// prototype所有对象共享，除非自行修改
+		People.prototype.name = "Amy";
+
+	var p1 = new People();
+	var p2 = new People();
+	p2.name="Lucy";
+
+	alert(p1.name);  //Amy（由原型得来）
+	alert(p2.name);  //Lucy（自己的）
+
+    </script>
+
+</body>
+</html>

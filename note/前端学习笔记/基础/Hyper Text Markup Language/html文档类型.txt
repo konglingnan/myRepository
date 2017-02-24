@@ -1,0 +1,14 @@
+﻿
+
+
+
+html有三种文档类型：
+
+	1.HTML Strict DTD   语法要求严格，不能使用被淘汰的标签（eg：bius）
+	2.HTML Transitional DTD  相较而言，语法不那么严格
+	3.Frameset DTD  使用框架时适用
+
+
+但只是html、xhtml，现在都被舍弃了。全部用h5规范。
+
+h5的标准：<!DOCTYPE html> 

@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+// 方法1
+	var people1 = new Object();
+	people1.name="111";
+	people1.age=11;
+
+// 方法2
+	var people2={
+		name: "222",
+		age: 22
+	}
+
+// 方法3
+	function People(name, age){
+		this.name=name;
+		this.age=age;
+	}
+	var people3 = new People("333", 33);
+
+
+
+
+	alert(people1.name);
+	alert(people2.name);
+	alert(people3.name);
+
+	</script>
+</body>
+</html>

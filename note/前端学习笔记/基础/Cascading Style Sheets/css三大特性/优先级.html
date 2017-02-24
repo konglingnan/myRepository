@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		#y {
+			color: red;
+		}
+
+		.c{
+			color: yellow;
+		}
+
+		p {
+			color: blue;
+		}
+
+		* {
+			color: green !important; 
+		}
+
+		body {
+			color: pink;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	优先级:  !important > id > class > 标签 > 通配符 > 继承 > 浏览器默认<br />
+
+	* !important 不能继承<br /> 
+	
+	<p id="y" class="c">看我</p>
+	
+</body>
+</html>

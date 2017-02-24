@@ -1,0 +1,17 @@
+﻿
+
+
+
+
+
+			盒子模型：
+
+				1.所有标签都是盒子。
+
+				2.由content，padding，border，margin组成。
+
+				3.width，height设置的是content，且不因padding，border，margin而改变。
+
+				4.计算宽高不包括 margin（盒子内不包括margin，由background-color可知）。
+
+				5.content，padding，border都会影响盒子的大小。*（padding的特殊点：当盒子的宽度是从父亲元素中继承来的时候，是不会影响盒子的大小的，content回和padding协调，使盒子大小维持原样。）

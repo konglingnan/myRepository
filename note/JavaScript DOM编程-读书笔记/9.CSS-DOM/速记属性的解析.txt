@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+		js支持解析css中的速记属性：
+
+			<p id="para" style="font: 12px 'Arial';"></p>
+
+			在js中想要得到字号，通过这个方式就可以：
+
+				var para = document.getElementById("para");
+
+				para.style.fontSize;

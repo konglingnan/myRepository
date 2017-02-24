@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+		overflow的应用：
+
+			1.overflow: hidden; 将超出的部分隐藏。
+
+			2.overflow: scroll; 加滚动条。
+
+			3.overflow: auto; 不超出时无滚动条，超出时有滚动条。

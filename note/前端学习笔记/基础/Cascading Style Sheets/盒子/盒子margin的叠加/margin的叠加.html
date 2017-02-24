@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<style type="text/css">
+
+	.main-div {
+		display: inline-block;
+		width: 200px;
+		height: 600px;
+		border: 1px solid #000000;
+	}
+/*并列*/
+	.div1 {
+		height: 100px;
+		background-color: pink;
+
+		margin-bottom: 100px;
+	}
+
+	.div2 {
+		height: 100px;
+		background-color: blue;
+
+		margin-top: 50px;
+	}
+/*包含*/
+	.div3 {
+		height: 100px;
+		background-color: pink;
+	}
+
+	.div4 {
+		height: 50px;
+		width: 100px;
+		background-color: blue;
+
+		margin-top: 40px;
+	}
+
+	.div33 {
+		height: 100px;
+		background-color: pink;
+		overflow: hidden;
+	}
+
+	.div44 {
+		height: 50px;
+		width: 100px;
+		background-color: blue;
+
+		margin-top: 40px;
+	}
+
+	</style>
+
+</head>
+<body>
+	<div class="main-div">
+		<p>两个包含关系的盒子，如果在子盒子内设置magin-top，父盒子会跟自盒子一起向下掉。</p>
+		<div class="div3">
+			<div class="div4"></div>
+		</div>
+		<br />
+		<p>解决办法：1.给父盒子设置border。2.给父盒子设置overflow:hidden</p>
+		<div class="div33">
+			<div class="div44"></div>
+		</div>
+	</div>
+
+	<div class="main-div">
+		<p>两个并列盒子magin会重叠。</p>
+		<div class="div1"></div>
+		<div class="div2"></div>
+	</div>
+
+</body>
+</html>

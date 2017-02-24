@@ -1,0 +1,21 @@
+﻿
+
+
+
+
+
+
+
+		写网站首先要做的事：
+
+
+			1.确定通栏。（通栏的设置：width: 100%; 具体参看 Cascading Style Sheets\练习\导航.html）
+
+			2.确定版心。
+
+			3.页面初始化。
+				（不用通配符，性能低。下面用这段代码。）
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+
+			4.将页面上文字的主体大小和主体颜色设置在body中。

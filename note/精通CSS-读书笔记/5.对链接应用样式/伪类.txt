@@ -1,0 +1,17 @@
+
+
+
+
+
+
+		:link
+		:visited
+
+		:hover
+		:focus
+		:active
+
+		顺序不可变
+
+		hover是鼠标移上
+		focus是获得焦点，可以是由键盘控制的

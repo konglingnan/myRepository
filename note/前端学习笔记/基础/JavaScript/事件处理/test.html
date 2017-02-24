@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="btn">sure</button> <!-- html事件处理 -->
+
+	<script type="text/javascript">
+
+	// DOM0级事件处理
+		// var x = document.getElementById("btn");
+		// x.onclick=hello;  //(注意是赋函数名，如果写成hello()，则会直接执行)
+		// x.onclick=world;  //会覆盖之前的
+		// x.onclick=null;   //取消事件
+
+	// DOM2级事件处理（推荐）
+		// var y = document.getElementById("btn");
+		// y.addEventListener("click", hello);  
+		// y.addEventListener("click", world);  //不会覆盖，同时存在
+
+	// IE事件处理(<=IE8)
+		// var z = document.getElementById("btn");
+		// z.attackEvent("onclick", hello);
+		// z.detackEvent("onclick", hello);
+
+
+	// 兼容写法
+		var a = document.getElementById("btn");
+		if(a.addEventListener){
+			a.addEventListener("click", hello);
+		}else if(a.attackEvent){
+			a.attackEvent("onclick", hello);
+		}else {
+			a.onclick = hello;
+		}
+
+		function hello() {
+			alert("hello");
+		}
+		function world() {
+			alert("world");
+		}
+		
+	</script>
+</body>
+</html>

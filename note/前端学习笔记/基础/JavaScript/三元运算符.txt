@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+		a和b比较： a>b ? alert(a):alert(b);
+
+
+
+		a、b和c比较： (a>b ? a : b)>c ? alert(a>b ? a : b) : alert(c);

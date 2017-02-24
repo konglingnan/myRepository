@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+		window.screen对象包含有关用户屏幕的信息。
+
+
+
+
+
+		属性：
+
+			screen.availWidth   可用的屏幕宽度
+
+			screen.availHeight   可用的屏幕高度
+
+			screen.width   屏幕宽度
+
+			screen.height   屏幕高度

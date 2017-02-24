@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="div">
+		<button id="btn">sure</button>
+	</div>
+
+	<script type="text/javascript">
+		var x = document.getElementById("div");
+		x.addEventListener("click", hello);  //添加事件句柄
+		var y = document.getElementById("btn");
+		y.addEventListener("click", world);  //添加事件句柄
+
+		function hello() {
+			alert("div");
+		}
+		function world() {
+			alert("button");
+		}
+	</script>
+</body>
+</html>
