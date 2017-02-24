@@ -49,13 +49,6 @@ function getByClass(parentNode, className) {
 	return classArr;
 }
 
-// 获取图片数字
-function getSrcNum(imgNode) {
-	var imgSrc = imgNode.getAttribute("src");
-	var charArr = imgSrc.split("/");
-	return parseInt(charArr[charArr.length-1].split(".")[0]);
-}
-
 window.onload = function() {
 
 	var carousel = document.getElementById("carousel");
@@ -67,7 +60,14 @@ window.onload = function() {
 	var bigLis = big.getElementsByTagName("li");
 	var oUl = getByClass(carousel, "imgs")[0].getElementsByTagName("ul")[0];
 	var lis = oUl.getElementsByTagName("li");
-	
+
+	// 图片高度
+	var imgHeight = parseInt(getStyle(big.getElementsByTagName("img")[0], "height"));
+	// ul移动的最大值
+	var moveMax = parseInt(getStyle(oUl.parentNode, "width"))-parseInt(getStyle(oUl, "width"));
+	// 移动一个小图的距离
+	var moveOne = parseInt(getStyle(lis[0], "width"))+2*parseInt(getStyle(lis[0], "margin"));
+
 	// 初始化
 	var now = 0;
 	move(lis[now], "opacity", 100);
@@ -86,13 +86,13 @@ window.onload = function() {
 	
 	// 左右按钮淡入淡出
 	prev.onmouseover = function() {
-		move(prevBtn, "opacity", 100);
+		move(prevBtn, "opacity", 70);
 	};
 	prev.onmouseout = function() {
 		move(prevBtn, "opacity", 0);
 	};
 	next.onmouseover = function() {
-		move(nextBtn, "opacity", 100);
+		move(nextBtn, "opacity", 70);
 	};
 	next.onmouseout = function() {
 		move(nextBtn, "opacity", 0);
@@ -118,17 +118,17 @@ window.onload = function() {
 
 		// 下拉效果
 		bigLis[now].style.height="0";
-		move(bigLis[now], "height", 360);
+		move(bigLis[now], "height", imgHeight);
 
 		// 改变小图淡入淡出
 		move(lis[now], "opacity", 100);
 
 		// 移动下方图片
-		var len = -120*(now-1);
-		if(len<=-360) {
-			move(oUl, "left", -240);
+		var len = -moveOne*(now-1);
+		if(len<moveMax) {
+			move(oUl, "left", moveMax);
 		}
-		if(len>-360 && len<=0) {
+		if(len>=moveMax && len<=0) {
 			move(oUl, "left", len);
 		}
 	};
@@ -147,17 +147,17 @@ window.onload = function() {
 
 		// 下拉效果
 		bigLis[now].style.height="0";
-		move(bigLis[now], "height", 360);
+		move(bigLis[now], "height", imgHeight);
 
 		// 改变小图淡入淡出
 		move(lis[now], "opacity", 100);
 
 		// 移动下方图片
-		var len = -120*(now-1);
-		if(len>=0) {
+		var len = -moveOne*(now-1);
+		if(len>0) {
 			move(oUl, "left", 0);
 		}
-		if(len>-360 && len<0) {
+		if(len>=moveMax && len<=0) {
 			move(oUl, "left", len);
 		}
 	};
@@ -175,9 +175,9 @@ window.onload = function() {
 		};
 		// 点击小图切换
 		lis[i].getElementsByTagName("img")[0].onclick = function() {
-			var len = -120*(this.parentNode.getAttribute("index")-1);
+			var len = -moveOne*(this.parentNode.getAttribute("index")-1);
 			// 移动小图
-			if(len>-360 && len<=0) {
+			if(len>=moveMax && len<=0) {
 				move(oUl, "left", len);
 			}
 			// 改变原小图淡出
@@ -191,7 +191,7 @@ window.onload = function() {
 
 			// 下拉效果
 			bigLis[now].style.height="0";
-			move(bigLis[now], "height", 360);
+			move(bigLis[now], "height", imgHeight);
 		};
 	}
 
