@@ -62,10 +62,19 @@ window.onload = function() {
 	var big = getByClass(carousel, "big")[0];
 	var prev = getByClass(big, "prevArea")[0];
 	var prevBtn = getByClass(big, "prevBtn")[0];
-	prevBtn.opacity = 0;
 	var next = getByClass(big, "nextArea")[0];
 	var nextBtn = getByClass(big, "nextBtn")[0];
+	var bigImg = big.getElementsByTagName("img")[0];
+	var oUl = getByClass(carousel, "imgs")[0].getElementsByTagName("ul")[0];
+	var lis = oUl.getElementsByTagName("li");
+	
+	// 初始化
+	var now =0;
+	move(lis[now], "opacity", 100);
+	prevBtn.opacity = 0;
 	nextBtn.opacity = 0;
+	
+	// 左右按钮淡入淡出
 	prev.onmouseover = function() {
 		move(prevBtn, "opacity", 100);
 	};
@@ -85,22 +94,26 @@ window.onload = function() {
 		move(this, "opacity", 100)
 	};
 
-	var bigImg = big.getElementsByTagName("img")[0];
-	var oUl = getByClass(carousel, "imgs")[0].getElementsByTagName("ul")[0];
-
-	var lii =0;
-	var lis = oUl.getElementsByTagName("li");
-	
 	// 点击prev按钮切换图片
 	prevBtn.onclick = function() {
+		// 还原被换小图
+		move(lis[now], "opacity", 50);
+
 		// 改变当前图片位置
-		lii = (--lii)%5;
-		if(lii==-1) lii=4;
-		var newSrc = lis[lii].getElementsByTagName("img")[0].getAttribute("src");
+		now--;
+		if(now==-1) now=4;
+		var newSrc = lis[now].getElementsByTagName("img")[0].getAttribute("src");
 		var bigSrc = bigImg.setAttribute("src", newSrc);
 
+		// 改变小图淡入淡出
+		move(lis[now], "opacity", 100);
+
+			// 下拉效果
+			bigImg.style.height="0";
+			move(bigImg, "height", 360);
+
 		// 移动下方图片
-		var len = -120*(lii-1);
+		var len = -120*(now-1);
 		if(len<=-360) {
 			move(oUl, "left", -240);
 		}
@@ -112,13 +125,23 @@ window.onload = function() {
 	// 点击next按钮切换图片
 	nextBtn.onclick = function() {
 
+		// 还原被换小图
+		move(lis[now], "opacity", 50);
 		// 改变当前图片位置
-		lii = (++lii)%5;
-		var newSrc = lis[lii].getElementsByTagName("img")[0].getAttribute("src");
-		var bigSrc = bigImg.setAttribute("src", lis[lii].getElementsByTagName("img")[0].getAttribute("src"));
+		now++;
+		if(now==5) now=0;
+		var newSrc = lis[now].getElementsByTagName("img")[0].getAttribute("src");
+		var bigSrc = bigImg.setAttribute("src", lis[now].getElementsByTagName("img")[0].getAttribute("src"));
+
+		// 改变小图淡入淡出
+		move(lis[now], "opacity", 100);
+
+			// 下拉效果
+			big.style.height="0";
+			move(big, "height", 360);
 
 		// 移动下方图片
-		var len = -120*(lii-1);
+		var len = -120*(now-1);
 		if(len>=0) {
 			move(oUl, "left", 0);
 		}
@@ -134,24 +157,32 @@ window.onload = function() {
 			move(this, "opacity", 100);
 		};
 		lis[i].onmouseout = function() {
-			if(this.getAttribute("index") != lii) {
+			if(this.getAttribute("index") != now) {
 				move(this, "opacity", 50);
 			}
 		};
-		// 点击切换大图和小图
+		// 点击小图切换
 		lis[i].getElementsByTagName("img")[0].onclick = function() {
 			var len = -120*(this.parentNode.getAttribute("index")-1);
+			// 移动小图
 			if(len>-360 && len<0) {
 				move(oUl, "left", len);
 			}
+			// 改变大图
 			var imgSrc = this.getAttribute("src");
 			bigImg.setAttribute("src", imgSrc);
 
+			big.setAttribute("background", "url(../"+imgSrc+") no-repeat");
+
+			// 下拉效果
 			bigImg.style.height="0";
 			move(bigImg, "height", 360);
 
-			big.setAttribute("background", "url(../"+imgSrc+") no-repeat");
-			lii = this.parentNode.getAttribute("index");
+			// 改变小图淡入淡出
+			move(lis[now], "opacity", 50);
+
+			// 修改now
+			now = this.parentNode.getAttribute("index");
 		};
 	}
 
@@ -163,6 +194,5 @@ window.onload = function() {
 	carousel.onmouseout=function() {
 		autoTimer = setInterval(nextBtn.onclick, 2000);
 	}
-
 
 };

@@ -1,8 +1,11 @@
+/*初始化开始*/
 body, div, ul, li, img {
 	margin: 0;
 	padding: 0;
 }
+/*初始化结束*/
 
+/*清除浮动开始*/
 .clearfix:after,
 .clearfix:before {
 	content: "";
@@ -14,30 +17,46 @@ body, div, ul, li, img {
 .clearfix {
 	*zoom: 1;
 }
+/*清除浮动结束*/
 
-.big {
+/*整体轮播图区域*/
+#carousel {
+	width: 360px;
+	height: 485px;
+	margin: 60px auto;
+	position: relative;
+}
+
+/*大图整体部分开始*/
+#carousel .big {
 	width: 360px;
 	height: 360px;
-	position: relative;
+	position: absolute;
 	background: url(../images/0.jpg) no-repeat;
+	overflow: hidden;
 }
-.big a {
+/*大图整体部分开始*/
+
+/*大图切换区域开始*/
+#carousel .big a {
 	display: block;
 	position: absolute;
 	top: 0;
 }
-.prevArea {
+#carousel .prevArea {
 	left: 0;
 	width: 180px;
 	height: 360px;
 }
-.nextArea {
+#carousel .nextArea {
 	left: 180px;
 	width: 180px;
 	height: 360px;
 }
+/*大图切换区域结束*/
 
-.big div {
+/*大图按钮开始*/
+#carousel .big div {
 	display: block;
 	width: 50px;
 	height: 50px;
@@ -50,37 +69,41 @@ body, div, ul, li, img {
 	background-color: #ccc;
 	cursor: pointer;
 }
-.prevBtn {
+#carousel .prevBtn {
 	left: 0;
 	top: 50%;
 	margin-top: -25px;
 	opacity: 0;
 	filter: alpha(opacity: 0);
 }
-.nextBtn {
+#carousel .nextBtn {
 	right: 0;
 	top: 50%;
 	margin-top: -25px;
 	opacity: 0;
 	filter: alpha(opacity: 0);
 }
+/*大图按钮结束*/
 
-#carousel {
-	width: 360px;
-	margin: 60px auto;
-}
-
+/*大图图片开始*/
 #carousel .big img {
 	width: 360px;
 	height: 360px;
 }
+/*大图图片结束*/
 
+/*小图整体部分开始*/
 #carousel .imgs {
 	width: 360px;
 	border: 1px solid black;
 	overflow: hidden;
-	position: relative;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
+/*小图整体部分结束*/
+
+/*小图列表开始*/
 #carousel .imgs ul {
 	width: 600px;
 	position: relative;
@@ -98,3 +121,4 @@ body, div, ul, li, img {
 	width: 100px;
 	height: 100px;
 }
+/*小图列表结束*/
