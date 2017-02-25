@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+		所有现代浏览器对margin: 0 auto;的居中效果都是有效的。
+
+		但是，混杂模式中的IE5.x和IE6不支持margin: auto;声明。幸运的是，IE将text-align: center误解为让所有东西居中，而不只是文本。我们可以利用这一点，将body中所有元素居中，再让容器中的内容重新向左对齐。
+
+
+	e.g. 
+
+		body {
+			text-align: center;
+		}
+
+		.wrapper {
+			text-align: left;
+		}
+
+
+		以这种方式使用text-align属性时是一种hack，但这个hack是无害的，对代码没有严重的影响。

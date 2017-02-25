@@ -1,0 +1,33 @@
+
+
+
+
+
+	许多屏幕阅读器会忽略表单之间的文本，除非把文本放在标签中。
+
+
+
+	为了避免这些问题，最好的方法是将错误消息文本放在表单标签中，然后使用css定位。
+
+	e.g.
+
+		<form>
+			<label for="email">Email Address:
+				<em class="feedback">Incorrect</em>
+			</label>
+			<input name="email" id="email" type="email" />
+		</form>
+
+
+		form {
+			position: relative;
+		}
+		form .feedback {
+			width: 10em;
+			position: absolute;
+			left: 20em;
+			top: 0;
+		}
+
+
+	IE6和更低版本错误地将反馈em的宽度设置为最小宽度。为了解决这个问题，我们需要为这种浏览器设置显示宽度。（width: 10em;）

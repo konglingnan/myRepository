@@ -3,8 +3,8 @@
 <head>
 	<title>京东</title>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="styles/base.css" />
+	<link rel="stylesheet" type="text/css" href="styles/index.css" />
 	<link rel="shortcut icon" href="favicon.ico">	<!-- 快捷图标 -->
 </head>
 <body>
@@ -144,13 +144,22 @@
 	<div class="w two clearfix">
 		<!-- 轮播图部分start -->
 		<div class="slider">
-			<a href="#"><img src="images/shoose.jpg" /></a>
+
+			<ul class="bigImgs">
+				<li><a href="#"><img src="images/0.jpg" /></a></li>
+				<li><a href="#"><img src="images/1.jpg" /></a></li>
+				<li><a href="#"><img src="images/2.jpg" /></a></li>
+				<li><a href="#"><img src="images/0.jpg" /></a></li>
+				<li><a href="#"><img src="images/3.jpg" /></a></li>
+				<li><a href="#"><img src="images/4.jpg" /></a></li>
+			</ul>
+
 			<div class="button go">
 				<a href="javascript:void(0)" class="button1">&lt;</a>
 				<a href="javascript:void(0)" class="button2">&gt;</a>
 			</div>
-			<ul>
-				<li class="current">1</li>
+			<ul class="point">
+				<li>1</li>
 				<li>2</li>
 				<li>3</li>
 				<li>4</li>
@@ -159,6 +168,7 @@
 			</ul>
 		</div>
 		<!-- 轮播图部分end -->
+
 		<!-- 信息部分start -->
 		<div class="information">
 			<div class="information-top">
@@ -301,5 +311,7 @@
 	</footer>
 	<!-- footer部分end -->
 
+	<script type="text/javascript" src="scripts/common.js"></script>
+	<script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>

@@ -91,17 +91,34 @@
 /*商品分类部分end*/
 
 /*轮播图部分start*/
+
+/*轮播图部分start*/
 .slider {
+    width: 730px;
+    height: 454px;
     margin: 12px 10px 0 220px;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 
-.slider:hover a {
+.slider:hover .button a {
     background: rgba(0, 0, 0, 0.5); 
 }
 
-.slider ul {
+.slider .bigImgs {
+    width: 4380px;
+    height: 454px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider .bigImgs li {
+    float: left;
+}
+
+.slider .point {
     width: 132px;
     height: 22px;
     position: absolute;
@@ -110,7 +127,7 @@
     margin-left: -66px;
 }
 
-.slider li {
+.slider .point li {
     float: left;
     color: #FFFFFF;
     width: 18px;
@@ -121,16 +138,23 @@
     border-radius: 10px;
 }
 
-.slider li:hover {
+.slider .point li:hover {
     cursor: pointer;
     background-color: #C81623;
 }
 
-.slider .current { /*通过js控制方便*/
+.slider .point .current { /*通过js控制方便*/
     cursor: pointer;
     background-color: #C81623;
 }
 /*轮播图部分end*/
+
+
+
+
+
+
+
 
 /*信息部分start*/
 .information {

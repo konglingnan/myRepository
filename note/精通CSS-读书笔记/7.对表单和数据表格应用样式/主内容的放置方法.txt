@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+		为了提高易用性和可访问性，我们可以把源代码的主内容写在次内容的前面，然后利用浮动改变位置。
+
+
+		首先，主内容是页面上最重要的东西，所以在文档中应该先出现。
+
+		其次，这样方便屏幕阅读器用户，它们不用经过很长的链接列表和不太重要的内容就能找到主内容部分。
+
+
+	e.g.
+
+		<div class="content">
+			<div class="primary"></div>
+			<div class="secondary"></div>
+		</div>
+
+
+		.content .primary {
+			float: right;
+		}
+		.content .secondary {
+			float: left;
+		}

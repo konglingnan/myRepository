@@ -51,76 +51,8 @@ function getByClass(parentNode, className) {
 }
 // 通用函数结束
 
-// 移动小图位置
-function moveSmall(len, oUl, moveMax) {
-	if(len>0) {
-		move(oUl, "left", 0);
-	}
-	if(len<moveMax) {
-		move(oUl, "left", moveMax);
-	}
-	if(len>=moveMax && len<=0) {
-		move(oUl, "left", len);
-	}
-}
-
-// 修改大图
-function changeBig(now, bigLis, oUl, moveOne, moveMax, imgHeight, zIndex) {
-	// 改变大图
-	bigLis[now].style.zIndex = zIndex;
-
-	// 下拉效果
-	bigLis[now].style.height="0";
-	move(bigLis[now], "height", imgHeight);
-}
-
-// 通过小图切换图片
-function moveBySmall(thisIndex, now, bigLis, lis, oUl, moveOne, moveMax, imgHeight, zIndex) {
-	// 还原被换小图
-	move(lis[now], "opacity", 50);
-
-	// 修改now
-	now = thisIndex;
-
-	// 修改大图
-	changeBig(now, bigLis, oUl, moveOne, moveMax, imgHeight, zIndex);
-
-	// 移动小图
-	var len = -moveOne*(thisIndex-1);
-	moveSmall(len, oUl, moveMax);
-
-	return now;
-}
-
-// 通过左右按钮移动图片
-function moveByBtn(whichBtn, now, bigLis, lis, oUl, moveOne, moveMax, imgHeight, zIndex) {
-	// 还原被换小图
-	move(lis[now], "opacity", 50);
-
-	// 改变当前图片位置
-	if(whichBtn=="prev"){
-		now--;
-	}else{
-		now++;
-	}
-	if(now==-1) now=4;
-	if(now==5) now=0;
-
-	// 修改大图
-	changeBig(now, bigLis, oUl, moveOne, moveMax, imgHeight, zIndex);
-	
-	// 移动小图
-	var len = -moveOne*(now-1);
-	moveSmall(len, oUl, moveMax);
-
-	// 改变小图淡入淡出
-	move(lis[now], "opacity", 100);
-
-	return now;
-}
-
 // 自动播放
-function autoplay(areaNode, func) {
+function autoPlay(areaNode, func) {
 	var autoTimer = setInterval(func, 2000);
 	areaNode.onmouseover=function() {
 		clearInterval(autoTimer);
@@ -186,34 +118,110 @@ function play() {
 		move(this, "opacity", 100)
 	};
 
+	// 小图效果
+	tab();
+
 	// 点击prev按钮切换图片
 	prevBtn.onclick = function() {
-		now = moveByBtn("prev", now, bigLis, lis, oUl, moveOne, moveMax, imgHeight, zIndex++);
+		now = moveByBtn("prev");
 	};
 	// 点击next按钮切换图片
 	nextBtn.onclick = function() {
-		now = moveByBtn("next", now, bigLis, lis, oUl, moveOne, moveMax, imgHeight, zIndex++);
+		now = moveByBtn("next");
 	};
 
-	for(var i=0; i<lis.length; i++){
-		// 下方图片淡入淡出
-		lis[i].onmouseover = function() {
-			move(this, "opacity", 100);
-		};
-		lis[i].onmouseout = function() {
-			if(this.getAttribute("index") != now) {
-				move(this, "opacity", 50);
-			}
-		};
-		// 点击小图切换大图
-		lis[i].onclick = function() {
-			var thisIndex = this.getAttribute("index");
-			now = moveBySmall(thisIndex, now, bigLis, lis, oUl, moveOne, moveMax, imgHeight, zIndex++);
-		};
+	// 自动播放
+	autoPlay(carousel, nextBtn.onclick);
+
+
+	// 小图效果
+	function tab() {
+		for(var i=0; i<lis.length; i++){
+			// 下方图片淡入淡出
+			lis[i].onmouseover = function() {
+				move(this, "opacity", 100);
+			};
+			lis[i].onmouseout = function() {
+				if(this.getAttribute("index") != now) {
+					move(this, "opacity", 50);
+				}
+			};
+			// 点击小图切换大图
+			lis[i].onclick = function() {
+				var thisIndex = this.getAttribute("index");
+				now = moveBySmall(thisIndex);
+			};
+		}	
 	}
 
-	// 自动播放
-	autoplay(carousel, nextBtn.onclick);
+	// 移动小图位置
+	function moveSmall(len) {
+		if(len>0) {
+			move(oUl, "left", 0);
+		}
+		if(len<moveMax) {
+			move(oUl, "left", moveMax);
+		}
+		if(len>=moveMax && len<=0) {
+			move(oUl, "left", len);
+		}
+	}
+
+	// 修改大图
+	function changeBig() {
+		// 改变大图
+		bigLis[now].style.zIndex = zIndex++;
+
+		// 下拉效果
+		bigLis[now].style.height="0";
+		move(bigLis[now], "height", imgHeight);
+	}
+
+	// 通过小图切换图片
+	function moveBySmall(thisIndex) {
+		// 还原被换小图
+		move(lis[now], "opacity", 50);
+
+		// 修改now
+		now = thisIndex;
+
+		// 修改大图
+		changeBig();
+
+		// 移动小图
+		var len = -moveOne*(thisIndex-1);
+		moveSmall(len);
+
+		return now;
+	}
+
+	// 通过左右按钮移动图片
+	function moveByBtn(whichBtn) {
+		// 还原被换小图
+		move(lis[now], "opacity", 50);
+
+		// 改变当前图片位置
+		if(whichBtn=="prev"){
+			now--;
+		}else{
+			now++;
+		}
+		if(now==-1) now=lis.length-1;
+		if(now==lis.length) now=0;
+
+		// 修改大图
+		changeBig();
+		
+		// 移动小图
+		var len = -moveOne*(now-1);
+		moveSmall(len);
+
+		// 改变小图淡入淡出
+		move(lis[now], "opacity", 100);
+
+		return now;
+	}
+
 }
 
 window.onload = function() {
