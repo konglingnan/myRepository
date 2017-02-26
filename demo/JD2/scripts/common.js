@@ -107,17 +107,25 @@ function move(node, json, func) {
 }
 
 // 节点多个属性的匀速运动（节点，json）
-function move2(node, json) {
+function move2(node, json, func) {
 	clearInterval(node.timer);
 	node.timer = setInterval(function() {
-
+		var stop = true;
 		for(var attr in json){
+			var cur;
+			if(attr=="opacity"){
+				cur = Math.round(parseFloat(getStyle(node, attr))*100);
+			}else {
+				cur = parseInt(getStyle(node, attr));
+			}
 			var speed;
-			var cur = parseInt(getStyle(node, attr));
 			if(json[attr]-cur>0){
 				speed = 6;
 			} else {
 				speed = -6;
+			}
+			if(cur != json[attr]) {
+				stop = false;
 			}
 			if(Math.abs(json[attr]-cur)<6){
 				clearInterval(node.timer);
@@ -126,8 +134,17 @@ function move2(node, json) {
 			}else{
 				// 移动
 				cur += speed;
-				node.style[attr] = cur+"px";
+				if(attr=="opacity"){
+					node.style.opacity = cur/100;
+					node.style.filter = "alpha(opacity:"+cur+")";
+				}else{
+					node.style[attr] = cur+"px";
+				}
 			}
+		}
+		if(stop) {
+			clearInterval(node.timer);
+			if(func) func();
 		}
 	}, 30);
 }
