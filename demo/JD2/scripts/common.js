@@ -106,5 +106,30 @@ function move(node, json, func) {
 	}, 30);
 }
 
+// 节点多个属性的匀速运动（节点，json）
+function move2(node, json) {
+	clearInterval(node.timer);
+	node.timer = setInterval(function() {
+
+		for(var attr in json){
+			var speed;
+			var cur = parseInt(getStyle(node, attr));
+			if(json[attr]-cur>0){
+				speed = 6;
+			} else {
+				speed = -6;
+			}
+			if(Math.abs(json[attr]-cur)<6){
+				clearInterval(node.timer);
+				// 定位到终点
+				node.style[attr] = json[attr]+"px";
+			}else{
+				// 移动
+				cur += speed;
+				node.style[attr] = cur+"px";
+			}
+		}
+	}, 30);
+}
 
 // 通用函数结束

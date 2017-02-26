@@ -105,7 +105,11 @@
 }
 
 .slider:hover .button a {
-    background: rgba(0, 0, 0, 0.3); 
+    background: rgba(0, 0, 0, 0.1); 
+}
+
+.slider .button a:hover {
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .slider .bigImgs {

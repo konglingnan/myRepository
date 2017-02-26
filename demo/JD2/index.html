@@ -8,6 +8,24 @@
 	<link rel="shortcut icon" href="favicon.ico">	<!-- 快捷图标 -->
 </head>
 <body>
+	<!-- 右侧边栏start -->
+	<div class="rightBar">
+		<ul class="rightBar-common">
+			<li class="top"><a href="#top"><i></i><em>顶部</em></a></li>
+			<li class="feedback"><a href="#"><i></i><em>反馈</em></a></li>
+			<li class="survey"><a href="#"><i>有奖调查</i></a></li>
+		</ul>
+		<ul class="rightBar-my">
+			<li class="member"><a href="#"><i></i><em>京东会员</em></a></li>
+			<li class="car"><a href="#"><i></i><em>购物车</em></a></li>
+			<li class="focus"><a href="#"><i></i><em>我的关注</em></a></li>
+			<li class="footprint"><a href="#"><i></i><em>我的足迹</em></a></li>
+			<li class="message"><a href="#"><i></i><em>我的消息</em></a></li>
+			<li class="consult"><a href="#"><i></i><em>咨询JIMI</em></a></li>
+		</ul>
+	</div>
+	<!-- 右侧边栏end -->
+
 	<!-- 广告start -->
 	<div class="banner">
 		<div class="w banner-ad">
@@ -18,10 +36,10 @@
 	<!-- 广告end -->
 
 	<!-- 导航栏start -->
-	<nav class="side-nav">
+	<nav class="side-nav" id="top">
 		<div class="w">
-			<div>
-				<div class="fl side-nav-l">
+			<div class="side-nav-l">
+				<div class="fl side-nav-l-send">
 					<span>送至：北京</span>
 					<s><i>◇</i></s>
 				</div>
@@ -83,6 +101,18 @@
 			<div class="search-input-search">
 				<input type="text" placeholder="洗衣机" />
 				<button>搜索</button>
+				<!-- 上方固定搜索栏start -->
+				<div class="search-top">
+					<div class="w">
+						<a class="search-top-logo" href="index.html">京东，多快好省</a>
+						<div class="search-top-search">
+							<input type="text" placeholder="洗衣机" />
+							<button>搜索</button>
+						</div>
+					</div>
+
+				</div>
+				<!-- 上方固定搜索栏end -->
 			</div>
 			<div class="search-input-link">
 				<a href="#" class="col-red">购车直降</a>

@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
 }
 
-s, i, em {              
+s, i, em {
     font-style: normal;
     text-decoration: none;
 }
@@ -157,8 +157,119 @@ s, i, em {
 .button a:hover {
     background: rgba(0, 0, 0, 0.5); 
 }
-
 /*左右按钮end*/
+
+/*右侧边栏start*/
+.rightBar {
+    width: 6px;
+    height: 100%;
+    background-color: #7A6E6E;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.rightBar .rightBar-my {
+    height: 216px;
+    top: 40%;
+}
+
+.rightBar .rightBar-common {
+    height: 108px;
+    bottom: 0;
+}
+
+.rightBar ul {
+    width: 35px;
+    position: absolute;
+    right: 0;
+}
+
+.rightBar li {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-top: 1px;
+    list-style: none;
+    border-radius: 3px 0 0 3px;
+    background-color: #7A6E6E;
+    float: left;
+    position: relative;
+}
+
+.rightBar a {
+    display: block;
+    color: #fff;
+}
+
+
+.rightBar li i {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 3px 0 0 3px;
+    background: #7A6E6E url(../images/rightbars.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.rightBar li em {
+    display: block;
+    width: 65px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+    background-color: #7A6E6E;
+    position: absolute;
+    top: 0;
+    left: 35px;
+    z-index: 1;
+}
+
+.rightBar .rightBar-common em {
+    width: 50px;
+}
+
+.rightBar li:hover i,
+.rightBar li:hover em {
+    background-color: #C81623;
+}
+.rightBar .member i {
+    background-position: -88px -173px; 
+}
+.rightBar .car i {
+    background-position: -50px 0px; 
+}
+.rightBar .focus i {
+    background-position: -50px -50px; 
+}
+.rightBar .footprint i {
+    background-position: -50px -100px; 
+}
+.rightBar .message i {
+    background-position: -190px -150px; 
+}
+.rightBar .consult i {
+    background-position: -50px -150px; 
+}
+.rightBar .top i {
+    background-position: -50px -250px; 
+}
+.rightBar .feedback i {
+    background-position: -50px -300px; 
+}
+.rightBar .survey i {
+    padding: 3px 5px;
+    line-height: 15px;
+    background: #C81623;
+}
+/*右侧边栏end*/
 
 /*广告start*/
 .banner {
@@ -188,20 +299,29 @@ s, i, em {
     background-color: #F1F1F1;
     height: 30px;
     line-height: 30px;
+    position: relative;
 }
 
-.side-nav-l {
+.side-nav-l-send {
     padding: 0 10px;
 }
 
-.side-nav-l:hover {
+.side-nav-l:hover .side-nav-l-send {
+    height: 30px;
     padding: 0 9px;
+    line-height: 29px;
     border: 1px solid #ccc;
+    border-bottom: none;
     background-color: #FFFFFF;
+    position: absolute;
+    z-index: 100;
 }
 
+.side-nav-l:hover .side-nav-l-city {
+    display: block;
+}
 
-.side-nav-l s,
+.side-nav-l-send s,
 .side-nav-r s {
     display: inline-block;
     width: 15px;
@@ -210,7 +330,7 @@ s, i, em {
     overflow: hidden;
 }
 
-.side-nav-l i,
+.side-nav-l-send i,
 .side-nav-r i {
     position: absolute;
     top: -15px;
@@ -222,9 +342,10 @@ s, i, em {
     z-index: 99;
     background-color: #fff;
     position: absolute;
+    top: 30px;
     left: 70px;
     border: 1px solid #ccc;
-    /*display: none;*/
+    display: none;
 }
 
 .side-nav-l-city li {
@@ -246,13 +367,11 @@ s, i, em {
     line-height: 18px;
 }
 
-.side-nav-l-city li .hover {
-    background-color: #ccc;
-    /*display: none;*/
+.side-nav-l-city li a:hover {
+    background-color: #eee;
 }
 
-.side-nav-l:hover i,
-.side-nav-r:hover i {
+.side-nav-l:hover i {
     position: absolute;
     top: -7px;
 }
@@ -352,12 +471,6 @@ s, i, em {
     float: left;
 }
 
-.search-input-search a {
-    display: inline-block;
-    padding: 8px 24px;
-    color: #FFFFFF;
-}
-
 .search-car {
     width: 139px;
     height: 34px;
@@ -386,8 +499,55 @@ s, i, em {
     top: -5px;
     right: 18px;
 }
-
 /*搜索栏end*/
+
+/*上方固定搜索栏start*/
+.search-top {
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: -53px;
+    left: 0;
+    border-bottom: 2px solid #C81623;
+    z-index: 99;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-top-logo {
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+    padding: 0;
+    text-indent: -999px;
+    background: url(../images/logo2.png) no-repeat;
+    background-size: 125px 40px;
+    position: absolute;
+    top: 4px;
+}
+
+.search-top-search {
+    position: absolute;
+    top: 6px;
+    left: 400px;
+}
+
+.search-top-search input {
+    width: 495px;
+    height: 35px;
+    border: none;
+    padding: 0;
+    padding-left: 5px;
+    background-color: #EFEFEF;
+}
+
+.search-top-search button {
+    width: 50px;
+    height: 35px;
+}
+/*上方固定搜索栏end*/
 
 /*footer部分start*/
 footer {

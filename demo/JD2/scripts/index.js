@@ -1,4 +1,31 @@
-// 关闭广告开始
+
+// 右侧边栏start
+function tabBar() {
+	var body = document.getElementsByTagName("body")[0];
+	var rightBar = getByClass(body, "rightBar")[0];
+	var lis = rightBar.getElementsByTagName("li");
+
+	// 移入显示，移出缩回
+	for(var i=0; i<lis.length; i++) {
+		lis[i].index = i;
+		lis[i].onmouseover = function () {
+			var em = this.getElementsByTagName("em")[0];
+			if(em) {
+				var len = parseInt(getStyle(em, "width"))-5;
+				move2(em, {left: -len});
+			}
+		};
+		lis[i].onmouseout = function () {
+			var em = this.getElementsByTagName("em")[0];
+			if(em) {
+				move2(em, {left: 35});
+			}
+		};
+	}
+}
+// 右侧边栏end
+
+// 关闭广告start
 function adClose() {
 	var body = document.getElementsByTagName("body")[0];
 	var banner = getByClass(body, "banner")[0];
@@ -7,15 +34,14 @@ function adClose() {
 		move(banner, {opacity:0}, function() {
 			banner.style.display = "none";
 		});
-	}
+	};
 }
-// 关闭广告结束
+// 关闭广告end
 
-// 送达城市开始
+// 送达城市start
 function sendCity() {
 	var citys = ["北京", "上海", "天津", "重庆", "河北", "河南", "辽宁", "吉林", "黑龙江", "内蒙古", "江苏", "山东", "北京", "上海", "天津", "重庆", "河北", "河南", "辽宁", "吉林", "黑龙江", "内蒙古", "江苏", "山东", "北京", "上海", "天津", "重庆", "河北", "河南"];
 	var body = document.getElementsByTagName("body")[0];
-	var cityBtn = getByClass(body, "side-nav-l")[0];
 	var cityArea = getByClass(body, "side-nav-l-city")[0];
 	var cityUl = cityArea.getElementsByTagName("ul")[0];
 	// 创建<li><a href="javascript:void(0)">"城市"</a></li>
@@ -29,8 +55,10 @@ function sendCity() {
 
 	}
 
-
 	var cityLis = cityUl.getElementsByTagName("li");
+	// 初始化
+	addClass(cityUl.childNodes[0], "active");
+	// 点击城市切换样式
 	for(var i=0; i<cityLis.length; i++) {
 		cityLis[i].onclick = function() {
 			for(var i=0; i<cityLis.length; i++) {
@@ -38,35 +66,40 @@ function sendCity() {
 			}
 			this.className = "active";
 			window.open("");
-		}
-		cityLis[i].getElementsByTagName("a")[0].onmouseover = function() {
-			this.className = "hover";
-		}
-		cityLis[i].getElementsByTagName("a")[0].onmouseout = function() {
-			this.className = "";
-		}
+		};
 	}
-
-	var banner = getByClass(body, "banner")[0];
-	var nav = getByClass(body, "side-nav")[0];
-	var height = banner.offsetHeight+nav.offsetHeight;
-	
-	cityArea.style.top = height+"px";
-
-	addClass(cityUl.childNodes[0], "active");
-
-	// 移入移出效果
-	// cityBtn.onmouseover = function() {
-	// 	cityArea.style.display = "block";
-	// }
-	// cityBtn.parentNode.onmouseout = function() {
-	// 	cityArea.style.display = "none";
-	// }
-
 }
-// 送达城市结束
+// 送达城市end
 
-// 轮播图开始
+// 搜索栏start
+function search() {
+	var body = document.getElementsByTagName("body")[0];
+	var searchInput = getByClass(body, "search-input-search")[0].getElementsByTagName("input")[0];
+	searchInput.onfocus = function() {
+		searchInput.setAttribute("placeholder", "");
+	};
+	searchInput.onblur = function() {
+		searchInput.setAttribute("placeholder", "洗衣机");
+	};
+}
+// 搜索栏end
+
+// 上方固定搜索栏start'
+function searchTop() {
+	var body = document.getElementsByTagName("body")[0];
+	var search = getByClass(body, "search-top")[0];
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	if(scrollTop < 600) {
+		// search.style.top = "-53px";
+		move(search, {top:-53});
+	}
+	if(scrollTop >= 600) {
+		move(search, {top:0});
+	}
+}
+// 上方固定搜索栏end
+
+// 轮播图start
 function slider() {
 	var now = 0;
 	var body = document.getElementsByTagName("body")[0];
@@ -92,16 +125,15 @@ function slider() {
 	// 上一个按钮
 	prevBtn.onclick = function() {
 		change("prev");
-	}
+	};
 
 	// 下一个按钮
 	nextBtn.onclick = function() {
 		change("next");
-	}
+	};
 
 	// 自动播放
 	autoPlay(slider, nextBtn.onclick);
-
 
 	// 鼠标移入小点
 	function tab() {
@@ -120,10 +152,11 @@ function slider() {
 			
 				// 小点添加current
 				pointLis[now].className = "current";
-			}
+			};
 		}
 	}
 	
+	// 左右按钮切换
 	function change(which) {
 		// 还原小点和被换大图
 		pointLis[now].className="";
@@ -138,20 +171,25 @@ function slider() {
 		// 小点添加current
 		pointLis[now].className = "current";
 	}
-}
-
-// 自动播放
-function autoPlay(areaNode, func) {
-	var autoTimer = setInterval(func, 2000);
-	areaNode.onmouseover=function() {
-		clearInterval(autoTimer);
+	
+	// 自动播放
+	function autoPlay(areaNode, func) {
+		var autoTimer = setInterval(func, 2000);
+		areaNode.onmouseover=function() {
+			clearInterval(autoTimer);
+		};
+		areaNode.onmouseout=function() {
+			autoTimer = setInterval(func, 2000);
+		};	
 	}
-	areaNode.onmouseout=function() {
-		autoTimer = setInterval(func, 2000);
-	}	
 }
-// 轮播图结束
+// 轮播图end
 
-addLoadEvent(slider);
 addLoadEvent(adClose);
+addLoadEvent(tabBar);
 addLoadEvent(sendCity);
+addLoadEvent(search);
+addLoadEvent(slider);
+window.onscroll = function() {
+	searchTop();
+};
