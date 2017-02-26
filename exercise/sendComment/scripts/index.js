@@ -34,4 +34,10 @@ window.onload = function() {
 
 	};
 
+	// ctrl+回车发布
+	textArea.onkeydown = function(ev) {
+		var oEvent = ev || event;
+
+		if(oEvent.keyCode==13 && oEvent.ctrlKey) oBtn.onclick();
+	};
 };

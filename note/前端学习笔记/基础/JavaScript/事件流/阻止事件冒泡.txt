@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+	很多情况我们需要阻止事件冒泡：
+
+
+		oBtn.onClick = function() {
+
+			//code
+
+			oEvent.cancelBubble=true;
+
+		}

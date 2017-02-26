@@ -529,6 +529,7 @@ s, i, em {
 }
 
 .search-top-search {
+    width: 560px;
     position: absolute;
     top: 6px;
     left: 400px;
