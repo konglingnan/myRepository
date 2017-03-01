@@ -1,0 +1,7 @@
+div {
+	width: 150px;
+	height: 200px;
+	background-color: pink;
+	display: none;
+	position: absolute;
+}

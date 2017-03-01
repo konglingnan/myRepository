@@ -1,0 +1,10 @@
+#tap div {
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+	margin: 10px;
+	display: none;
+}
+#tap .active {
+	background-color: pink;
+}

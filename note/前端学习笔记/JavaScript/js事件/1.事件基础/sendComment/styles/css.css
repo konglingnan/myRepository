@@ -1,0 +1,27 @@
+body, div, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+#comment {
+	width: 350px;
+	height: 520px;
+	padding: 40px;
+	margin: 10px auto;
+}
+#comment ul {
+	height: 400px;
+	background-color: #fff;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+	overflow: auto;
+}
+#comment li {
+	list-style: none;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 10px;
+	opacity: 0;
+	filter: alpha(opacity:0);
+	border-bottom: 1px dashed #ccc;
+}

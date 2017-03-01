@@ -19,5 +19,5 @@
 
 			event的方法
 				1.event.stopPropagation() 停止事件冒泡的传播
-				2.event.preventDefault() 组织事件的默认行为
+				2.event.preventDefault() 阻止事件的默认行为
 

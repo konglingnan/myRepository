@@ -1,0 +1,30 @@
+#did {
+	position: relative;
+	width: 800px;
+	height: 500px;
+}
+#did #iid {
+	width: 800px;
+	height: 500px;
+	opacity: 1;
+	filter:alpha(opacity: 100);
+}
+
+#did a {
+	display: block;
+	width: 800px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 500px;
+	text-indent: -999px;
+	text-decoration: none;
+	color: white;
+	font-size: 36px;
+	font-weight: bold;
+}
+#did:hover a {
+	text-indent: 0;
+}

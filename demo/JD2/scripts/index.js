@@ -74,13 +74,15 @@ function sendCity() {
 // 搜索栏start
 function search() {
 	var body = document.getElementsByTagName("body")[0];
-	var searchInput = getByClass(body, "search-input-search")[0].getElementsByTagName("input")[0];
-	searchInput.onfocus = function() {
-		searchInput.setAttribute("placeholder", "");
-	};
-	searchInput.onblur = function() {
-		searchInput.setAttribute("placeholder", "洗衣机");
-	};
+	var searchInputs = getByClass(body, "search-input-search")[0].getElementsByTagName("input");
+	for(var i=0; i<searchInputs.length; i++) {
+		searchInputs[i].onfocus = function() {
+			this.setAttribute("placeholder", "");
+		};
+		searchInputs[i].onblur = function() {
+			this.setAttribute("placeholder", "洗衣机");
+		};
+	}
 }
 // 搜索栏end
 

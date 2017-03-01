@@ -1,0 +1,11 @@
+body {
+	height: 1000px;
+}
+#did {
+	width: 100px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}

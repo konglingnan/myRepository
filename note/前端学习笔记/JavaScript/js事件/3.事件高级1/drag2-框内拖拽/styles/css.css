@@ -1,0 +1,17 @@
+#out {
+	width: 600px;
+	height: 400px;
+	background-color: pink;
+	position: relative;
+	top:100px;
+	left:50%;
+	margin-left: -300px;
+}
+#inner {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,15 @@
+#did {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	top: 100px;
+	left: 10px;
+}
+#xian {
+	width: 1px;
+	height: 500px;
+	background-color: black;
+	position: absolute;
+	left: 300px;
+}

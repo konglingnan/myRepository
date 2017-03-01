@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+	BOM中的scrollTop需要兼容：
+
+
+	（IE/FF || Chrome）
+
+var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;

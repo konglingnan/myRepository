@@ -1,0 +1,35 @@
+div {
+	float: left;
+}
+#content {
+	width: 400px;
+	height: 298px;
+	border: 1px solid #000;
+	overflow: hidden;
+	position: relative;
+}
+#content-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#out {
+	width: 20px;
+	height: 300px;
+	background-color: black;
+	position: relative;
+}
+#inner {
+	width: 20px;
+	height: 20px;
+	background-color: pink;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.box {
+	border: 1px dashed #000;
+	position: absolute;
+}

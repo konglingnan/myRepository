@@ -1,9 +1,5 @@
 // 通用函数开始
 
-function $(id){
-	return document.getElementById(id);
-}
-
 // 页面加载后执行
 function addLoadEvent(func) {
 	var oldload = window.onload;
@@ -14,6 +10,18 @@ function addLoadEvent(func) {
 			oldload();
 			func();
 		}
+	}
+}
+
+// 事件绑定通用函数
+// addEvent(事件源, 事件, 事件处理函数)
+function addEvent(obj, eve, fn) {
+	if(obj.attachEvent) {
+		// IE
+		obj.attachEvent("on"+eve, fn);
+	} else {
+		// chrome，FF
+		obj.addEventListener(eve, fn, false);
 	}
 }
 
@@ -106,5 +114,47 @@ function move(node, json, func) {
 	}, 30);
 }
 
+// 节点多个属性的匀速运动（节点，json）
+function move2(node, json, func) {
+	clearInterval(node.timer);
+	node.timer = setInterval(function() {
+		var stop = true;
+		for(var attr in json){
+			var cur;
+			if(attr=="opacity"){
+				cur = Math.round(parseFloat(getStyle(node, attr))*100);
+			}else {
+				cur = parseInt(getStyle(node, attr));
+			}
+			var speed;
+			if(json[attr]-cur>0){
+				speed = 6;
+			} else {
+				speed = -6;
+			}
+			if(cur != json[attr]) {
+				stop = false;
+			}
+			if(Math.abs(json[attr]-cur)<6){
+				clearInterval(node.timer);
+				// 定位到终点
+				node.style[attr] = json[attr]+"px";
+			}else{
+				// 移动
+				cur += speed;
+				if(attr=="opacity"){
+					node.style.opacity = cur/100;
+					node.style.filter = "alpha(opacity:"+cur+")";
+				}else{
+					node.style[attr] = cur+"px";
+				}
+			}
+		}
+		if(stop) {
+			clearInterval(node.timer);
+			if(func) func();
+		}
+	}, 30);
+}
 
 // 通用函数结束
