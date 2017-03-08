@@ -1,0 +1,51 @@
+
+
+
+	// 获取css样式
+	$('div').css('color');
+
+	// 设置css样式
+	$('div').css('background', '#0f0');
+	
+	// 设置多个css样式
+	$('div').css({
+		'height': '100px',
+		'width': '200px',
+		'color': '#f00'
+	});
+	
+	// 通过匿名函数设置css样式
+	$('div').css('height', function() {
+		// 局部操作
+		return parseInt($(this).css('height'))+100+'px';
+	});
+
+	// 获取元素多个css样式	// 返回js原生对象数组
+	var box = $('div').css(['height', 'width', 'color']);
+	// 设置元素多个css样式
+
+	// 传统遍历对象数组的方法
+	for(var i in box) {
+		alert(i+": "+box[i]);
+	}
+
+	// jQuery遍历js原生对象数组的方法
+	$.each(box, function(index, value) {
+		alert(index+":"+value);
+	});
+	// jQuery遍历jQuery对象数组的方法
+	$('div').each(function(index, value) {
+		alert(index+":"+value);
+	});
+
+	// 添加样式类
+	$('div').addClass('size');
+	$('div').addClass('red bg');
+	// 移除样式类
+	$('div').removeClass('red');
+	$('div').removeClass('red bg');
+
+	// 默认样式和指定样式的切换
+	$('div').click(function() {
+		$(this).toggleClass('green');
+	});

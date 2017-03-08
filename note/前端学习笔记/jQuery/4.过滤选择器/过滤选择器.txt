@@ -5,47 +5,58 @@
 
 
 	// 基本过滤器
-	$("li:first"); //li中的第一个
+
+	$("li:first");		//所有li中的第一个
 	$("li").first();
-	$("li:last"); //li中的最后一个
+	$("li:last"); 		//所有li中的最后一个
 	$("li").last();
 	$("#ul2 li:last");
 	$("#ul:first li:last");
-	$("li:not(.yang)"); //所有不是.yang样式的li
+	$("li:not(.yang)"); 	//所有不是.yang样式的li
 	$("li").not(".yang");
-	$("li:even"); //所有第偶数个的li
-	$("li:odd"); //所有第奇数个的li
-	$("li:eq(2)"); // equal li[2]
+	$("li:even"); 		//所有第偶数个的li
+	$("li:odd");		//所有第奇数个的li
+	$("li:eq(2)");		// equal li[2]
 	$("li").eq(2);
-	$("li:eq(-2)"); // 倒数第2个
-	$("li:gt(2)"); // 大于第2个的所有
-	$("li:lt(2)"); // 小于第2个的所有
-	$(":header"); // h1-h6
+	$("li:eq(-2)");		// 所有的li倒数第2个
+	$("li:gt(2)");		// 大于第2个的所有li
+	$("li:lt(2)");		// 小于第2个的所有li
+	$(":header");		// h1-h6
 
 	$("input").get(0).focus();
-	$(":focus"); // 当前焦点的元素（必须是初始状态已经被激活的）
+	$(":focus");		// 当前焦点的元素（必须是初始状态已经被激活的）
 
 
 
 	// 内容过滤器
-	$("div:empty"); // 无子节点
-	$("ul:has(.red)"); //子节点中有.red类的ul
+
+	$("div:empty");			// 无子节点
+	$("ul:has(.red)");		//子节点中有.red类的ul
 	$("ul").has(".red");
-	$("div:parent"); //是父节点的div（有子元素的div）
-	$("li").parent(); //得到li的父节点
-	$("li").contains("ycku.com") // 包括"ycku.com"内容的结点
-	$("li").parents(); //li的所有父辈节点
-	$("li").parentsUntil("html"); //li的父辈节点到html之前
+	$("div:parent");		//是父节点的div（有子元素的div）
+	$("li").parent();		//得到li的父节点
+	$("li").contains("ycku.com")	// 包括"ycku.com"内容的结点
+	$("li").parents();		//li的所有父辈节点
+	$("li").parentsUntil("html");	//li的父辈节点到html之前
 
 
 
 	// 可见性过滤器
-	$("div:visible"); //display为visible的div
-	$("div:hidden"); //display为hidden的div
+
+	$("div:visible");	//display为visible的div
+	$("div:hidden");	//display为hidden的div
 	//display为hidden的div们在1000毫秒之后慢慢显示出来，并且包括它新增的样式
 	$("div:hidden").css("backgroundColor", "#ccc").show(1000); 
 
 
 
 	// 子元素过滤器
-	
+
+	$('li:first-child');		//每个父元素的第一个子元素
+	$('li:last-child');		//每个父元素的最后一个子元素
+	$('li:only-child');		//每个只有一个子元素的父元素
+	$('li:nth-child(odd)');		//每个父元素的所有奇数项的子元素
+	$('li:nth-child(even)');	//每个父元素的所有偶数项的子元素
+	$('li:nth-child(2)');		//每个父元素的第二个子元素
+	$('li:nth-child(3n)');		//每个父元素的第3n个子元素
+	$('li:nth-child(2n+1)');	//每个父元素的第2n+1个子元素

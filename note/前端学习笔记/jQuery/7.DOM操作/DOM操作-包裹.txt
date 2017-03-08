@@ -1,0 +1,31 @@
+
+
+
+	// 每个strong外层包裹一层div的几种写法
+	// （html代码）
+	$('strong').wrap('<div></div>');
+	$('strong').wrap('<div />');
+	$('strong').wrap('<div>123</div>');
+	$('strong').wrap('<div><em></em></div>');
+	// （DOM结点）
+	$('strong').wrap($(div).get(0));
+	$('strong').wrap(document.createElement('div'));
+	// （函数）
+	$('strong').wrap(function(index) {
+		return '<strong>'+index+'</strong>';
+	});
+
+	// 所有的strong外层包裹一个div
+	// 只列举一种写法，其他写法同上
+	$('strong').wrapAll('<div></div>');
+	$('strong').wrapAll(document.createElement('div'));
+
+	// 用div把strong的子元素包裹起来
+	$('strong').wrapInner('<div></div>');
+	$('strong').wrapInner(document.createElement('div'));
+	$('strong').wrapInner(function(index) {
+		return '<div>'+index+'</div>';
+	});
+
+	// 清除一个最内层包裹
+	$('strong').unwrap();

@@ -1,0 +1,48 @@
+
+
+
+
+	// 常规选择器
+	$('input[name=user]');
+
+
+	// 表单选择器
+	$(':input[name=user]').val();
+	$('form :hidden');
+	$(':radio[name=sex]').last().val();
+
+	// 选取所有input、textarea、select、button
+	$(':input');
+	// 选取所有单行文本（type=text）
+	$(':text');
+	// 选取所有密码框（type=password）
+	$(':password');
+	// 选取所有单选框（type=radio）
+	$(':radio');
+	// 选取所有复选框（type=checkbox）
+	$(':checkbox');
+	// 选取所有提交按钮（type=submit）
+	$(':submit');
+	// 选取所有重置按钮（type=reset）
+	$(':reset');
+	// 选取所有图像按钮（type=image）
+	$(':image');
+	// 选取所有普通按钮（<button>）
+	$(':button');
+	// 选取所有文件按钮（type=file）
+	$(':file');
+	// 选取所有不可见字段（type=hidden）
+	$(':hidden');
+
+
+	// 表单过滤器
+
+	// 获取可用元素
+	$(':enabled');
+	// 获取不可用元素
+	$(':disabled');
+	// 获取radio、checkbox中被选中的元素
+	$(':checked');
+	// 获取select下拉列表中被选中的元素
+	$(':selected');
+

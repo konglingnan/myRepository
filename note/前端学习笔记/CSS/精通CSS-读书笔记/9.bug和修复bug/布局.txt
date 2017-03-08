@@ -1,0 +1,36 @@
+
+
+
+
+
+
+	IE的表现与其他浏览器不同的原因之一是，显示引擎使用一个称为布局的内部概念。
+
+	布局问题是许多IE/Win显示bug的根源。
+
+
+
+
+	什么是布局？
+
+	Windows上的IE使用布局概念来控制元素的尺寸和定位。那些“拥有布局”的元素负责本身及其子元素的尺寸的设置和定位。如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
+
+	IE显示引擎利用布局概念减少它的处理开销。为了提高性能，IE开发团队只将布局应用于一部分实际需要布局的元素。
+	默认情况下拥有布局的元素：body、html、table、tr、td、img、hr、input、select、textarea、button、iframe、embed、object、applet、marquee
+
+
+	布局概念是Windows上的IE特有的。
+
+	设置以下css属性会自动地使元素拥有布局。
+
+	display: inline-bolck;
+	float
+	width
+	height
+	zoom
+	writing-mode: tb-rl
+
+	IE7中以下属性也是布局触发器：
+	overflow: hidden/scroll/auto
+	min-width
+	max-width: (除none以外的任何值)

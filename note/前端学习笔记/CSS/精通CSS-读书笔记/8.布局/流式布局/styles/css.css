@@ -1,0 +1,21 @@
+.wrapper {
+	width: 76.8%;
+	margin: 0 auto;
+	text-align: left;
+	min-width: 50em;
+	background-color: #ccc;
+}
+
+.content .primary {
+	width: 72.82%;
+	float: right;
+	display: inline;
+	background-color: blue;
+}
+
+.content .secondary {
+	width: 25%;
+	float: left;
+	display: inline;
+	background-color: pink;
+}

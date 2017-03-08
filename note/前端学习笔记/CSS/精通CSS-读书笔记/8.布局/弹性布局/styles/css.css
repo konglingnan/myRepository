@@ -1,0 +1,27 @@
+body {
+	font-size: 62.5%; /*为了让1em=10px 设置font-size为10px，10/16=62.5% */
+	text-align: center;
+}
+
+.wrapper {
+	width: 62em;
+	font-size: 1.1em;
+	margin: 0 auto;
+	text-align: left;
+	min-width: 50em;
+	background-color: #ccc;
+}
+
+.content .primary {
+	width: 72.82%;
+	float: right;
+	display: inline;
+	background-color: blue;
+}
+
+.content .secondary {
+	width: 25%;
+	float: left;
+	display: inline;
+	background-color: pink;
+}

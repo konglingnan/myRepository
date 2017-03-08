@@ -1,0 +1,41 @@
+
+
+
+其他方法：
+
+
+	//.is()	//判断	//返回布尔值
+	$('.red').is('li');		//选择器
+	$('.red').is('li');		//jQuery对象集合
+	$('.red').is($('li').eq(2));	//jQuery对象单个
+	$('.red').is($('li').get(2));	//DOM对象
+	$('.red').is(function(){	//方法
+		return $(this).attr('title')=='列表3';	//自定义判断
+	});
+
+
+	//.hasClass()	//判断是否有类	//返回布尔值
+	$('li').eq(2).hasClass('red');
+
+
+	//.slice()	//返回jQuery对象集合	//根据索引
+	$('li').slice(0,5);	//返回所有li的第0-4个（从第0个开始，到第五个之前）
+	$('li').slice(2);	//返回所有li的从第二个开始，到最后
+	$('li').slice(2,-2);	//返回所有li的从第二个开始，到倒数第2个之前
+
+
+	//.end()	//返回当前状态的前一个状态的节点
+	$('li').eq(1).end()		//返回$('li')
+	$('li').eq(1).next().end()	//返回$('li').eq(1)
+
+
+	$('div:first').children();	//返回$('div:first')的元素子节点
+	$('div:first').contents();	//返回$('div:first')的所有子节点（包括文本节点）
+
+
+	//.filter()	//可以同时选择多个，可以通过函数返回（拓展性好，灵活性高）
+	$('li').filter('.red, :first, :last');	//返回.red和第一个li和最后一个li
+
+	$('li').filter(function() {
+		return $(this).attr('class')=="red" && $(this).attr('title')=='列表3';
+	}).css('background', '#ccc');

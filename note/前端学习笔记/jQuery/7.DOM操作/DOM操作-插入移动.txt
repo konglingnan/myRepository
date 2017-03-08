@@ -1,0 +1,40 @@
+
+
+
+	// 创建节点
+	var box = $('<div id="div1">结点</div>');
+
+	// 向body的后面插入节点box
+	$('body').append(box);
+	// 向div的后面插入strong节点
+	$('div').append('<strong>DOM</strong>');
+	$('div').append(function(index, html) {
+		return '<strong>DOM</strong>'+index+html;
+	});
+	// 将strong移入到div内部的后面
+	$('strong').appendTo('div');
+
+	// 向div的前面插入strong节点
+	$('div').prepend('<strong>DOM</strong>');
+	$('div').prepend(function(index, html) {
+		return '<strong>DOM</strong>'+index+html;
+	});
+	// 将strong移入到div内部的前面
+	$('strong').prependTo('div');
+
+	// 向div的外部的后面插入strong节点
+	$('div').after('<strong>DOM</strong>');
+	$('div').after(function(index, html) {
+		return '<strong>DOM</strong>'+index+html;
+	});
+
+	// 向div的外部的前面插入strong节点
+	$('div').before('<strong>DOM</strong>');
+	$('div').before(function(index, html) {
+		return '<strong>DOM</strong>'+index+html;
+	});
+
+	// 将strong移到div外部的后面
+	$('<strong>DOM</strong>').insertAfter('div');
+	// 将strong移到div外部的前面
+	$('<strong>DOM</strong>').insertBefore('div');

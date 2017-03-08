@@ -1,0 +1,23 @@
+
+
+
+
+
+	// 只复制元素和内容，不复制事件行为
+	$('div').clone();
+	// 既复制元素和内容，也复制事件行为
+	$('div').clone(true);
+
+	// 删除节点（返回的结点不保留事件行为）
+	$('div').remove();
+	// 删除节点（返回的结点保留事件行为）
+	$('div').detach();
+	// 删除是.box类的节点
+	$('div').remove('.box');
+
+	// 清空节点内的内容
+	$('div').empty();
+
+	// strong替换div节点内的内容（连带事件清除）
+	$('div').replaceWith('<span>DOM</span>');
+	$('<span>DOM</span>').replaceAll('div');

@@ -1,0 +1,36 @@
+
+
+
+	// 宽度的设置方法（不包括内外边距及边框）
+	// 高度同理
+	$('div').width(500);
+	$('div').width('500px');
+	$('div').width(function(index, width) {
+		return width-500+'px';
+	});
+
+	// 宽高获取方法
+	// 高度同理
+	// width
+	$('div').width();
+	// width+padding
+	$('div').innerWidth();
+	// width+padding+border
+	$('div').outerWidth();
+	// width+padding+border+margin
+	$('div').outerWidth(true);
+
+	// 获取某个元素相对于视口的位置
+	$('div').offset();
+	$('div').offset().top;
+	$('div').offset().left;
+	// 获取某个元素相对于父元素的位置
+	$('div').position();
+	// 获取垂直滚动条的值
+	$('div').scrollTop();
+	// 设置垂直滚动条的值
+	$('div').scrollTop(700);
+	// 获取水平滚动条的值
+	$('div').scrollLeft();
+	// 设置水平滚动条的值
+	$('div').scrollLeft(700);
