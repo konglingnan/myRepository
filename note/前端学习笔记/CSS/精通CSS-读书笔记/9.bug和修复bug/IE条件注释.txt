@@ -1,0 +1,27 @@
+
+
+
+
+
+		定义：条件注释是一种专有的（因此是非标准的）对常规HTML注释的Microsoft扩展。
+
+
+		作用：条件注释能够根据条件（比如浏览器版本）显示代码块。尽管是非标准的，但条件注释在其他所有浏览器看来是常规注释，因此本质上是无害的。
+
+
+		用法：
+			<!--[if IE]>
+				<link rel="stylesheet" type="text/css" href="/css/ie.css" />
+			<![endif]-->
+
+
+			//特定浏览器
+			<!--[if IE 6]>
+				<link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+			<![endif]-->
+
+
+			//一组浏览器(IE5/IE5.5)
+			<!--[if lt IE]>
+				<link rel="stylesheet" type="text/css" href="/css/ie5x.css" />
+			<![endif]-->
