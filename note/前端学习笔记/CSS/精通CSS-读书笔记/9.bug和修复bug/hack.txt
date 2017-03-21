@@ -1,11 +1,8 @@
 
 
 
-
-
 		·基于浏览器解析错误的过滤器：IE for Mac带通过滤器
 		（利用css注释中的转义bug）
-
 
 		/*\*//*/
 			@import "ie5mac.css";
@@ -20,7 +17,6 @@
 		/* blah */
 			@import "ie5mac.css";
 		/**/
-
 
 		其他所有浏览器看到的是：
 		/* blah *//*
