@@ -1,0 +1,49 @@
+孔令囡/女/2018届
+
+求职意向：web前端开发
+email：konglingnan@gmail.com
+tel：18340865479
+微信：k1214509175
+博客：http://blog.csdn.net/konglingnan999
+github：https://github.com/konglingnan/
+在线简历：konglingnan.github.io
+
+
+个人信息：
+出生日期：1994-10-28
+民族：汉
+性别：女
+
+教育经历：
+本科 2014.09-2018.07
+大连民族大学 计算机科学与技术专业
+
+获奖情况：
+2015 获得学习优秀单项先进个人
+2016 优秀三好学生 综合一等奖学金
+全美数学建模比赛（三等奖）
+
+语言能力：
+日语二级相当
+曾翻译英文科技文章
+
+职业技能：
+html & css
+JavaScript & jQuery
+框架：bootstrap
+angualr
+后台语言： Java JSP C++ 
+
+项目经验：
+仿京东首页
+使用技术：html5 css3 JavaScript
+企业OA系统 bootstrap AngualrJS java
+建材公司网站 html css
+宠物网demo html5 css3 JavaScript
+
+
+学过的课程：
+数据库
+操作系统
+Linux
+
