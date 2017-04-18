@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	// 超类型
+	function SuperType() {
+		this.superProperty = "Super";
+	}
+	SuperType.prototype.getSuper = function(){
+		return this.superProperty;
+	};
+
+	// 子类型
+	function SubType() {
+		this.subProperty = "Sub";
+	}
+
+	// SubType继承了SuperType
+	SubType.prototype = new SuperType();
+
+	// 子类型特有方法
+	SubType.prototype.getSub = function() {
+		return this.subProperty;
+	}
+
+	var s = new SubType();
+	alert(s.getSub());		//子类型的特有方法
+	alert(s.getSuper());	//继承来的超类型方法
+
+	</script>
+
+</body>
+</html>

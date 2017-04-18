@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	// 通过构造函数创建属性
+	function Person(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	// 通过原型创建方法
+	Person.prototype = {
+		constructor : Person,
+		getName : function() {
+			return this.name;
+		},
+		// 注意这里是，逗号
+		getAge : function() {
+			return this.age;
+		}
+	}
+
+	// Person.prototype.getName = function(){
+	// 	return this.name;
+	// };
+	// Person.prototype.getAge = function(){
+	// 	return this.age;
+	// };
+
+	var p = new Person("a", 2);
+	alert(p.getAge());
+
+	</script>
+
+</body>
+</html>

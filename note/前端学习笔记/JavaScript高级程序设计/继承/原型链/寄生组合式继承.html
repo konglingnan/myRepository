@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	// 超类型
+	function SuperType(name) {
+		this.name = name;
+	}
+	SuperType.prototype.getName = function(){
+		return this.name;
+	};
+
+	// 子类型
+	function SubType(name, age) {
+//		// SubType继承SuperType属性
+		SuperType.call(this, name, age);
+		// 子类型特有属性
+		this.age = age;
+	}
+
+//	// SubType继承SuperType原型
+	inheritPrototype(SubType, SuperType);
+
+	// 子类型特有方法
+	SubType.prototype.getAge = function() {
+		return this.age;
+	}
+
+	// 继承原型函数（有函数提升）
+	function inheritPrototype(SubType, SuperType) {
+		var prototype = SuperType.prototype;
+		prototype.constructor = SubType;
+		SubType.prototype = prototype;
+	}
+
+	var s = new SubType("小明", 20);
+	alert(s.getName());	//继承来的超类型方法
+	alert(s.getAge());		//子类型的特有方法
+
+	</script>
+
+</body>
+</html>
