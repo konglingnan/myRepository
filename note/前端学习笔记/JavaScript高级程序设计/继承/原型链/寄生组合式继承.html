@@ -30,7 +30,7 @@
 		return this.age;
 	}
 
-	// 继承原型函数（有函数提升）
+	// 继承原型函数（有函数声明提升）
 	function inheritPrototype(SubType, SuperType) {
 		var prototype = SuperType.prototype;
 		prototype.constructor = SubType;
