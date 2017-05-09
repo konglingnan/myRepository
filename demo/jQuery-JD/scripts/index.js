@@ -40,9 +40,7 @@ function tabBar() {
 				var len = parseInt(getStyle(em.get(0), "width"))-5;
 				$(em).animate({left: -len});
 			}
-		});
-		// 移出缩回
-		$(this).mouseleave(function(){
+		}).mouseleave(function(){
 			var em = $(this).find("em");
 			if(em) {
 				$(em).animate({left: 35});
@@ -59,13 +57,12 @@ function sendCity() {
 	for(var i=0; i<citys.length; i++){
 		cityUl.append('<li><a href="javascript:void(0)">'+citys[i]+'</a></li>');
 	}
-	var cityLis = cityUl.children("li");
 	// 初始化
 	$(cityUl.children()[0]).addClass("active");
 	// 点击城市切换样式
-	cityLis.each(function(){
+	cityUl.children("li").each(function(){
 		$(this).click(function() {
-			cityLis.each(function(){
+			$(this).siblings().each(function(){
 				$(this).removeClass("active");
 			});
 		$(this).addClass("active");
@@ -76,11 +73,9 @@ function sendCity() {
 
 // 搜索栏
 function searcher() {
-	var searchInputs = $(".search-input-search").children("input");
-	searchInputs.focus(function() {
+	$(".search-input-search").children("input").focus(function() {
 		$(this).removeAttr("placeholder");
-	});
-	searchInputs.blur(function() {
+	}).blur(function() {
 		$(this).attr("placeholder", "洗衣机");
 	});
 }
@@ -101,29 +96,25 @@ function classifyImg() {
 // 轮播图
 function slider() {
 	var now = 0;
-	var slider = $(".slider");
 	// 大图列表
 	var ImgLis = $(".bigImgs").children("li");
 	// 小点列表
 	var pointLis = $(".point").children("li");
-	// 左右按钮
-	var prevBtn = $(".button1");
-	var nextBtn = $(".button2");
 	// 初始化
 	var now = 0;
 	$(ImgLis[now]).css("display", "block");
 	// 鼠标移入小点
 	tab();
 	// 上一个按钮
-	prevBtn.click(function() {
+	$(".button1").click(function() {
 		change("prev");
 	});
 	// 下一个按钮
-	nextBtn.click(function() {
+	$(".button2").click(function() {
 		change("next");
 	});
 	// 自动播放
-	autoPlay(slider, function() {
+	autoPlay($(".slider"), function() {
 		change("next");
 	});
 	// 鼠标移入小点
