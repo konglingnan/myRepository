@@ -1,0 +1,652 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {      /*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;       /*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;      /*合并外边线*/
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";   /*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+/*右箭头start*/
+.go {
+    font-family: "SimSun";
+}
+/*右箭头end*/
+
+/*左右按钮start*/
+
+.button {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.button a {
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: rgba(0, 0, 0, 0.3); 
+}
+
+.button .button1 {
+    float: left;
+}
+
+.button .button2 {
+    float: right;
+}
+
+.button a:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+/*左右按钮end*/
+
+/*右侧边栏start*/
+.rightBar {
+    width: 6px;
+    height: 100%;
+    background-color: #7A6E6E;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.rightBar .rightBar-my {
+    height: 216px;
+    top: 40%;
+}
+
+.rightBar .rightBar-common {
+    height: 108px;
+    bottom: 0;
+}
+
+.rightBar ul {
+    width: 35px;
+    position: absolute;
+    right: 0;
+}
+
+.rightBar li {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-top: 1px;
+    list-style: none;
+    border-radius: 3px 0 0 3px;
+    background-color: #7A6E6E;
+    float: left;
+    position: relative;
+}
+
+.rightBar a {
+    display: block;
+    color: #fff;
+}
+
+
+.rightBar li i {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 3px 0 0 3px;
+    background: #7A6E6E url(../images/rightbars.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.rightBar li em {
+    display: block;
+    width: 65px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+    background-color: #7A6E6E;
+    position: absolute;
+    top: 0;
+    left: 35px;
+    z-index: 1;
+}
+
+.rightBar .rightBar-common em {
+    width: 50px;
+}
+
+.rightBar li:hover i,
+.rightBar li:hover em {
+    background-color: #C81623;
+}
+.rightBar .member i {
+    background-position: -88px -173px; 
+}
+.rightBar .car i {
+    background-position: -50px 0px; 
+}
+.rightBar .focus i {
+    background-position: -50px -50px; 
+}
+.rightBar .footprint i {
+    background-position: -50px -100px; 
+}
+.rightBar .message i {
+    background-position: -190px -150px; 
+}
+.rightBar .consult i {
+    background-position: -50px -150px; 
+}
+.rightBar .top i {
+    background-position: -50px -250px; 
+}
+.rightBar .feedback i {
+    background-position: -50px -300px; 
+}
+.rightBar .survey i {
+    padding: 3px 5px;
+    line-height: 15px;
+    background: #C81623;
+}
+/*右侧边栏end*/
+
+/*广告start*/
+.banner {
+    background-color: #090359;
+}
+
+.banner-ad {
+    position: relative;
+}
+
+.banner-ad-close {
+    width: 19px;
+    height: 19px;
+    background: url(../images/close.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.banner-ad-close:hover {
+    background-position: bottom;
+}
+/*广告end*/
+
+/*导航栏start*/
+.side-nav {
+    background-color: #F1F1F1;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+
+.side-nav-l-send {
+    padding: 0 10px;
+}
+
+.side-nav-l:hover .side-nav-l-send {
+    height: 30px;
+    padding: 0 9px;
+    line-height: 29px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 100;
+}
+
+.side-nav-l:hover .side-nav-l-city {
+    display: block;
+}
+
+.side-nav-l-send s,
+.side-nav-r s {
+    display: inline-block;
+    width: 15px;
+    height: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.side-nav-l-send i,
+.side-nav-r i {
+    position: absolute;
+    top: -15px;
+}
+
+.side-nav-l-city {
+    width: 300px;
+    height: 195px;
+    z-index: 99;
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.side-nav-l-city li {
+    display: block;
+    width: 48px;
+    height: 28px;
+    padding: 2px;
+    padding-left: 10px;
+    color: #ccc; 
+    background-color: #fff;
+    float: left;
+    /*display: none;*/
+}
+
+.side-nav-l-city li a {
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.side-nav-l-city li a:hover {
+    background-color: #eee;
+}
+
+.side-nav-l:hover i {
+    position: absolute;
+    top: -7px;
+}
+
+.side-nav-r li {
+    float: left;
+}
+
+.site-nav-r-line {
+    width: 1px;
+    height: 15px;
+    background-color: #DDDDDD;
+    margin: 7px 10px 0;
+}
+
+.site-nav-r-tel {
+    padding-left: 25px;
+    position: relative;
+}
+
+.side-nav-r .tel {
+    width: 15px;
+    height: 20px;
+    background: url(../images/tel.png) no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}
+
+.side-nav-l-city .active a {
+    background-color: #C81623;
+    color: #fff;
+}
+
+/*导航栏end*/
+
+/*搜索栏start*/
+.search-logo {
+    padding: 20px 0;
+    width: 362px;
+    float: left;
+    position: relative;
+}
+
+.search-logo a {
+    display: inline-block;
+    width: 270px;
+    height: 60px;
+    background: url(../images/logo.png);
+}
+
+.search-logo img {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.search-input {
+    width: 539px;
+    height: 100px;
+    float: left;
+}
+
+.search-input-search {
+    width: auto; /*自适应子盒子*/
+    height: 36px;
+    margin: 25px 0 8px 0;
+}
+
+.search-input-search input {
+    width: 450px;
+    height: 24px;
+    border: 2px solid #B61D1D;
+    padding: 4px;
+    font: 14px/24px "microsoft yahei";
+    vertical-align: middle; /*垂直对齐方式: 居中*/
+    float: left;
+}
+
+.search-input-search button {
+    width: 76px;
+    height: 36px;
+    background-color: #B61D1D;
+    color: #FFFFFF;
+    cursor: pointer; /*鼠标样式：小手*/
+    /*cursor: move;*/ /*移动*/
+    /*cursor: default;*/ /*默认*/
+    /*cursor: text;*/ /*光标*/
+    /*cursor: wait;*/
+
+    float: left;
+}
+
+.search-input-link a {
+    display: inline-block;
+    padding-right: 11px;
+    float: left;
+}
+
+.search-car {
+    width: 139px;
+    height: 34px;
+    margin: 25px 65px 0 0;
+    border: 1px solid #DFDFDF;
+    background: url(../images/tel.png) no-repeat 10px -49px;
+    background-color: #F9F9F9;
+    float: right;
+    position: relative;
+}
+
+.search-car a {
+    display: inline-block;
+    padding: 9px 17px 7px 43px;
+}
+
+.search-car .search-car-number {
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #C81623;
+    border-radius: 8px 8px 8px 0px; /*宽高的一半*/
+    position: absolute;
+    top: -5px;
+    right: 18px;
+}
+/*搜索栏end*/
+
+/*上方固定搜索栏start*/
+.search-top {
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #C81623;
+    z-index: 99;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.search-top-logo {
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+    padding: 0;
+    text-indent: -999px;
+    background: url(../images/logo2.png) no-repeat;
+    background-size: 125px 40px;
+    position: absolute;
+    top: 4px;
+}
+
+.search-top-search {
+    width: 560px;
+    position: absolute;
+    top: 6px;
+    left: 400px;
+}
+
+.search-top-search input {
+    width: 495px;
+    height: 35px;
+    border: none;
+    padding: 0;
+    padding-left: 5px;
+    background-color: #EFEFEF;
+}
+
+.search-top-search button {
+    width: 50px;
+    height: 35px;
+}
+/*上方固定搜索栏end*/
+
+/*footer部分start*/
+footer {
+    margin-top: 20px;
+}
+
+.footer-top {
+    height: 93px;
+    padding: 20px 0 0 80px;
+    background-color: #F5F5F5;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.footer-top img {
+    margin-right: 80px;
+    position: absolute;
+    left: 50%;
+}
+
+.footer-top-slogan1 {
+    margin-left: -608px;
+}
+
+.footer-top-slogan2 {
+    margin-left: -304px;
+}
+
+.footer-top-slogan4 {
+    margin-left: 304px;
+}
+
+.footer-guide {
+    margin-left: 18px;
+}
+
+.footer-guide-one {
+    float: left;
+    width: 150px;
+    height: 187px;
+    margin-left: 50px;
+}
+
+.footer-guide-one dt {
+    font: 400 16px/36px "microsoft yahei";
+}
+
+.footer-guide-one a {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer-guide-china {
+    float: left;
+    margin-left: 16px;
+    width: 216px;
+    height: 169px;
+    background: url(../images/china.png) no-repeat 0 -131px;
+}
+
+.footer-guide-china h1 {
+    font: 400 16px/36px "microsoft yahei";
+    margin-left: 20px;
+}
+
+.footer-guide-china p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 10px 13px 5px 20px;
+}
+
+.footer-guide-china a {
+    float: right;
+}
+
+.footer-us {
+    height: 192px;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer-us a {
+    line-height: 38px;
+}
+
+.footer-us span {
+    margin: 0 10px;
+}
+
+.footer-us-img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.footer-us-img img {
+    float: left;
+    margin: 13px 13px 0 0;
+}
+/*footer部分end*/
