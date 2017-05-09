@@ -172,3 +172,12 @@ function slider() {
 		});
 	}
 }
+
+// 获取元素属性值
+function getStyle(obj, name) {
+	if(obj.currentStyle){
+		return obj.currentStyle[name];
+	}else{
+		return getComputedStyle(obj, false)[name];
+	}
+}
