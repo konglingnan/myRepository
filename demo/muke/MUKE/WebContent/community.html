@@ -1,0 +1,347 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/wow/animate.css">
+
+	<link rel="stylesheet" href="styles/base.css" />
+	<link rel="stylesheet" href="styles/community.css" />
+		
+	<!-- bootstrap插件 -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/course.js"></script>
+	<script type="text/javascript" src="js/wow/wow.js"></script>
+	<script src="js/swiper/swiper.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- 考虑低版本IE的js兼容 -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<title>慕课网</title>
+
+		<link rel="stylesheet" type="text/css" href="styles/loginstyle.css">
+
+</head>
+<body>
+	<!-- 发现新问题start -->
+	<div class="myModal">
+		<h3>我的问题</h3>
+		<textarea id="question_title"></textarea>
+		<button id="submit">提交<button>
+	</div>
+	<!-- 发现新问题end -->
+
+
+	<!-- 登录start -->
+	<div id="login">
+		<div id="main">
+			<div id="head_pic"></div>
+			<div id="account">
+				<div class="input">	
+					<input type="text" id="uname" name="uname" placeholder="username" />
+				</div>
+				<div class="input1">
+					<input type="password" id="upwd" name="upwd" placeholder="password" />
+				</div>
+			</div>
+			<input type="button" id="loginBtn" value="login" class="btn11" />
+			<div id="footer">
+				<a href="#">Forget Password?</a>
+			</div>
+		</div>
+	</div>
+	<!-- 登录end -->
+	<!-- 注册start -->
+	<div id="signin">
+		<div id="main">
+			<div id="head_pic"></div>
+			<div id="account">
+				<div class="input">	
+					<input type="text" id="rtel" name="rtel" placeholder="tel" />
+				</div>
+				<div class="input1">
+					<input type="text" id="rname" name="registerName" placeholder="username" />
+					<input type="password" id="rpwd" name="password1" placeholder="password" />
+				</div>
+			</div>
+			<input type="button" id="register" value="register" class="btn11" />
+		</div>
+	</div>
+	<!-- 注册end -->
+
+	<!-- 导航栏部分start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="logo">
+			<a href="index.html"></a>
+		</div>
+		<button class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div id="nav-collapse" class="collapse navbar-collapse">
+			<ul  class="nav navbar-nav">
+				<li><a href="course.html">课程</a></li>
+				<li><a href="plan.html">计划</a></li>
+				<li><a href="share.html">分享</a></li>
+				<li class="currentPage"><a href="community.html">社区</a></li>
+			</ul>
+			<div class="user navbar-right">
+				<span class="username"></span>
+				<button class="loginBtn">登录</button>
+				<button class="signinBtn">注册</button>
+				<button class='logoutBtn'>注销</button>
+				<form method="post" action="">
+					<input type="text" placeholder="请输入想要搜索的内容" />
+					<button>Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- 导航栏部分end -->
+
+	<div class="community-banner" style="margin-top:50px">
+		<div class="container">
+			<div class="banner-img"></div>
+			<ul>
+				<li><a href="#">问答</a></li>
+				<li><a href="#">作品</a></li>
+				<li><a href="#">文章</a></li>
+				<li><a href="#">活动</a></li>
+			</ul>		
+		</div>
+	</div>
+	<!-- 主内容区开始 -->
+	<div class="container-fluid " >
+		<div class="container clearfix">
+			<!-- 加薪利器开始-->
+			<div class="share-left ">
+				<div class="community-header">
+					<ul>
+						<li><h1>全部问答</h1></li>
+						<li><a href="#">技术问答</a></li>
+						<li><a href="#">课程问答</a></li>
+						<li><a href="#">官方活动</a></li>
+					</ul>
+				</div>
+
+				<div class="community-zuixin">
+					<ul>
+						<li ><a href="#"class="a_1">最新</a></li>
+						<li><a href="#">热门</a></li>
+						<li><a href="#">等待回复</a></li>
+					</ul>
+				</div>				
+				<!-- 留言部分开始 -->
+				<div class="liuyan-list">
+					<div class="liuyan-i clearfix">
+						<div class="lt">
+							<a href="#" class="a_img">
+								<img src="imgs/mukeee.png" alt="">
+							</a>
+							<a href="#" class="a_img_tip">幕女神</a>
+						</div>
+
+						<div class="md ">
+							<div class="md-left">
+								<i class="i">88</i>
+								<span>顶</span>
+								<a href="#"> 猿们看过来！文章投稿功能开放啦！</a>
+							</div>
+							<div class="md-left">
+								<i class="i2">88</i>
+								<span class="span2">[最新回答]</span>
+								<a href="#"><img src="imgs/ytl.jpg" alt="" width="20" height="20"></a>
+								<span class="span3 who"><a href="#">飞非飞:</a></span>
+								<span class="span2 what">
+									CSS的入门基础
+								</span>
+							</div>
+							<div class="md-left1">
+								<span class="time-span">提问时间：2017-10-1</span>
+								<span class="t-span"><a href="#">JAVA</a></span>
+								<span class="t-span"><a href="#">HTML/CSS</a></span>
+								<span class="t-span"><a href="#">C++</a></span>
+							</div>
+						</div>
+						<div class="ri clearfix">
+								<div class="ri-l">
+									<div class="number"></div>
+									<div class="comment"><input type="text/aera"><a href="#" class="btn btn-submit ">评论</a></div>
+								</div>
+								<div class="ri-r">
+									<div class="liulan">266浏览</div>
+								</div>
+							</div>
+					</div>
+					<div class="liuyan-i clearfix">
+						<div class="lt">
+							<a href="#" class="a_img">
+								<img src="imgs/mukeee.png" alt="">
+							</a>
+							<a href="#" class="a_img_tip">幕女神</a>
+						</div>
+
+						<div class="md ">
+							<div class="md-left">
+								<i class="i">88</i>
+								<span>顶</span>
+								<a href="#"> 猿们看过来！文章投稿功能开放啦！</a>
+							</div>
+							<div class="md-left">
+								<i class="i2">88</i>
+								<span class="span2">[最新回答]</span>
+								<a href="#"><img src="imgs/ytl.jpg" alt="" width="20" height="20"></a>
+								<span class="span3 who"><a href="#">飞非飞:</a></span>
+								<span class="span2 what">
+									CSS的入门基础
+								</span>
+							</div>
+							<div class="md-left1">
+								<span class="time-span">提问时间：2017-10-1</span>
+								<span class="t-span"><a href="#">JAVA</a></span>
+								<span class="t-span"><a href="#">HTML/CSS</a></span>
+								<span class="t-span"><a href="#">C++</a></span>
+							</div>
+						</div>
+						<div class="ri clearfix">
+								<div class="ri-l">
+									<div class="number"></div>
+									<div class="comment"><input type="text/aera"><a href="#" class="btn btn-submit ">评论</a></div>
+								</div>
+								<div class="ri-r">
+									<div class="liulan">266浏览</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<!-- 留言部分结束 -->
+				<!-- 加薪课程开始 -->
+
+			<!-- 页码部分start -->
+			<div class="page2">
+				<span>首页</span>
+				<span>上一页</span>
+				<ul>
+					<li><a href="javascript:void(0);" class="cur">1</a></li>
+					<li><a href="javascript:void(0);">2</a></li>
+					<li><a href="javascript:void(0);">3</a></li>
+					<li><a href="javascript:void(0);">4</a></li>
+					<li><a href="javascript:void(0);">5</a></li>
+					<li><a href="javascript:void(0);">6</a></li>
+					<li><a href="javascript:void(0);">7</a></li>
+				</ul>
+				<a href="javascript:void(0);">下一页</a>
+				<a href="javascript:void(0);">尾页</a>
+			</div>
+			<!-- 页码部分end -->
+			</div>
+			<!-- 加薪课程结束 -->
+
+			<!-- 最新活动开始 -->
+			<div class="share-right">
+				<div class="course-header" style="width:85%;border:none">
+					<a href="#" class="p-a" id="find">发现新问题</a>
+				</div>
+
+				<ul class="clearfix">
+					<li class="share-li" style="margin-top:5px;border:none">
+						<span><a href="#">当 better-scroll 遇见 Vue ?</a></span>
+						<span><a href="#">python与java、php 的优势对比</a></span>
+						<span><a href="#">你应该学 Kotlin 吗？</a></span>
+					<li>
+					</li>
+						<h1 style="margin-bottom:0px;color:#14191e">为你推荐</h1>
+					</li>
+
+					<li>
+						<h1>热修复与插件化你准备好了吗</h1>
+						<p>
+							android原生应用开发发展到今天，几乎每个App都是巨无霸级的大小，手淘，优酷这种应用更是航母级别的应用，一个应用可能几百人一起合作开发，在应用还小的时候大家可以甜蜜的合作，快速的迭代就像孩子小的时候每个人都喜欢，但随着应用越来越大，我们不得不面对的以下几个问题：第一，团队合作的效率越来越低，这是无法避免的，可能一个人的延期就会导致整个版本的延期，而人越多这个概率就是指数级别的增长。第二，潜在...
+						</p>
+					</li>
+                   
+                    <li>
+
+						<h1>标签风向标</h1>
+
+						<p>
+						<span><a href="#">JAVA 3088篇</a></span>
+						<span><a href="#">Html/CSS 1547篇</a></span>
+						<span><a href="#">大数据 122篇</a></span>
+						<span><a href="#">Mysq l371篇</a></span>
+						<span><a href="#">Node.js 122篇</a></span>
+						</p>
+					</li>
+				</ul>
+				<div class="course-header" style="width:85%;margin-top:20px;">
+					<h1>我要合作</h1>
+				</div>
+				<ul class="clearfix hezuo">
+					<li>
+						<p>
+							我们以积极向上、精益求精的态度，带领国内IT从业者共同找寻梦想，追求卓越。我们致力于为技术团队搭建分享和交流的平台，为推动在线教育发展略尽绵薄。我们欢迎各大互联网企业的技术研发团队与慕课网合作，在这里展示团队风貌，传递顶尖技术，分享实战经验，共同推动互联网技术的向前发展！
+						</p>
+						<p>邮箱：BD@imooc.com</p>
+					</li>
+				</ul>
+			</div>
+			<!-- 最新活动结束 -->
+		</div>
+	</div>
+	<!-- 主内容区结束 -->
+
+	<!-- 页脚部分start -->
+	<footer>
+		<div class="footer-left">
+			<ul>
+				<li><a href="javascript:void(0);">网站首页</a></li>
+				<li><a href="javascript:void(0);">人才招聘</a></li>
+				<li><a href="javascript:void(0);">联系我们</a></li>
+				<li><a href="javascript:void(0);">慕课云</a></li>
+				<li><a href="javascript:void(0);">关于我们</a></li>
+				<li><a href="javascript:void(0);">讲师招募</a></li>
+				<li><a href="javascript:void(0);">意见反馈</a></li>
+				<li><a href="javascript:void(0);">友情链接</a></li>
+			</ul>
+			<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+		</div>
+		<div class="footer-right">
+			<a href="javascript:void(0);" class="way1">
+				<div>
+					<img src="imgs/footer-sprite.png" />
+				</div>
+			</a>
+			<a href="javascript:void(0);" class="way2"></a>
+			<a href="javascript:void(0);" class="way3"></a>
+			</ul>
+		</div>
+	</footer>
+	<!-- 页脚部分end -->
+
+	<!-- goto部分start -->
+	<div class="goto">
+		<a href="javascript:void(0);" class="wechat">
+			<div></div>
+		</a>
+		<a href="javascript:void(0);" class="message"></a>
+		<a href="javascript:void(0);" class="phone"></a>
+		<a href="#" class="top"></a>
+	</div>
+	<!-- goto部分end -->
+
+
+	<script src="scripts/base.js"></script>
+	<script src="scripts/index.js"></script>
+</body>
+</html>
