@@ -95,7 +95,6 @@ function classifyImg() {
 
 // 轮播图
 function slider() {
-	var now = 0;
 	// 大图列表
 	var ImgLis = $(".bigImgs").children("li");
 	// 小点列表
