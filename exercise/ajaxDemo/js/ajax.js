@@ -24,6 +24,6 @@ function ajax(url, fnSucc, fnFaild) {
 					fnFaild(oAjax.status);
 				}
 			}
-		}	
+		}
 	}
 }

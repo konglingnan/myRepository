@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>慕课网</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/base.css" />
+		<link rel="stylesheet" href="styles/share.css" />
+		<link rel="stylesheet" type="text/css" href="styles/loginstyle.css">
+
+	</head>
+	<body>
+
+		<!-- 登录start -->
+		<div id="login">
+			<div id="main">
+				<div id="head_pic"></div>
+				<div id="account">
+					<div class="input">	
+						<input type="text" id="uname" name="uname" placeholder="username" />
+					</div>
+					<div class="input1">
+						<input type="password" id="upwd" name="upwd" placeholder="password" />
+					</div>
+				</div>
+				<input type="button" id="loginBtn" value="login" class="btn11" />
+				<div id="footer">
+					<a href="#">Forget Password?</a>
+				</div>
+			</div>
+		</div>
+		<!-- 登录end -->
+		<!-- 注册start -->
+		<div id="signin">
+			<div id="main">
+				<div id="head_pic"></div>
+				<div id="account">
+					<div class="input">	
+						<input type="text" id="rtel" name="rtel" placeholder="tel" />
+					</div>
+					<div class="input1">
+						<input type="text" id="rname" name="registerName" placeholder="username" />
+						<input type="password" id="rpwd" name="password1" placeholder="password" />
+					</div>
+				</div>
+				<input type="button" id="register" value="register" class="btn11" />
+			</div>
+		</div>
+		<!-- 注册end -->
+
+		<!-- 导航栏部分start -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div id="nav-collapse" class="collapse navbar-collapse">
+				<ul  class="nav navbar-nav">
+					<li><a href="course.html">课程</a></li>
+					<li><a href="plan.html">计划</a></li>
+					<li class="currentPage"><a href="share.html">分享</a></li>
+					<li><a href="community.html">社区</a></li>
+				</ul>
+				<div class="user navbar-right">
+					<span class="username"></span>
+					<button class="loginBtn">登录</button>
+					<button class="signinBtn">注册</button>
+					<button class='logoutBtn'>注销</button>
+					<form method="post" action="">
+						<input type="text" placeholder="请输入想要搜索的内容" />
+						<button>Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!-- 导航栏部分end -->
+
+		<div class="companys">
+			<div class="companys-top clearfix">
+				<a href="javascript:void(0);"><img src="imgs/aliyun.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/luntan.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/mongoDB.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/FEX.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/LBS.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/qiwu.jpg" /><div></div></a>
+				<a href="javascript:void(0);"><img src="imgs/quna.jpg" /><div></div></a>
+			</div>
+			<div class="companys-bottom">分享名企智慧，解密最强代码</div>
+		</div>
+		<!-- 内容部分start -->
+		<div class="container">
+			<div class="course">
+				<!-- 课程start -->
+				<div class="route clearfix">
+					<h1>课程</h1>
+					<hr />
+					<div class="courses">
+						<ul>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video1.jpg" />
+									<h3>MongoDB在线讲座</h3>
+									<p>揭秘MongoDB复制集技术内幕</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>10000人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video2.jpg" />
+									<h3>MongoDB在线讲座</h3>
+									<p>如何测试、调整及监控MongoDB性能</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>15000人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video3.jpg" />
+									<h3>前端交互技术解析</h3>
+									<p>金牌讲师带领大家解读前端交互</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>172354人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video4.jpg" />
+									<h3>前端技术基础课程</h3>
+									<p>6小时带领大家走进前端并深入了解前端知识</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>100234人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video5.jpg" />
+									<h3>数学知识在CSS动画中的应用</h3>
+									<p>3小时带大家了解CSS动画中的数学知识</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>12340人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video6.jpg" />
+									<h3>使用Android SDK基于LBS的开发</h3>
+									<p>带领大家学习如何使用高德进行基于LBS的开发</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>100000人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video7.jpg" />
+									<h3>HTML+CSS经典解析</h3>
+									<p>专业讲师带你领略HTML5、CSS3的魅力</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>205467人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video8.jpg" />
+									<h3>JQuery基础三部曲</h3>
+									<p>金牌讲师带领大家步步深入学习如何利用JQuery设计网页</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>128923人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video9.jpg" />
+									<h3>JavaScript基础课程</h3>
+									<p>8小时带领大家探索JS的秘密</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>125634人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video10.jpg" />
+									<h3>CSS3提升课程</h3>
+									<p>视频教学利用CSS3实现漂亮的阴影效果</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>163425人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video11.jpg" />
+									<h3>CSS技术基础课程</h3>
+									<p>9小时带领大家了解并深入CSS那些事儿</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>181223人在学习</span>
+								</a>
+							</li>
+							<li>
+								<div>9小时17分钟 | 初级</div>
+								<a href="javascript:void(0);"><img src="imgs/video12.jpg" />
+									<h3>JQuery基础知识解析</h3>
+									<p>视频详细解析JQuery功能之动画篇</p>
+									<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>210012人在学习</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 课程end -->
+				<!-- 页码部分start -->
+				<div class="page2">
+					<span>首页</span>
+					<span>上一页</span>
+					<ul>
+						<li><a href="javascript:void(0);" class="cur">1</a></li>
+						<li><a href="javascript:void(0);">2</a></li>
+					</ul>
+					<a href="javascript:void(0);">下一页</a>
+					<a href="javascript:void(0);">尾页</a>
+				</div>
+
+			</div>
+			<div class="activity">
+				<div class="route clearfix">
+					<h1>活动</h1>
+					<hr />
+					<div class="pic"></div>
+					<hr />
+					<div class="text">
+						<h4>【北京】2016 iWeb峰会北京站开幕</h4>
+						<p>由HTML5梦工场举办的“2016 iWeb峰会·北京站”今日盛大开幕，iWeb峰会紧扣行业热点，高度关注技术创新与发展，邀请行业各领域权威人士现场坐而论道，共同探讨HTML5最新技术与行业趋势，构建并推动完善健康的行业发展生态链，让技术为企业和开发者创造更大价值。</p>
+					</div>
+					<hr />
+					<div class="text">
+						<h4>【CSS】那些令人激动的CSS新技术</h4>
+						<p>第三代选择器得到了浏览器的良好支持，也为我们提供了有用的选择器。第四代选择器则是对第三代选择器的改进和升级：第四代选择器为我们提供了诸多方法来定位CSS的内容。</p>
+					</div>
+					<hr />
+					<h1>我要合作</h1>
+					<hr />
+					<div class="pic"></div>
+					<hr />
+					<div class="text">
+						<h4>【前端】前端就业前景</h4>
+						<p>HTML5全栈开发技术降低了对适配终端和应用的技术门槛，使得跨平台跨网络的低成本通用应用成为可能，有利于促进整个行业的良性发展。职友网数据显示，北、上、广的HTML5相关的职位共有21520个，尤其HTML5全栈高端人才稀缺，HTML5全栈开发技术具有学习门槛低，实用性强，易上手，好就业等特点。不管您是在校大学生，职场小白还是相关行业从业者都适合学习这套课程！</p>
+					</div>
+				</div>
+			</div>
+			<!-- 页码部分end -->
+		</div>
+		<!-- 内容部分end -->
+
+		<!-- 页脚部分start -->
+		<footer>
+			<div class="footer-left">
+				<ul>
+					<li><a href="javascript:void(0);">网站首页</a></li>
+					<li><a href="javascript:void(0);">人才招聘</a></li>
+					<li><a href="javascript:void(0);">联系我们</a></li>
+					<li><a href="javascript:void(0);">慕课云</a></li>
+					<li><a href="javascript:void(0);">关于我们</a></li>
+					<li><a href="javascript:void(0);">讲师招募</a></li>
+					<li><a href="javascript:void(0);">意见反馈</a></li>
+					<li><a href="javascript:void(0);">友情链接</a></li>
+				</ul>
+				<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+			</div>
+			<div class="footer-right">
+				<a href="javascript:void(0);" class="way1">
+					<div>
+						<img src="imgs/footer-sprite.png" />
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="way2"></a>
+				<a href="javascript:void(0);" class="way3"></a>
+				</ul>
+			</div>
+		</footer>
+		<!-- 页脚部分end -->
+		
+		<!-- goto部分start -->
+		<div class="goto">
+			<a href="javascript:void(0);" class="wechat">
+				<div></div>
+			</a>
+			<a href="javascript:void(0);" class="message"></a>
+			<a href="javascript:void(0);" class="phone"></a>
+			<a href="#" class="top"></a>
+		</div>
+		<!-- goto部分end -->
+
+
+		<script src="js/bootstrap.js"></script>
+		<script src="scripts/base.js"></script>
+	</body>
+</html>

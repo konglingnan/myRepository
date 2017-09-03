@@ -1,0 +1,322 @@
+body,html{
+	min-width: 1200px;
+	height: 100%;
+	width: 100%;
+}
+ul,li{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.share-left{
+	width: 75%;
+	float: left;
+	color: #14191e;
+}
+.share-left ul {
+	margin-left: -25px;
+}
+.share-left li{
+	margin-right: 2px;
+}
+.share-right{
+	width: 280px;
+	float: right;
+	color: #14191e;
+}
+.share-right ul {
+	margin-right: 0px;
+	padding: 0px 16px;
+}
+.share-right .course-header{
+	margin-left: 15px;
+}
+.share-right ul li{
+	width: 240px;
+	display: block;
+	margin-top: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+.share-right ul li h1{
+	font-size: 16px;
+	font-weight: bold;
+}
+.share-right ul li p{
+	font-size: 14px;
+	color:#666;
+}
+.share-right .hezuo li{
+	border-bottom: none;
+}
+
+.community-banner{
+	width: 100%;
+	height: 81px;
+	background: #edf1f2;
+	padding:28px 0px;
+}
+
+.banner-img{
+	float: left;
+	height: 22px;
+	width: 100px;
+	background: url(../imgs/opus-logo.png) no-repeat;
+}
+.community-banner ul {
+	float: left;
+}
+.community-banner ul li{
+	display: inline-block;
+	margin-left: 100px;
+
+}
+.community-banner ul li a{
+	color:#14191e;
+	font-size: 16px;
+	 font-family: 'Microsoft Yahei';
+	 text-decoration: none;
+}
+
+.community-header{
+	margin-top: 20px;
+}
+.community-header ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+.community-header ul li h1{
+	font-size: 20px;
+}
+.community-header ul{
+	margin-left: 0px;
+}
+.community-header ul li a{
+	display: block;
+	height: 40px;
+	width:48px; 
+	font-size: 12px;
+	color:#787d82;
+	text-decoration: none;
+}
+.community-header ul li a:hover{
+	color:#14191e;
+}
+
+.community-zuixin{
+	width: 100%;
+	background: #edf1f2;
+}
+.community-zuixin ul li{
+	display: inline-block;
+	margin-left: 50px;
+}
+.community-zuixin ul li a{
+	text-align: center;
+	line-height: 39px;
+	vertical-align: middle;
+	display: block;
+	color:#787d82;
+	text-decoration: none;
+	height: 39px;
+}
+.community-zuixin ul li .a_1{
+	color:#14191e;
+}
+.community-zuixin ul li a:not(.a_1):hover{
+	color:#14191e;
+}
+.liuyan-list{
+	width: 100%;
+}
+.liuyan-i{
+	width: 100%;
+	padding: 40px 0px;
+	border-bottom: 1px solid #ccc;
+}
+.liuyan-i .lt{
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+.a_img{
+	width: 75px;
+	height: 75px;
+	display: inline-block;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.a_img_tip{
+	display: block;
+	color:#787d82;
+	text-decoration: none;
+	padding:5px 0px;
+	font-size: 12px;
+}
+.a_img_tip:hover{
+	text-decoration: none;
+	color:#787d82;
+}
+
+.liuyan-i .md{
+	float: left;
+	width: 680px;
+	height: 100%;
+	padding:10px 0px;
+}
+.md-left{
+	height: 20px;
+	line-height: 20px;
+	margin-top: 5px;
+}
+.md-left .i{
+	text-align: center;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #0cc;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.md-left .i2{
+	text-align: center;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #c8cdd2;
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.md-left span{
+	background: #cc0000;
+	color:#fff;
+	font-size: 12px;
+}
+.md-left .span2{
+	background: #fff;
+	color:#787d82;
+}.md-left .span3{
+	color:#14191e;
+	background: #fff;
+}
+.md-left a{
+	color:#14191e;
+	text-decoration:none;
+	font-weight: bold;
+}
+.md-left1{
+	color:#787d82;
+	margin-left:35px;
+	margin-top:10px;
+	font-size: 12px;
+}
+.md-left1 .t-span a{
+	text-align: center;
+	line-height: 20px;
+	display: inline-block;
+	padding:0px 5px;
+	height: 20px;
+	background: #ddd;
+	margin-left: 10px;
+	color:#787d82;
+	text-decoration: none;
+}
+.md-left1 .t-span a:hover{
+	color:#222;
+	text-decoration: none;
+}
+
+.liuyan-i .ri{
+	float: left;
+}
+.liuyan-i .ri .ri-l{
+	color:#00b33b;
+	text-align: right;
+	float: left;
+}
+.liuyan-i .ri .ri-r{
+	color:#787d82;
+	text-align: right;
+	float: left;
+	margin-left: 20px;
+}
+
+.share-right .p-a{
+	display: block;
+	width: 100%;
+	height: 40px;
+	background: #CC0001;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	color:#fff;
+}
+.share-right .p-a:hover{
+	background: #f00000;
+	text-decoration: none;
+	transition:all .3s;
+}
+.share-li a{
+	text-align: center;
+	line-height: 20px;
+	display: inline-block;
+	padding:0px 5px;
+	height: 20px;
+	background: #edf1f2;
+	margin-left: 10px;
+	color:#787d82;
+	text-decoration: none;
+}
+.share-li a:hover{
+	color:#14191e !important;
+	background: #d0d6d9;
+	text-decoration: none;
+}
+.page2 {
+	margin-left: 100px;
+}
+
+/*提交问题start*/
+.myModal {
+	width: 500px;
+	height: 300px;
+	background: url(../imgs/12.jpg);
+	position: absolute;
+	top: 150px;
+	left: 300px;
+	border-radius: 50px;
+	z-index: 66;
+	display: none;
+}
+.myModal h3 {
+	font-size: 24px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	
+}
+.myModal textarea {
+	width: 500px;
+	height: 200px;
+	font-size: 18px;
+}
+.myModal #submit {
+	display: block;
+	width: 100px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+	border-radius: 10px;
+	background: #f23422;
+	margin: 10px auto;
+}
+.myModal #submit:hover {
+	background: #f25222;
+}
+/*提交问题end*/

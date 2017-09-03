@@ -1,0 +1,23 @@
+
+// 注册验证start
+function register() {
+	$("#register").click(function() {
+		var rtel = $("#rtel").val();
+		var rname = $("#rname").val();
+		var rpwd = $("#rpwd").val();
+		$.post("register.action", {
+			rtel: rtel,
+			rname: rname,
+			rpwd: rpwd
+		},
+		function(data, status){
+			if(data=="true"){
+				alert("注册成功！");
+				location.reload();
+			}else {
+				alert("该账户已被占用！");
+			}
+		});
+	});
+}
+// 注册验证end

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>慕课网</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/base.css" />
+		<link rel="stylesheet" href="styles/plan.css" />
+
+		<link rel="stylesheet" type="text/css" href="styles/loginstyle.css">
+
+	</head>
+	<body>
+
+		<!-- 登录start -->
+		<div id="login">
+			<div id="main">
+				<div id="head_pic"></div>
+				<div id="account">
+					<div class="input">	
+						<input type="text" id="uname" name="uname" placeholder="username" />
+					</div>
+					<div class="input1">
+						<input type="password" id="upwd" name="upwd" placeholder="password" />
+					</div>
+				</div>
+				<input type="button" id="loginBtn" value="login" class="btn11" />
+				<div id="footer">
+					<a href="#">Forget Password?</a>
+				</div>
+			</div>
+		</div>
+		<!-- 登录end -->
+		<!-- 注册start -->
+		<div id="signin">
+			<div id="main">
+				<div id="head_pic"></div>
+				<div id="account">
+					<div class="input">	
+						<input type="text" id="rtel" name="rtel" placeholder="tel" />
+					</div>
+					<div class="input1">
+						<input type="text" id="rname" name="registerName" placeholder="username" />
+						<input type="password" id="rpwd" name="password1" placeholder="password" />
+					</div>
+				</div>
+				<input type="button" id="register" value="register" class="btn11" />
+			</div>
+		</div>
+		<!-- 注册end -->
+
+		<!-- 导航栏部分start -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div id="nav-collapse" class="collapse navbar-collapse">
+				<ul  class="nav navbar-nav">
+					<li><a href="course.html">课程</a></li>
+					<li class="currentPage"><a href="plan.html">计划</a></li>
+					<li><a href="share.html">分享</a></li>
+					<li><a href="community.html">社区</a></li>
+				</ul>
+				<div class="user navbar-right">
+					<span class="username"></span>
+					<button class="loginBtn">登录</button>
+					<button class="signinBtn">注册</button>
+					<button class='logoutBtn'>注销</button>
+					<form method="post" action="">
+						<input type="text" placeholder="请输入想要搜索的内容" />
+						<button>Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!-- 导航栏部分end -->
+
+		<!-- 内容部分start -->
+		<div class="container">
+			<!-- 求职路线start -->
+			<div class="route clearfix">
+				<h1>求职路线</h1>
+				<hr />
+				<div class="courses0">
+					<ul>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course1.jpg" />
+								<h3>HTML5入门课程</h3>
+								<p>HTML5入门，新手最好的选择</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>678134人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course2.jpg" />
+								<h3>前端性能基础知识</h3>
+								<p>3小时带你徜徉前端知识的海洋</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>451238人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course3.jpg" />
+								<h3>全栈工程师基础培训</h3>
+								<p>最全的全栈工程师必备技能都在这里</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>781264人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course4.jpg" />
+								<h3>CSS技术全面精讲</h3>
+								<p>5小时带你提升运用CSS的能力</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>348123人在学习</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 求职路线end -->
+			<!-- 加薪利器start -->
+			<div class="route clearfix">
+				<h1>加薪利器</h1>
+				<hr />
+				<div class="dir">
+					<h4>方向：</h4>
+					<ul>
+						<li class="current"><a href="javascript:void(0);">前端</a></li>
+						<li><a href="javascript:void(0);">后端开发</a></li>
+						<li><a href="javascript:void(0);">移动开发</a></li>
+						<li><a href="javascript:void(0);">整站开发</a></li>
+					</ul>
+				</div>
+				<hr />
+				<div class="most">
+					<a href="javascript:void(0);">最热</a>
+					<a href="javascript:void(0);">最新</a>
+					<div class="page">
+						<span>1/2</span>
+						<i>&lt;</i>
+						<i>&gt;</i>
+					</div>
+				</div>
+				<div class="courses">
+					<ul>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course5.jpg" />
+								<h3>JQuery插件小应用</h3>
+								<p>小应用、大智慧，是你润色网页最好的选择</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>126834人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course6.jpg" />
+								<h3>HTML5知识全面升级篇</h3>
+								<p>金牌讲师带你提升运用HTML5的能力</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>451232人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course7.jpg" />
+								<h3>Dreamwearer制作网页应用实例</h3>
+								<p>4小时带你拿下Dreamwearer的所有功能</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>123422人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course8.jpg" />
+								<h3>Web2.0简介、前端概要</h3>
+								<p>想学前端的新手小白看这里</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>561244人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course9.jpg" />
+								<h3>HTML+CSS综合应用</h3>
+								<p>金牌讲师带你领略CSS的神奇之处</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>241354人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course10.jpg" />
+								<h3>HTML应用实例</h3>
+								<p>这里有最全的HTML的实例来提升你的实力</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>231512人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course11.jpg" />
+								<h3>HTML5知识大全</h3>
+								<p>金牌讲师带你从基础到冷门吃透HTML5</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>451255人在学习</span>
+							</a>
+						</li>
+						<li>
+							<div>9小时17分钟 | 初级</div>
+							<a href="javascript:void(0);"><img src="imgs/course12.jpg" />
+								<h3>Web前端精英课程</h3>
+								<p>前端工程师完善自我的最好选择</p>
+								<span>更新完毕</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>301244人在学习</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 加薪利器end -->
+			<!-- 页码部分start -->
+			<div class="page2">
+				<span>首页</span>
+				<span>上一页</span>
+				<ul>
+					<li><a href="javascript:void(0);" class="cur">1</a></li>
+					<li><a href="javascript:void(0);">2</a></li>
+				</ul>
+				<a href="javascript:void(0);">下一页</a>
+				<a href="javascript:void(0);">尾页</a>
+			</div>
+			<!-- 页码部分end -->
+		</div>
+		<!-- 内容部分end -->
+
+		<!-- 页脚部分start -->
+		<footer>
+			<div class="footer-left">
+				<ul>
+					<li><a href="javascript:void(0);">网站首页</a></li>
+					<li><a href="javascript:void(0);">人才招聘</a></li>
+					<li><a href="javascript:void(0);">联系我们</a></li>
+					<li><a href="javascript:void(0);">慕课云</a></li>
+					<li><a href="javascript:void(0);">关于我们</a></li>
+					<li><a href="javascript:void(0);">讲师招募</a></li>
+					<li><a href="javascript:void(0);">意见反馈</a></li>
+					<li><a href="javascript:void(0);">友情链接</a></li>
+				</ul>
+				<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+			</div>
+			<div class="footer-right">
+				<a href="javascript:void(0);" class="way1">
+					<div>
+						<img src="imgs/footer-sprite.png" />
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="way2"></a>
+				<a href="javascript:void(0);" class="way3"></a>
+				</ul>
+			</div>
+		</footer>
+		<!-- 页脚部分end -->
+		
+		<!-- goto部分start -->
+		<div class="goto">
+			<a href="javascript:void(0);" class="wechat">
+				<div></div>
+			</a>
+			<a href="javascript:void(0);" class="message"></a>
+			<a href="javascript:void(0);" class="phone"></a>
+			<a href="#" class="top"></a>
+		</div>
+		<!-- goto部分end -->
+
+
+		<script src="js/bootstrap.js"></script>
+		<script src="scripts/base.js"></script>
+		<script src="scripts/index.js"></script>
+	</body>
+</html>

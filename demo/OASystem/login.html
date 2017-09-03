@@ -1,0 +1,136 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+</head>
+<body ng-controller="controller">
+
+	<div id="main">
+		<!-- 澶村��哄�濮�-->
+		<div id="head_pic">
+
+		</div>
+		<!-- 澶村��虹���-->
+		<!-- 璐��瀵���哄�濮�-->
+		<div id="account">
+			<div class="input">		
+				<input type="text" name="employee_id" placeholder=" username" ng-model="employee_id"></input>
+			</div>
+			<div class="input1">			
+				<input type="password" name="passwd" placeholder=" password" ng-model="passwd"></input>
+				
+			</div>			
+		</div>
+		<!-- 璐��瀵���虹���-->
+		<input type="button" value="sure" class="btn1" ng-click="login();">
+
+		<!-- 蹇��瀵��寮�� -->
+		<div id="footer">
+			<a href="#">Forget Password?</a>
+		</div>
+		<!-- 蹇��瀵��缁�� -->
+	</div>
+	<!-- �婚�涓讳��虹���-->
+
+	<!-- 引入jquery的js文件 -->
+	<script type="text/javascript" src="js/bootstrap/js/jquery.js"></script>
+	<!-- 引入angularjs的js文件 -->
+	<script type="text/javascript" src="js/angularjs/angular.js"></script>
+	<!-- 引入layer.js插件 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 引入全局配置js -->
+	<script type="text/javascript" src="js/global.js"></script>
+
+	<script type="text/javascript">
+	
+			// ��缓妯″�
+		var myApp = angular.module('myApp',[]);
+
+		//���post璇锋�蹇�』瑕��缃�慨�硅�姹��澶翠负x-www-form-urlencoded锛����互json瀛��涓插舰寮���������ㄧ�!!!
+		myApp.config(function($httpProvider) {
+		    $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
+		    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+		 
+		    // Override $http service's default transformRequest
+		    $httpProvider.defaults.transformRequest = [function(data) {
+		        /**
+		         * The workhorse; converts an object to x-www-form-urlencoded serialization.
+		         * @param {Object} obj
+		         * @return {String}
+		         */
+		        var param = function(obj) {
+		            var query = '';
+		            var name, value, fullSubName, subName, subValue, innerObj, i;
+		 
+		            for (name in obj) {
+		                value = obj[name];
+		 
+		                if (value instanceof Array) {
+		                    for (i = 0; i < value.length; ++i) {
+		                        subValue = value[i];
+		                        fullSubName = name + '[' + i + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value instanceof Object) {
+		                    for (subName in value) {
+		                        subValue = value[subName];
+		                        fullSubName = name + '[' + subName + ']';
+		                        innerObj = {};
+		                        innerObj[fullSubName] = subValue;
+		                        query += param(innerObj) + '&';
+		                    }
+		                } else if (value !== undefined && value !== null) {
+		                    query += encodeURIComponent(name) + '='
+		                            + encodeURIComponent(value) + '&';
+		                }
+		            }
+		 
+		            return query.length ? query.substr(0, query.length - 1) : query;
+		        };
+		 
+		        return angular.isObject(data) && String(data) !== '[object File]'
+		                ? param(data)
+		                : data;
+		    }];
+		});
+
+		// ��缓�у���
+		myApp.controller('controller', function($scope,$http) {
+
+			// �婚����
+			$scope.login = function() {
+			
+				var url = URL + '/LoginServlet';
+
+				// post璇锋���揩�锋�娉�
+				var promise = $http.post(url,{					
+					employee_id:$scope.employee_id,
+					passwd:$scope.passwd
+				});
+
+				promise.success(function(data){
+					if (data == -1) {
+						layer.msg('用户或密码错误');
+					} else if (data == 0) {//管理员登陆
+						window.location = "http://192.168.1.9:7777/demo/QueryEmp.html"
+					} else{//普通用户登陆
+						window.location = "http://192.168.1.9:7777/demo/index.html"
+					}
+				});
+
+				promise.error(function(data,status,headers,config) {
+					layer.msg('用户或密码错误');
+				});
+
+			}
+			
+		});
+
+	</script>
+</body>
+</html>
+
